@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 2 &middot; Level 2 | Quranic Arabic Workbook</title>
+<meta name="description" content="Arabic Chains - Quranic Arabic Level 2, Unit 2">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 2</span></div>
+<h1 class="unit-title">Arabic Chains</h1>
+
+<div class="intro-box">In most sentences, groups of words make up chains. Here are the different kinds of chains.</div>
+<div class="section-title"><i class="fas fa-link"></i> Chain #1: Waw</div>
+<div class="subsection-title">What effect does waw have?</div>
+<div class="quran-block"><div class="arabic large">رَبُّ السَّمَوَاتِ وَالْأَرْضِ</div></div>
+<div class="section-title"><i class="fas fa-language"></i> 2.1: Translate using the definitions given.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">مِنَ الْجِنَّةِ وَالنَّاسِ</td><td class="def">jinn</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">فِرْعَوْنَ وَثَمُودَ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">الشِّتَاءِ وَالصَّيْفِ</td><td class="def">winter; summer</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">السَّمَاوَاتِ وَالْأَرْضِ</td><td class="def">skies</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">الذَّكَرَ وَالْأُنْثَىٰ</td><td class="def">male; female</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">وَالشَّفْعِ وَالْوَتْرِ</td><td class="def">even; odd</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">الْآخِرَةَ وَالْأُولَىٰ</td><td class="def">last (life); first (life)</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">8.</td><td class="prompt">وَالتِّينِ وَالزَّيْتُونِ</td><td class="def">fig; olive</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">مِنْ قُوَّةٍ وَلَا نَاصِرٍ</td><td class="def">power; helper</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">رَبُّكَ وَالْمَلَكُ</td><td class="def">angel</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">11.</td><td class="prompt">فُجُورَهَا وَتَقْوَاهَا</td><td class="def">wickedness; righteousness</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-link"></i> Chain #2: &ldquo;E&rdquo; Harfs and its follower</div>
+<div class="quran-block"><div class="arabic large">مِنَ النَّبِيِّ</div></div>
+<div class="note-box"><strong>Steps to translate:</strong><ol class="steps"><li>Compare each word to the next to find chains</li><li>Add is after the break in the chain</li><li>Translate in order</li></ol></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 2.2: Find all connections. Then find the is. Then translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">الْحَمْدُ لِلَّـهِ</td><td class="def">praise</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">وَمِنْهُمْ أُمِّيُّونَ</td><td class="def">illiterates</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">لَهُمْ فِيهَا فَاكِهَةٌ</td><td class="def">fruits</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">الْحَقُّ مِن رَّبِّكُمْ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">الْأَنفَالُ لِلَّـهِ وَالرَّسُولِ</td><td class="def">war; bounties</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">لَكُمْ دِينُكُمْ</td><td class="def">skies</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">فِيهِ ظُلُمَاتٌ وَرَعْدٌ وَبَرْقٌ</td><td class="def">darkness; thunder; lightning</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">8.</td><td class="prompt">وَلَكُمْ فِي الْأَرْضِ مُسْتَقَرٌّ</td><td class="def">residence</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">أَنَا خَيْرٌ مِنْهُ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">وَهُمْ فِيهَا خَالِدُونَ</td><td class="def">living forever</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">11.</td><td class="prompt">فِي قُلُوبِهِمْ مَرَضٌ</td><td class="def">hearts; sickness</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-link"></i> Chain #3: &ldquo;A&rdquo; Harfs and their follower</div>
+<div class="subsection-title">&ldquo;A&rdquo; Harfs For Isms:</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>لَعَلَّ</td><td>لَكِنَّ</td><td>لَيْتَ</td><td>بِأَنَّ</td><td>كَأَنَّ</td><td>أَنَّ</td><td>إِنَّ</td></tr>
+<tr><td class="gloss">so that, perhaps</td><td class="gloss">however</td><td class="gloss">alas</td><td class="gloss">because</td><td class="gloss">as if</td><td class="gloss">that</td><td class="gloss">indeed</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 2.3: Find &ldquo;A&rdquo; Harfs in the following ayahs from Surah Al A&rsquo;raf (7:170-7:176)</div>
+<div class="quran-block">
+<div class="arabic large">وَٱلَّذِينَ يُمَسِّكُونَ بِٱلْكِتَـٰبِ وَأَقَامُوا۟ ٱلصَّلَوٰةَ إِنَّا لَا نُضِيعُ أَجْرَ ٱلْمُصْلِحِينَ ﴿١٧٠﴾ وَإِذْ نَتَقْنَا ٱلْجَبَلَ فَوْقَهُمْ كَأَنَّهُۥ ظُلَّةٌ وَظَنُّوٓا۟ أَنَّهُۥ وَاقِعٌۢ بِهِمْ خُذُوا۟ مَآ ءَاتَيْنَـٰكُم بِقُوَّةٍ وَٱذْكُرُوا۟ مَا فِيهِ لَعَلَّكُمْ تَتَّقُونَ ﴿١٧١﴾ وَإِذْ أَخَذَ رَبُّكَ مِنۢ بَنِىٓ ءَادَمَ مِن ظُهُورِهِمْ ذُرِّيَّتَهُمْ وَأَشْهَدَهُمْ عَلَىٰٓ أَنفُسِهِمْ أَلَسْتُ بِرَبِّكُمْ قَالُوا۟ بَلَىٰ شَهِدْنَآ أَن تَقُولُوا۟ يَوْمَ ٱلْقِيَـٰمَةِ إِنَّا كُنَّا عَنْ هَـٰذَا غَـٰفِلِينَ ﴿١٧٢﴾ أَوْ تَقُولُوٓا۟ إِنَّمَآ أَشْرَكَ ءَابَآؤُنَا مِن قَبْلُ وَكُنَّا ذُرِّيَّةً مِّنۢ بَعْدِهِمْ ۖ أَفَتُهْلِكُنَا بِمَا فَعَلَ ٱلْمُبْطِلُونَ ﴿١٧٣﴾ وَكَذَٰلِكَ نُفَصِّلُ ٱلْءَايَـٰتِ وَلَعَلَّهُمْ يَرْجِعُونَ ﴿١٧٤﴾ وَٱتْلُ عَلَيْهِمْ نَبَأَ ٱلَّذِىٓ ءَاتَيْنَـٰهُ ءَايَـٰتِنَا فَٱنسَلَخَ مِنْهَا فَأَتْبَعَهُ ٱلشَّيْطَـٰنُ فَكَانَ مِنَ ٱلْغَاوِينَ ﴿١٧٥﴾ وَلَوْ شِئْنَا لَرَفَعْنَـٰهُ بِهَا وَلَـٰكِنَّهُۥٓ أَخْلَدَ إِلَى ٱلْأَرْضِ وَٱتَّبَعَ هَوَىٰهُ ۚ فَمَثَلُهُۥ كَمَثَلِ ٱلْكَلْبِ إِن تَحْمِلْ عَلَيْهِ يَلْهَثْ أَوْ تَتْرُكْهُ يَلْهَث ۚ ذَٰلِكَ مَثَلُ ٱلْقَوْمِ ٱلَّذِينَ كَذَّبُوا۟ بِـَٔايَـٰتِنَا ۚ فَٱقْصُصِ ٱلْقَصَصَ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿١٧٦﴾</div>
+<div class="quran-ref">Surah Al-A&rsquo;raf 7:170-176</div>
+</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 2.4: Circle the A Harf and its follower.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">لَعَلَّ السَّاعَةَ قَرِيبٌ</td><td class="def">hour; near</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">وَلَـٰكِنِّي رَسُولٌ</td><td class="def">&mdash;&mdash;&mdash;&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّهُمْ فِتْيَةٌ</td><td class="def">youth</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">كَأَنَّهُ ظُلَّةٌ</td><td class="def">dark cloud</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">أَنَّ اللَّـهَ عَزِيزٌ حَكِيمٌ</td><td class="def">Almighty; All-wise</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="note-box">2.4b: Now find the &ldquo;is&rdquo; above and translate.</div>
+<div class="section-title"><i class="fas fa-circle-question"></i> What if there are multiple chains?</div>
+<div class="intro-box">Multiple chains chain together. The &ldquo;is&rdquo; goes after the first break in the chain.</div>
+<div class="section-title"><i class="fas fa-language"></i> 2.5: Circle the chains. Then find the &ldquo;is&rdquo; and translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">إِنَّ الْإِنسَانَ لَفِي خُسْرٍ</td><td class="def">mankind; loss</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">أَنَّهُ الْحَقُّ مِن رَّبِّهِ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">وَأَنَّهُمْ إِلَيْهِ رَاجِعُونَ</td><td class="def">returning</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">وَإِنَّكَ لَمِنَ الْمُرْسَلِينَ</td><td class="def">messenger</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">وَلَـٰكِنَّ كَثِيرًا مِّنْهُمْ فَاسِقُونَ</td><td class="def">many; disobedient</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">فَإِنَّ اللَّـهَ غَنِيٌّ عَنِ الْعَالَمِينَ</td><td class="def">self-sufficient; worlds</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book"></i> Word Bank</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">مُؤْمِن</td><td class="en">believer</td><td class="ar">عَبْد</td><td class="en">slave</td></tr><tr><td class="ar">أَمْر</td><td class="en">command, matter</td><td class="ar">ظَالِم</td><td class="en">unjust, wrongdoer</td></tr><tr><td class="ar">عَلِيْم</td><td class="en">knowing</td><td class="ar">مُبِيْن</td><td class="en">clear</td></tr><tr><td class="ar">آخِر</td><td class="en">hereafter, last</td><td class="ar">أَهْل</td><td class="en">family, people</td></tr><tr><td class="ar">إِلَـٰه</td><td class="en">god</td><td class="ar">يَد</td><td class="en">hand</td></tr><tr><td class="ar">نَاس</td><td class="en">people</td><td class="ar">كِتَاب</td><td class="en">book</td></tr><tr><td class="ar">جَنَّة</td><td class="en">paradise, garden</td><td class="ar">كَافِر</td><td class="en">disbeliever</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-heart"></i> Distance Makes the Heart Grow Fonder</div>
+<div class="intro-box">Unlike &ldquo;E Harf&rdquo;, sometimes the &ldquo;A Harf&rdquo; is separated from their &ldquo;follower&rdquo;. The &ldquo;is&rdquo; follows the first <strong>break</strong> as usual.</div>
+<div class="quran-block"><div class="arabic large">إِنَّ إِلَيْنَا إِيَابَهُمْ</div></div>
+<div style="text-align:center; font-style:italic; color:var(--text-color); margin:-8px 0 16px;">Surely, to us <strong>is</strong> their return.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">لَعَلَّهُمْ أَجْرًا</td><td class="def">reward</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">كَأَنَّ فِي أُذُنَيْهِ وَقْرًا</td><td class="def">ears; deafness</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّ إِلَيْنَا إِيَابَهُمْ</td><td class="def">return</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">إِنَّ فِي ذَٰلِكَ لَعِبْرَةً</td><td class="def">lesson</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="note-box"><strong>Homework:</strong> &#9744; Complete Lessons 6-10 in the mobile app</div>
+<div class="unit-pagination">
+<a href="level2-unit1.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 1</a>
+<a href="level2-unit3.html" class="pagination-next">Unit 3: Possession <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 2</span></div>
+<h1 class="unit-title">Rangkaian Kata Arab</h1>
+
+<div class="intro-box">Pada sebagian besar kalimat, kelompok-kelompok kata membentuk rangkaian. Berikut adalah jenis-jenis rangkaian.</div>
+<div class="section-title"><i class="fas fa-link"></i> Rangkaian #1: Waw</div>
+<div class="subsection-title">Apa efek dari waw?</div>
+<div class="quran-block"><div class="arabic large">رَبُّ السَّمَوَاتِ وَالْأَرْضِ</div></div>
+<div class="section-title"><i class="fas fa-language"></i> 2.1: Terjemahkan menggunakan arti yang diberikan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">مِنَ الْجِنَّةِ وَالنَّاسِ</td><td class="def">jin</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">فِرْعَوْنَ وَثَمُودَ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">الشِّتَاءِ وَالصَّيْفِ</td><td class="def">musim dingin; musim panas</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">السَّمَاوَاتِ وَالْأَرْضِ</td><td class="def">langit-langit</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">الذَّكَرَ وَالْأُنْثَىٰ</td><td class="def">laki-laki; perempuan</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">وَالشَّفْعِ وَالْوَتْرِ</td><td class="def">genap; ganjil</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">الْآخِرَةَ وَالْأُولَىٰ</td><td class="def">akhirat; dunia (awal)</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">8.</td><td class="prompt">وَالتِّينِ وَالزَّيْتُونِ</td><td class="def">buah tin; buah zaitun</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">مِنْ قُوَّةٍ وَلَا نَاصِرٍ</td><td class="def">kekuatan; penolong</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">رَبُّكَ وَالْمَلَكُ</td><td class="def">malaikat</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">11.</td><td class="prompt">فُجُورَهَا وَتَقْوَاهَا</td><td class="def">kefasikan; ketakwaan</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-link"></i> Rangkaian #2: Harf &ldquo;E&rdquo; dan pengikutnya</div>
+<div class="quran-block"><div class="arabic large">مِنَ النَّبِيِّ</div></div>
+<div class="note-box"><strong>Langkah-langkah menerjemahkan:</strong><ol class="steps"><li>Bandingkan tiap kata dengan kata berikutnya untuk menemukan rangkaian</li><li>Tambahkan &ldquo;adalah&rdquo; setelah putusnya rangkaian</li><li>Terjemahkan secara berurutan</li></ol></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 2.2: Temukan semua sambungan. Lalu temukan &ldquo;adalah&rdquo;. Lalu terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">الْحَمْدُ لِلَّـهِ</td><td class="def">segala puji</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">وَمِنْهُمْ أُمِّيُّونَ</td><td class="def">orang-orang buta huruf</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">لَهُمْ فِيهَا فَاكِهَةٌ</td><td class="def">buah-buahan</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">الْحَقُّ مِن رَّبِّكُمْ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">الْأَنفَالُ لِلَّـهِ وَالرَّسُولِ</td><td class="def">perang; harta rampasan</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">لَكُمْ دِينُكُمْ</td><td class="def">langit-langit</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">فِيهِ ظُلُمَاتٌ وَرَعْدٌ وَبَرْقٌ</td><td class="def">kegelapan; guntur; kilat</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">8.</td><td class="prompt">وَلَكُمْ فِي الْأَرْضِ مُسْتَقَرٌّ</td><td class="def">tempat tinggal</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">أَنَا خَيْرٌ مِنْهُ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">وَهُمْ فِيهَا خَالِدُونَ</td><td class="def">kekal selamanya</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">11.</td><td class="prompt">فِي قُلُوبِهِمْ مَرَضٌ</td><td class="def">hati; penyakit</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-link"></i> Rangkaian #3: Harf &ldquo;A&rdquo; dan pengikutnya</div>
+<div class="subsection-title">Harf &ldquo;A&rdquo; untuk Ism:</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>لَعَلَّ</td><td>لَكِنَّ</td><td>لَيْتَ</td><td>بِأَنَّ</td><td>كَأَنَّ</td><td>أَنَّ</td><td>إِنَّ</td></tr>
+<tr><td class="gloss">agar, semoga</td><td class="gloss">akan tetapi</td><td class="gloss">alangkah baiknya</td><td class="gloss">karena</td><td class="gloss">seolah-olah</td><td class="gloss">bahwa</td><td class="gloss">sesungguhnya</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 2.3: Temukan harf &ldquo;A&rdquo; pada ayat-ayat berikut dari Surah Al-A&rsquo;raf (7:170-7:176)</div>
+<div class="quran-block">
+<div class="arabic large">وَٱلَّذِينَ يُمَسِّكُونَ بِٱلْكِتَـٰبِ وَأَقَامُوا۟ ٱلصَّلَوٰةَ إِنَّا لَا نُضِيعُ أَجْرَ ٱلْمُصْلِحِينَ ﴿١٧٠﴾ وَإِذْ نَتَقْنَا ٱلْجَبَلَ فَوْقَهُمْ كَأَنَّهُۥ ظُلَّةٌ وَظَنُّوٓا۟ أَنَّهُۥ وَاقِعٌۢ بِهِمْ خُذُوا۟ مَآ ءَاتَيْنَـٰكُم بِقُوَّةٍ وَٱذْكُرُوا۟ مَا فِيهِ لَعَلَّكُمْ تَتَّقُونَ ﴿١٧١﴾ وَإِذْ أَخَذَ رَبُّكَ مِنۢ بَنِىٓ ءَادَمَ مِن ظُهُورِهِمْ ذُرِّيَّتَهُمْ وَأَشْهَدَهُمْ عَلَىٰٓ أَنفُسِهِمْ أَلَسْتُ بِرَبِّكُمْ قَالُوا۟ بَلَىٰ شَهِدْنَآ أَن تَقُولُوا۟ يَوْمَ ٱلْقِيَـٰمَةِ إِنَّا كُنَّا عَنْ هَـٰذَا غَـٰفِلِينَ ﴿١٧٢﴾ أَوْ تَقُولُوٓا۟ إِنَّمَآ أَشْرَكَ ءَابَآؤُنَا مِن قَبْلُ وَكُنَّا ذُرِّيَّةً مِّنۢ بَعْدِهِمْ ۖ أَفَتُهْلِكُنَا بِمَا فَعَلَ ٱلْمُبْطِلُونَ ﴿١٧٣﴾ وَكَذَٰلِكَ نُفَصِّلُ ٱلْءَايَـٰتِ وَلَعَلَّهُمْ يَرْجِعُونَ ﴿١٧٤﴾ وَٱتْلُ عَلَيْهِمْ نَبَأَ ٱلَّذِىٓ ءَاتَيْنَـٰهُ ءَايَـٰتِنَا فَٱنسَلَخَ مِنْهَا فَأَتْبَعَهُ ٱلشَّيْطَـٰنُ فَكَانَ مِنَ ٱلْغَاوِينَ ﴿١٧٥﴾ وَلَوْ شِئْنَا لَرَفَعْنَـٰهُ بِهَا وَلَـٰكِنَّهُۥٓ أَخْلَدَ إِلَى ٱلْأَرْضِ وَٱتَّبَعَ هَوَىٰهُ ۚ فَمَثَلُهُۥ كَمَثَلِ ٱلْكَلْبِ إِن تَحْمِلْ عَلَيْهِ يَلْهَثْ أَوْ تَتْرُكْهُ يَلْهَث ۚ ذَٰلِكَ مَثَلُ ٱلْقَوْمِ ٱلَّذِينَ كَذَّبُوا۟ بِـَٔايَـٰتِنَا ۚ فَٱقْصُصِ ٱلْقَصَصَ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿١٧٦﴾</div>
+<div class="quran-ref">Surah Al-A&rsquo;raf 7:170-176</div>
+</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 2.4: Lingkari harf A dan pengikutnya.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">لَعَلَّ السَّاعَةَ قَرِيبٌ</td><td class="def">waktu (kiamat); dekat</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">وَلَـٰكِنِّي رَسُولٌ</td><td class="def">&mdash;&mdash;&mdash;&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّهُمْ فِتْيَةٌ</td><td class="def">pemuda</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">كَأَنَّهُ ظُلَّةٌ</td><td class="def">awan gelap</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">أَنَّ اللَّـهَ عَزِيزٌ حَكِيمٌ</td><td class="def">Mahaperkasa; Mahabijaksana</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="note-box">2.4b: Sekarang temukan &ldquo;adalah&rdquo; di atas dan terjemahkan.</div>
+<div class="section-title"><i class="fas fa-circle-question"></i> Bagaimana jika ada beberapa rangkaian?</div>
+<div class="intro-box">Beberapa rangkaian dapat tersambung bersama. &ldquo;Adalah&rdquo; diletakkan setelah putusnya rangkaian pertama.</div>
+<div class="section-title"><i class="fas fa-language"></i> 2.5: Lingkari rangkaian-rangkaiannya. Lalu temukan &ldquo;adalah&rdquo; dan terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">إِنَّ الْإِنسَانَ لَفِي خُسْرٍ</td><td class="def">manusia; kerugian</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">أَنَّهُ الْحَقُّ مِن رَّبِّهِ</td><td class="def">&mdash;</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">وَأَنَّهُمْ إِلَيْهِ رَاجِعُونَ</td><td class="def">kembali</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">وَإِنَّكَ لَمِنَ الْمُرْسَلِينَ</td><td class="def">rasul/utusan</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">وَلَـٰكِنَّ كَثِيرًا مِّنْهُمْ فَاسِقُونَ</td><td class="def">banyak; fasik/durhaka</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">فَإِنَّ اللَّـهَ غَنِيٌّ عَنِ الْعَالَمِينَ</td><td class="def">Mahakaya; alam semesta</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book"></i> Kumpulan Kata</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">مُؤْمِن</td><td class="en">orang beriman</td><td class="ar">عَبْد</td><td class="en">hamba</td></tr><tr><td class="ar">أَمْر</td><td class="en">perintah, urusan</td><td class="ar">ظَالِم</td><td class="en">zalim, orang yang berbuat aniaya</td></tr><tr><td class="ar">عَلِيْم</td><td class="en">Maha Mengetahui</td><td class="ar">مُبِيْن</td><td class="en">jelas, nyata</td></tr><tr><td class="ar">آخِر</td><td class="en">akhirat, terakhir</td><td class="ar">أَهْل</td><td class="en">keluarga, kaum</td></tr><tr><td class="ar">إِلَـٰه</td><td class="en">tuhan (sesembahan)</td><td class="ar">يَد</td><td class="en">tangan</td></tr><tr><td class="ar">نَاس</td><td class="en">manusia</td><td class="ar">كِتَاب</td><td class="en">kitab</td></tr><tr><td class="ar">جَنَّة</td><td class="en">surga, taman</td><td class="ar">كَافِر</td><td class="en">orang kafir</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-heart"></i> Jarak Membuat Hati Semakin Rindu</div>
+<div class="intro-box">Berbeda dengan &ldquo;Harf E&rdquo;, terkadang &ldquo;Harf A&rdquo; terpisah dari &ldquo;pengikutnya&rdquo;. &ldquo;Adalah&rdquo; tetap mengikuti <strong>putusnya rangkaian</strong> pertama seperti biasa.</div>
+<div class="quran-block"><div class="arabic large">إِنَّ إِلَيْنَا إِيَابَهُمْ</div></div>
+<div style="text-align:center; font-style:italic; color:var(--text-color); margin:-8px 0 16px;">Sesungguhnya kepada Kami-<strong>lah</strong> kembali mereka.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">لَعَلَّهُمْ أَجْرًا</td><td class="def">pahala</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">كَأَنَّ فِي أُذُنَيْهِ وَقْرًا</td><td class="def">telinga; tuli</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّ إِلَيْنَا إِيَابَهُمْ</td><td class="def">kembali</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">إِنَّ فِي ذَٰلِكَ لَعِبْرَةً</td><td class="def">pelajaran</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="note-box"><strong>Tugas:</strong> &#9744; Selesaikan Pelajaran 6-10 di aplikasi seluler</div>
+<div class="unit-pagination">
+<a href="level2-unit1.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 1</a>
+<a href="level2-unit3.html" class="pagination-next">Unit 3: Kepemilikan <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var savedLang = safeGet('uqa-lang');
+    setLang(savedLang === 'id' ? 'id' : 'en');
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var savedDark = safeGet('uqa-dark');
+    if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>

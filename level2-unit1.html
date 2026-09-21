@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 1 &middot; Level 2 | Quranic Arabic Workbook</title>
+<meta name="description" content="Level 1 Review and Intro to Ism Sentences - Quranic Arabic Level 2, Unit 1">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 1</span></div>
+<h1 class="unit-title">Level 1 Review &amp; Intro to Ism Sentences</h1>
+
+<div class="section-title"><i class="fas fa-rotate"></i> 1.1: Let&rsquo;s review everything.</div>
+<div class="note-box"><ol class="steps"><li>3 kinds of words and their definition</li><li>Pronouns (both charts)</li><li>Two types of Sentences</li><li>Parts of Fi&rsquo;l Sentence. What ending do the parts get?</li><li>Past tense chart and how to recognize each form</li><li>How to find inside doer</li><li>How do we translate the attached pronoun (when it&rsquo;s attached to a fi&rsquo;l)</li><li>Rules of outside doer</li><li>&ldquo;E&rdquo; Harfs</li><li>Connector Harfs</li><li>Connector Isms</li><li>Present tense. How to recognize each form.</li><li>What happens if we add لَنْ in front of present tense?</li><li>All the &ldquo;A&rdquo; Harfs, Sukun Harfs, Future tense harfs, and General harfs.</li><li>Review the commands chart and its endings</li></ol></div>
+<div class="section-title"><i class="fas fa-underline"></i> 1.2: Underline the fi&rsquo;l once, the doer twice, and the detail three times. If the doer is inside, write it out.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">رَأَيْتَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">اتَّبَعْنَا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">3.</td><td class="prompt">جَاءَتْهُمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">أَذَّنَ مُؤَذِّنٌ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">5.</td><td class="prompt">خَلَقَ الْإِنسَانَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">يَصْدُرُ النَّاسُ أَشْتَاتًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">كَيْ نُسَبِّحَكَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">اُسْجُدُوا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">9.</td><td class="prompt">فَلَا تَقُلْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-highlighter"></i> 1.3: Identify as many of the highlighted words as you can. For fi&rsquo;l, label as commanding, forbidding, present, or past and identify the doer.</div>
+<div class="quran-block">
+<div class="arabic large">يَا مَرْيَمُ <mark class="hl">اقْنُتِي</mark> <mark class="hl">لِرَبِّكِ</mark> وَ<mark class="hl">اسْجُدِي</mark> وَ<mark class="hl">ارْكَعِي</mark> مَعَ الرَّاكِعِينَ ﴿٤٣﴾ <mark class="hl">ذَٰلِكَ</mark> مِنْ أَنبَاءِ الْغَيْبِ نُوحِيهِ إِلَيْكَ ۚ وَمَا كُنتَ لَدَيْهِمْ إِذْ يُلْقُونَ أَقْلَامَهُمْ أَيُّهُمْ يَكْفُلُ مَرْيَمَ وَمَا كُنتَ <mark class="hl">لَدَيْهِمْ</mark> إِذْ <mark class="hl">يَخْتَصِمُونَ</mark></div>
+<div class="quran-ref">Surah Aal-Imran 3:43-44</div>
+</div>
+<div class="section-title"><i class="fas fa-font"></i> Tanween and AL</div>
+<div class="note-box"><ul class="definition-list"><li><span class="label">What does Tanween do?</span> <span class="blank-line" style="min-width:220px;"></span></li>
+<li><span class="label">What does AL do?</span> <span class="blank-line" style="min-width:220px;"></span></li></ul></div>
+<div class="subsection-title">Translate</div>
+<div class="two-col"><div class="note-box"><div class="arabic" style="text-align:center;">الرَّسُوْلُ</div><span class="blank-line" style="min-width:160px;"></span></div><div class="note-box"><div class="arabic" style="text-align:center;">رَسُوْلٌ</div><span class="blank-line" style="min-width:160px;"></span></div></div>
+<div class="section-title"><i class="fas fa-book"></i> Word Bank</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">رَبّ</td><td class="en">Lord</td><td class="ar">رَسُوْل</td><td class="en">messenger</td></tr><tr><td class="ar">يَوْم</td><td class="en">day</td><td class="ar">عَذَاب</td><td class="en">punishment</td></tr><tr><td class="ar">قَوْم</td><td class="en">nation, people</td><td class="ar">هُدَى</td><td class="en">guidance</td></tr><tr><td class="ar">ءَايَة</td><td class="en">sign</td><td class="ar">شَيْء</td><td class="en">thing</td></tr><tr><td class="ar">حَقّ</td><td class="en">truth</td><td class="ar">خَيْر</td><td class="en">good, better</td></tr><tr><td class="ar">غَفُوْر</td><td class="en">forgiving</td><td class="ar">عَظِيْم</td><td class="en">great</td></tr><tr><td class="ar">كَانَ</td><td class="en">he/it was</td><td class="ar">يَكُوْنُ</td><td class="en">he/it is</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 1.4: Translate based on tanween and AL:</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">يَوْمًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">الْقَوْمِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">3.</td><td class="prompt">شَيْءٌ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">عَذَابٍ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">5.</td><td class="prompt">الرَّسُوْلَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">النَّاسُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">عَظِيْمًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">الْغَفُوْرُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">9.</td><td class="prompt">الْهُدَى</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">ءَايَةٍ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">11.</td><td class="prompt">الْخَيْرُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">12.</td><td class="prompt">الْحَقَّ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-quote-left"></i> Ism Sentences</div>
+<div class="note-box"><ul class="definition-list"><li><span class="label">What are some examples of 3 word sentences using &ldquo;is&rdquo;</span> <span class="blank-line" style="min-width:220px;"></span></li></ul><p>Simple Ism sentences consist of just <span class="blank-line" style="min-width:70px;"></span> words which end in <span class="blank-line" style="min-width:70px;"></span>. In between the two words there is an invisible <span class="blank-line" style="min-width:70px;"></span>.</p></div>
+<div class="subsection-title">Translate</div>
+<div class="note-box"><div class="arabic" style="text-align:center;">اللَّهُ عَلِيْمٌ</div><span class="blank-line" style="min-width:200px;"></span></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 1.5: Find the invisible &ldquo;is&rdquo;. Then translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">الْقُرْآنُ رَحْمَةٌ</td><td class="def">mercy</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">الْعَذَابُ أَلِيْمٌ</td><td class="def">painful</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">الْقَوْلُ نَذِيْرٌ</td><td class="def">speech; warning</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">الْكُتُبُ بَيِّنَةٌ</td><td class="def">books; clear proof</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">الْمُجْرِمُ ظَالِمٌ</td><td class="def">criminal; unjust</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">النَّبِيُّ حَكِيْمٌ</td><td class="def">prophet; wise</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">الْأَجْرُ عَظِيْمٌ</td><td class="def">reward</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">8.</td><td class="prompt">اللَّهُ غَفُوْرٌ</td><td class="def">forgiving</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">الْأَعْمَالُ صَالِحَاتٌ</td><td class="def">deeds; righteous</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">الْآيَةُ مُبِيْنٌ</td><td class="def">clear</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-anchor"></i> Stubborn Words</div>
+<div class="note-box"><p>What endings do you think the word مُوْسَى gets? <span class="blank-line" style="min-width:200px;"></span></p><p>What are stubborn words? <span class="blank-line" style="min-width:300px;"></span></p><p><strong>Categories of stubborn isms:</strong></p><ol class="steps"><li>Pronouns</li><li>Connector Isms</li><li>Words ending in yaa</li><li>Words ending in alif</li></ol></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 1.6: Find the invisible is. Then translate:</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">هُوَ قُرْآنٌ</td><td class="def"></td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">هُمْ كُفَّارٌ</td><td class="def">disbelievers</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">هَذَا الْقُرْآنُ</td><td class="def">this</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">هَذَا رَبِّي</td><td class="def"></td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">ذَلِكَ خَيْرٌ</td><td class="def">that</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">وَهَذَا النَّبِيُّ</td><td class="def">prophet</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">مَنْ أَنْتَ</td><td class="def"></td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 1.7: Open the Qur&rsquo;an to Surah An&rsquo;aam (Surah 6) and identify as many stubborn words as you can in verses 84-92. Write your findings.</div>
+<div class="note-box"><span class="blank-line" style="min-width:600px;"></span></div>
+<div class="unit-pagination">
+<a href="level1-unit7.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Level 1, Unit 7</a>
+<a href="level2-unit2.html" class="pagination-next">Unit 2: Arabic Chains <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 1</span></div>
+<h1 class="unit-title">Ulasan Level 1 &amp; Pengantar Kalimat Ism</h1>
+
+<div class="section-title"><i class="fas fa-rotate"></i> 1.1: Mari kita ulas kembali semuanya.</div>
+<div class="note-box"><ol class="steps"><li>3 jenis kata dan definisinya</li><li>Kata ganti (kedua tabel)</li><li>Dua jenis kalimat</li><li>Bagian-bagian kalimat Fi&rsquo;l. Akhiran apa yang didapat tiap bagian?</li><li>Tabel bentuk lampau dan cara mengenali tiap bentuknya</li><li>Cara menemukan pelaku di dalam kata</li><li>Cara menerjemahkan kata ganti yang melekat (pada fi&rsquo;l)</li><li>Aturan pelaku luar (isim)</li><li>Harf &ldquo;E&rdquo;</li><li>Harf Penghubung</li><li>Ism Penghubung</li><li>Bentuk sekarang. Bagaimana cara mengenali tiap bentuknya?</li><li>Apa yang terjadi jika kita tambahkan لَنْ di depan bentuk sekarang?</li><li>Semua harf &ldquo;A&rdquo;, harf sukun, harf bentuk akan datang, dan harf umum.</li><li>Ulasan tabel perintah dan akhirannya</li></ol></div>
+<div class="section-title"><i class="fas fa-underline"></i> 1.2: Garis bawahi fi&rsquo;l satu kali, pelaku dua kali, dan detail tiga kali. Jika pelaku tersembunyi, tuliskan.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">رَأَيْتَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">اتَّبَعْنَا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">3.</td><td class="prompt">جَاءَتْهُمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">أَذَّنَ مُؤَذِّنٌ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">5.</td><td class="prompt">خَلَقَ الْإِنسَانَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">يَصْدُرُ النَّاسُ أَشْتَاتًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">كَيْ نُسَبِّحَكَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">اُسْجُدُوا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">9.</td><td class="prompt">فَلَا تَقُلْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-highlighter"></i> 1.3: Tentukan sebanyak mungkin kata yang disorot. Untuk fi&rsquo;l, tandai sebagai perintah, larangan, sekarang, atau lampau, dan tentukan pelakunya.</div>
+<div class="quran-block">
+<div class="arabic large">يَا مَرْيَمُ <mark class="hl">اقْنُتِي</mark> <mark class="hl">لِرَبِّكِ</mark> وَ<mark class="hl">اسْجُدِي</mark> وَ<mark class="hl">ارْكَعِي</mark> مَعَ الرَّاكِعِينَ ﴿٤٣﴾ <mark class="hl">ذَٰلِكَ</mark> مِنْ أَنبَاءِ الْغَيْبِ نُوحِيهِ إِلَيْكَ ۚ وَمَا كُنتَ لَدَيْهِمْ إِذْ يُلْقُونَ أَقْلَامَهُمْ أَيُّهُمْ يَكْفُلُ مَرْيَمَ وَمَا كُنتَ <mark class="hl">لَدَيْهِمْ</mark> إِذْ <mark class="hl">يَخْتَصِمُونَ</mark></div>
+<div class="quran-ref">Surah Aal-Imran 3:43-44</div>
+</div>
+<div class="section-title"><i class="fas fa-font"></i> Tanwin dan AL</div>
+<div class="note-box"><ul class="definition-list"><li><span class="label">Apa fungsi tanwin?</span> <span class="blank-line" style="min-width:220px;"></span></li>
+<li><span class="label">Apa fungsi AL?</span> <span class="blank-line" style="min-width:220px;"></span></li></ul></div>
+<div class="subsection-title">Terjemahkan</div>
+<div class="two-col"><div class="note-box"><div class="arabic" style="text-align:center;">الرَّسُوْلُ</div><span class="blank-line" style="min-width:160px;"></span></div><div class="note-box"><div class="arabic" style="text-align:center;">رَسُوْلٌ</div><span class="blank-line" style="min-width:160px;"></span></div></div>
+<div class="section-title"><i class="fas fa-book"></i> Kosakata</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">رَبّ</td><td class="en">Tuhan</td><td class="ar">رَسُوْل</td><td class="en">utusan</td></tr><tr><td class="ar">يَوْم</td><td class="en">hari</td><td class="ar">عَذَاب</td><td class="en">siksa</td></tr><tr><td class="ar">قَوْم</td><td class="en">kaum/bangsa</td><td class="ar">هُدَى</td><td class="en">petunjuk</td></tr><tr><td class="ar">ءَايَة</td><td class="en">tanda/ayat</td><td class="ar">شَيْء</td><td class="en">sesuatu</td></tr><tr><td class="ar">حَقّ</td><td class="en">kebenaran</td><td class="ar">خَيْر</td><td class="en">baik, lebih baik</td></tr><tr><td class="ar">غَفُوْر</td><td class="en">Maha Pengampun</td><td class="ar">عَظِيْم</td><td class="en">agung</td></tr><tr><td class="ar">كَانَ</td><td class="en">dia/itu adalah (lampau)</td><td class="ar">يَكُوْنُ</td><td class="en">dia/itu adalah (sekarang)</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 1.4: Terjemahkan berdasarkan tanwin dan AL:</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">يَوْمًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">الْقَوْمِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">3.</td><td class="prompt">شَيْءٌ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">عَذَابٍ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">5.</td><td class="prompt">الرَّسُوْلَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">النَّاسُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">عَظِيْمًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">الْغَفُوْرُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">9.</td><td class="prompt">الْهُدَى</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">ءَايَةٍ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">11.</td><td class="prompt">الْخَيْرُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">12.</td><td class="prompt">الْحَقَّ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-quote-left"></i> Kalimat Ism</div>
+<div class="note-box"><ul class="definition-list"><li><span class="label">Apa contoh kalimat 3 kata yang menggunakan kata &ldquo;adalah&rdquo;</span> <span class="blank-line" style="min-width:220px;"></span></li></ul><p>Kalimat Ism sederhana hanya terdiri dari <span class="blank-line" style="min-width:70px;"></span> kata yang berakhiran <span class="blank-line" style="min-width:70px;"></span>. Di antara kedua kata tersebut ada kata &ldquo;adalah&rdquo; yang tidak terlihat: <span class="blank-line" style="min-width:70px;"></span>.</p></div>
+<div class="subsection-title">Terjemahkan</div>
+<div class="note-box"><div class="arabic" style="text-align:center;">اللَّهُ عَلِيْمٌ</div><span class="blank-line" style="min-width:200px;"></span></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 1.5: Temukan kata &ldquo;adalah&rdquo; yang tidak terlihat. Lalu terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">الْقُرْآنُ رَحْمَةٌ</td><td class="def">rahmat</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">الْعَذَابُ أَلِيْمٌ</td><td class="def">pedih</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">الْقَوْلُ نَذِيْرٌ</td><td class="def">perkataan; peringatan</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">الْكُتُبُ بَيِّنَةٌ</td><td class="def">kitab-kitab; bukti nyata</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">الْمُجْرِمُ ظَالِمٌ</td><td class="def">penjahat; zalim</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">النَّبِيُّ حَكِيْمٌ</td><td class="def">nabi; bijaksana</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">الْأَجْرُ عَظِيْمٌ</td><td class="def">pahala</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">8.</td><td class="prompt">اللَّهُ غَفُوْرٌ</td><td class="def">Maha Pengampun</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">الْأَعْمَالُ صَالِحَاتٌ</td><td class="def">amal; saleh</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">10.</td><td class="prompt">الْآيَةُ مُبِيْنٌ</td><td class="def">jelas</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-anchor"></i> Kata-Kata &ldquo;Keras Kepala&rdquo;</div>
+<div class="note-box"><p>Menurutmu akhiran apa yang didapat kata مُوْسَى? <span class="blank-line" style="min-width:200px;"></span></p><p>Apa itu kata &ldquo;keras kepala&rdquo;? <span class="blank-line" style="min-width:300px;"></span></p><p><strong>Kategori ism &ldquo;keras kepala&rdquo;:</strong></p><ol class="steps"><li>Kata ganti (Dhamir)</li><li>Ism Penghubung</li><li>Kata yang berakhiran yaa</li><li>Kata yang berakhiran alif</li></ol></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 1.6: Temukan &ldquo;adalah&rdquo; yang tidak terlihat. Lalu terjemahkan:</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">هُوَ قُرْآنٌ</td><td class="def"></td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">2.</td><td class="prompt">هُمْ كُفَّارٌ</td><td class="def">orang-orang kafir</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">هَذَا الْقُرْآنُ</td><td class="def">ini</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">4.</td><td class="prompt">هَذَا رَبِّي</td><td class="def"></td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">ذَلِكَ خَيْرٌ</td><td class="def">itu</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">6.</td><td class="prompt">وَهَذَا النَّبِيُّ</td><td class="def">nabi</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">مَنْ أَنْتَ</td><td class="def"></td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 1.7: Buka Al-Qur&rsquo;an ke Surah Al-An&rsquo;am (Surah 6) dan temukan sebanyak mungkin kata &ldquo;keras kepala&rdquo; pada ayat 84-92. Tuliskan temuanmu.</div>
+<div class="note-box"><span class="blank-line" style="min-width:600px;"></span></div>
+<div class="unit-pagination">
+<a href="level1-unit7.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Level 1, Unit 7</a>
+<a href="level2-unit2.html" class="pagination-next">Unit 2: Rangkaian Kata Arab <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var savedLang = safeGet('uqa-lang');
+    setLang(savedLang === 'id' ? 'id' : 'en');
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var savedDark = safeGet('uqa-dark');
+    if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
