@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 3 &middot; Level 2 | Quranic Arabic Workbook</title>
+<meta name="description" content="Possession - Quranic Arabic Level 2, Unit 3">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 3</span></div>
+<h1 class="unit-title">Possession (not the jinn kind)</h1>
+
+<div class="section-title"><i class="fas fa-shuffle"></i> 3.1: Unscramble. Draw a line from a word to its true definition.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">آمَنَ</td><td style="text-align:right;">he knew</td><td class="arabic">عَمِلَ</td><td style="text-align:right;">god</td></tr><tr><td class="arabic">هُمْ</td><td style="text-align:right;">her/it</td><td class="arabic">أَنْتُمْ</td><td style="text-align:right;">people</td></tr><tr><td class="arabic">عَلِمَ</td><td style="text-align:right;">he sent down/revealed</td><td class="arabic">إِلَـٰه</td><td style="text-align:right;">you (f)</td></tr><tr><td class="arabic">جَعَلَ</td><td style="text-align:right;">he believed</td><td class="arabic">شَاءَ</td><td style="text-align:right;">he did</td></tr><tr><td class="arabic">هَا</td><td style="text-align:right;">he made</td><td class="arabic">كِ</td><td style="text-align:right;">hand</td></tr><tr><td class="arabic">كَفَرَ</td><td style="text-align:right;">they</td><td class="arabic">نَاس</td><td style="text-align:right;">you all</td></tr><tr><td class="arabic">أَنْزَلَ</td><td style="text-align:right;">he disbelieved</td><td class="arabic">يَدَ</td><td style="text-align:right;">he willed/wanted</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-pen"></i> 3.2: Write the correct letter from the word bank to fill in the blanks.</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td></tr>
+<tr><td class="gloss">لَـٰكِنَّ</td><td class="gloss">قَالَ</td><td class="gloss">بِأَنَّ</td><td class="gloss">إِنَّ</td><td class="gloss">كَأَنَّ</td><td class="gloss">خَلَقَ</td><td class="gloss">جَاءَ</td></tr>
+</tbody>
+</table></div>
+<div class="note-box"><ol class="steps"><li>It is Allah who _____ the heavens and the earth and sent down rain from the sky and with it produced some fruits as provision for you.</li><li>_____ the guidance of Allah is the [only] guidance.</li><li>[Moses was told], "Throw down your staff." But when he saw it writhing _____ it were a snake, he turned and fled. [Allah said], "O Moses, do not fear!"</li><li>Moses _____, "O Pharaoh, I am a messenger from the Lord of the worlds."</li><li>We drowned [the people of Pharaoh] in the sea _____ they denied Our signs and were heedless of them.</li><li>Allah is full of bounty to the people, _____ most of the people do not show gratitude.</li><li>O Mankind, the Messenger _____ to you with the truth from your Lord, so believe; it is better for you.</li></ol></div>
+<div class="section-title"><i class="fas fa-highlighter"></i> 3.3: Identify the kinds of chain that are highlighted.</div>
+<div class="quran-block">
+<div class="arabic large">وَلَا يَحْسَبَنَّ الَّذِينَ كَفَرُوا أَنَّمَا نُمْلِي <mark class="hl">لَهُمْ</mark> <mark class="hl">خَيْرٌ</mark> <mark class="hl">لِّأَنفُسِهِمْ</mark> ۚ إِنَّمَا نُمْلِي <mark class="hl">لَهُمْ</mark> لِيَزْدَادُوا إِثْمًا ۚ وَ<mark class="hl">لَهُمْ</mark> <mark class="hl">عَذَابٌ</mark> مُّهِينٌ ﴿١٧٨﴾ مَّا كَانَ اللَّـهُ لِيَذَرَ الْمُؤْمِنِينَ <mark class="hl">عَلَىٰ مَا</mark> أَنتُمْ <mark class="hl">عَلَيْهِ</mark> حَتَّىٰ يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ ۗ وَمَا كَانَ اللَّـهُ لِيُطْلِعَكُمْ <mark class="hl">عَلَى الْغَيْبِ</mark> وَ<mark class="hl">لَـٰكِنَّ اللَّـهَ</mark> يَجْتَبِي <mark class="hl">مِن رُّسُلِهِ</mark> مَن يَشَاءُ ۖ فَآمِنُوا <mark class="hl">بِاللَّـهِ وَرُسُلِهِ</mark> ۚ وَإِن تُؤْمِنُوا وَتَتَّقُوا <mark class="hl">فَلَكُمْ</mark> أَجْرٌ عَظِيمٌ ﴿١٧٩﴾ وَلَا يَحْسَبَنَّ الَّذِينَ يَبْخَلُونَ بِمَا آتَاهُمُ اللَّـهُ <mark class="hl">مِن فَضْلِهِ</mark> <mark class="hl">هُوَ</mark> خَيْرًا <mark class="hl">لَّهُم</mark> ۖ بَلْ <mark class="hl">هُوَ</mark> شَرٌّ <mark class="hl">لَّهُمْ</mark> ۖ سَيُطَوَّقُونَ مَا بَخِلُوا بِهِ يَوْمَ الْقِيَامَةِ ۗ وَ<mark class="hl">لِلَّـهِ</mark> <mark class="hl">مِيرَاثُ السَّمَاوَاتِ وَالْأَرْضِ</mark> ۗ وَاللَّـهُ <mark class="hl">بِمَا</mark> تَعْمَلُونَ خَبِيرٌ ﴿١٨٠﴾</div>
+<div class="quran-ref">Surah Aal-Imran 3:178-180</div>
+</div>
+<div class="section-title"><i class="fas fa-link"></i> Chain #4: Possession aka &ldquo;When you own stuff&rdquo;</div>
+<div class="note-box"><strong>Possession has 2 parts:</strong><ol class="rules"><li><span class="blank-line" style="min-width:400px;"></span></li>
+<li><span class="blank-line" style="min-width:400px;"></span></li></ol></div>
+<div class="quran-block"><div class="arabic large">دِيْنُ اللَّـهِ</div></div>
+<div style="text-align:center; margin:-8px 0 20px; color:var(--text-color);">Religion of Allah (or Allah&rsquo;s religion)</div>
+<div class="quran-block"><div class="arabic large">مَالُهُ</div></div>
+<div style="text-align:center; margin:-8px 0 20px; color:var(--text-color);">Wealth of his (or His wealth)</div>
+<div class="note-box"><strong>Rules of the Thing:</strong><ol class="rules"><li><span class="blank-line" style="min-width:400px;"></span></li>
+<li><span class="blank-line" style="min-width:400px;"></span></li>
+<li><span class="blank-line" style="min-width:400px;"></span></li></ol></div>
+<div class="section-title"><i class="fas fa-circle"></i> 3.4: Circle the thing and underline the owner.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">طَعَامِ الْمِسْكِيْنِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">نَصْرُ اللَّـهِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">أَهْلِ الْكِتَابِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">4.</td><td class="prompt">عِبَادِيْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">يَدَاهُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">بَلَاءٌ مِّن رَّبِّكُمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">شَرِّ حَاسِدٍ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">بِحَمْدِ رَبِّكَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">بِرَبِّ النَّاسِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">10.</td><td class="prompt">رَبُّ السَّمَاوَاتِ وَالْأَرْضِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 3.5: Translate each possession using the definitions given.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">طَعَامِ الْمِسْكِيْنِ</td><td class="def">feeding; needy</td><td class="answer">The feeding of the needy</td></tr><tr><td class="num">2.</td><td class="prompt">نَصْرُ اللَّـهِ</td><td class="def">help</td><td class="answer">The help of Allah</td></tr><tr><td class="num">3.</td><td class="prompt">بِرَبِّ النَّاسِ</td><td class="def">&mdash;</td><td class="answer">With the Lord of mankind</td></tr><tr><td class="num">4.</td><td class="prompt">رَبُّ السَّمَاوَاتِ وَالْأَرْضِ</td><td class="def">skies</td><td class="answer">The Lord of the heavens and the earth</td></tr><tr><td class="num">5.</td><td class="prompt">يَدَاهُ</td><td class="def">two hands</td><td class="answer">His two hands</td></tr><tr><td class="num">6.</td><td class="prompt">بَلَاءٌ مِّن رَّبِّكُمْ</td><td class="def">test</td><td class="answer">A test from your Lord</td></tr><tr><td class="num">7.</td><td class="prompt">شَرِّ حَاسِدٍ</td><td class="def">evil; envier</td><td class="answer">The evil of an envier</td></tr><tr><td class="num">8.</td><td class="prompt">بِحَمْدِ رَبِّكَ</td><td class="def">praise</td><td class="answer">With the praise of your Lord</td></tr><tr><td class="num">9.</td><td class="prompt">أَهْلِ الْكِتَابِ</td><td class="def">people; book</td><td class="answer">The people of the Book</td></tr><tr><td class="num">10.</td><td class="prompt">عِبَادِيْ</td><td class="def">slaves</td><td class="answer">My slaves</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 3.6: Circle the chains. Then find the &ldquo;is&rdquo;. Then translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">وَاللَّـهُ ذُو الْفَضْلِ</td><td class="def">possessor; bounty</td><td class="answer">And Allah is the possessor of bounty</td></tr><tr><td class="num">2.</td><td class="prompt">وَهُوَ رَبُّنَا</td><td class="def">&mdash;</td><td class="answer">And He is our Lord</td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّكَ سَمِيعُ الدُّعَاءِ</td><td class="def">hearer</td><td class="answer">Indeed You are the Hearer of supplication</td></tr><tr><td class="num">4.</td><td class="prompt">فِي قُلُوبِهِمْ زَيْغٌ</td><td class="def">hearts; deviation</td><td class="answer">In their hearts is deviation</td></tr><tr><td class="num">5.</td><td class="prompt">وَاللَّـهُ خَيْرُ الْمَاكِرِينَ</td><td class="def">best; planners</td><td class="answer">And Allah is the best of planners</td></tr><tr><td class="num">6.</td><td class="prompt">إِنَّكَ جَامِعُ النَّاسِ</td><td class="def">gatherer</td><td class="answer">Indeed You are the gatherer of mankind</td></tr><tr><td class="num">7.</td><td class="prompt">لَهُمْ جَنَّاتُ الْفِرْدَوْسِ</td><td class="def">gardens; paradise</td><td class="answer">For them are the gardens of Paradise</td></tr><tr><td class="num">8.</td><td class="prompt">إِنَّ اللَّـهَ رَبِي وَرَبُّكُمْ</td><td class="def">&mdash;</td><td class="answer">Indeed Allah is my Lord and your Lord</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-circle-exclamation"></i> Sometimes words look like possession even if they don&rsquo;t &ldquo;mean&rdquo; it:</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>قَبْلَ</td><td>بَعْدَ</td><td>فَوْقَ</td><td>تَحْتَ</td><td>خَلْفَ | وَرَاءَ</td><td>عِندَ</td></tr>
+<tr><td class="gloss">before</td><td class="gloss">after</td><td class="gloss">above</td><td class="gloss">below</td><td class="gloss">behind</td><td class="gloss">near</td></tr>
+</tbody>
+</table></div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>بَيْنَ</td><td>مَعَ</td><td>غَيْرَ | دُونَ</td><td>بَعْضَ</td><td>كُلّ</td><td>أَيّ</td></tr>
+<tr><td class="gloss">between</td><td class="gloss">with</td><td class="gloss">other than</td><td class="gloss">some (of)</td><td class="gloss">each, all, every</td><td class="gloss">which, any</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 3.7: Circle the chains. Then find the &ldquo;is&rdquo; and translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">جَزَاؤُهُمْ عِندَ رَبِّهِمْ</td><td class="def">reward</td><td class="answer">Their reward is with their Lord</td></tr><tr><td class="num">2.</td><td class="prompt">وَاللَّـهُ مِن وَرَائِهِم مُّحِيطٌ</td><td class="def">encompassing</td><td class="answer">And Allah encompasses them from behind</td></tr><tr><td class="num">3.</td><td class="prompt">يُبَايِعُونَكَ تَحْتَ الشَّجَرَةِ</td><td class="def">pledge allegiance; tree</td><td class="answer">They pledge allegiance to you under the tree</td></tr><tr><td class="num">4.</td><td class="prompt">إِنَّ الدِّينَ عِندَ اللَّـهِ الْإِسْلَامُ</td><td class="def">religion</td><td class="answer">Indeed the religion with Allah is Islam</td></tr><tr><td class="num">5.</td><td class="prompt">لَا تَرْفَعُوا أَصْوَاتَكُمْ فَوْقَ صَوْتِ النَّبِيِّ</td><td class="def">raise; voices; voice</td><td class="answer">Do not raise your voices above the voice of the Prophet</td></tr><tr><td class="num">6.</td><td class="prompt">فَبِأَيِّ حَدِيثٍ بَعْدَهُ يُؤْمِنُونَ</td><td class="def">speech</td><td class="answer">So in what speech after it will they believe?</td></tr><tr><td class="num">7.</td><td class="prompt">بَيْنَكُمْ وَبَيْنَهُم مِّيثَاقٌ</td><td class="def">treaty</td><td class="answer">Between you and them is a treaty</td></tr><tr><td class="num">8.</td><td class="prompt">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</td><td class="def">difficulty; ease</td><td class="answer">So indeed with difficulty is ease</td></tr><tr><td class="num">9.</td><td class="prompt">إِنَّ بَعْضَ الظَّنِّ إِثْمٌ</td><td class="def">assumption; sin</td><td class="answer">Indeed some assumption is sin</td></tr><tr><td class="num">10.</td><td class="prompt">وَاللَّـهُ عَلَىٰ كُلِّ شَيْءٍ شَهِيدٌ</td><td class="def">witness</td><td class="answer">And Allah is a witness over all things</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 3.8: Open the Quran to Surah Kahf (Surah 18) and identify as many possessions as you can in verses 1-14. Write your findings.</div>
+<div class="note-box" style="min-height:120px;"></div>
+<div class="note-box"><strong>Homework:</strong> &#9744; Complete Lessons 11-15 in the mobile app</div>
+<div class="unit-pagination">
+<a href="level2-unit2.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 2</a>
+<a href="level2-unit4.html" class="pagination-next">Unit 4: Gender &amp; Number <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 3</span></div>
+<h1 class="unit-title">Kepemilikan (bukan jenis jin)</h1>
+
+<div class="section-title"><i class="fas fa-shuffle"></i> 3.1: Acak. Tariklah garis dari sebuah kata ke arti yang benar.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">آمَنَ</td><td style="text-align:right;">dia mengetahui</td><td class="arabic">عَمِلَ</td><td style="text-align:right;">tuhan</td></tr><tr><td class="arabic">هُمْ</td><td style="text-align:right;">dia (pr)/itu</td><td class="arabic">أَنْتُمْ</td><td style="text-align:right;">orang-orang</td></tr><tr><td class="arabic">عَلِمَ</td><td style="text-align:right;">dia menurunkan/mewahyukan</td><td class="arabic">إِلَـٰه</td><td style="text-align:right;">kamu (pr)</td></tr><tr><td class="arabic">جَعَلَ</td><td style="text-align:right;">dia beriman</td><td class="arabic">شَاءَ</td><td style="text-align:right;">dia melakukan</td></tr><tr><td class="arabic">هَا</td><td style="text-align:right;">dia menjadikan</td><td class="arabic">كِ</td><td style="text-align:right;">tangan</td></tr><tr><td class="arabic">كَفَرَ</td><td style="text-align:right;">mereka</td><td class="arabic">نَاس</td><td style="text-align:right;">kalian</td></tr><tr><td class="arabic">أَنْزَلَ</td><td style="text-align:right;">dia mengingkari</td><td class="arabic">يَدَ</td><td style="text-align:right;">dia berkehendak</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-pen"></i> 3.2: Tuliskan huruf yang benar dari kumpulan kata untuk mengisi bagian yang kosong.</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td></tr>
+<tr><td class="gloss">لَـٰكِنَّ</td><td class="gloss">قَالَ</td><td class="gloss">بِأَنَّ</td><td class="gloss">إِنَّ</td><td class="gloss">كَأَنَّ</td><td class="gloss">خَلَقَ</td><td class="gloss">جَاءَ</td></tr>
+</tbody>
+</table></div>
+<div class="note-box"><ol class="steps"><li>Sesungguhnya Allah-lah yang _____ langit dan bumi dan menurunkan hujan dari langit lalu Dia hasilkan dengannya buah-buahan sebagai rezeki untukmu.</li><li>_____ petunjuk Allah itulah [satu-satunya] petunjuk.</li><li>[Musa diperintahkan], "Lemparkanlah tongkatmu." Namun ketika ia melihatnya bergerak-gerak _____ seekor ular, ia berbalik dan lari. [Allah berfirman], "Wahai Musa, jangan takut!"</li><li>Musa _____, "Wahai Fir'aun, sesungguhnya aku adalah seorang rasul dari Tuhan semesta alam."</li><li>Kami tenggelamkan [kaum Fir'aun] di laut _____ mereka mendustakan tanda-tanda (kebesaran) Kami dan melalaikannya.</li><li>Allah mempunyai karunia yang besar atas manusia, _____ kebanyakan manusia tidak bersyukur.</li><li>Wahai manusia, Rasul itu benar-benar _____ kepadamu dengan kebenaran dari Tuhanmu, maka berimanlah; itu lebih baik bagimu.</li></ol></div>
+<div class="section-title"><i class="fas fa-highlighter"></i> 3.3: Tentukan jenis rangkaian yang disorot.</div>
+<div class="quran-block">
+<div class="arabic large">وَلَا يَحْسَبَنَّ الَّذِينَ كَفَرُوا أَنَّمَا نُمْلِي <mark class="hl">لَهُمْ</mark> <mark class="hl">خَيْرٌ</mark> <mark class="hl">لِّأَنفُسِهِمْ</mark> ۚ إِنَّمَا نُمْلِي <mark class="hl">لَهُمْ</mark> لِيَزْدَادُوا إِثْمًا ۚ وَ<mark class="hl">لَهُمْ</mark> <mark class="hl">عَذَابٌ</mark> مُّهِينٌ ﴿١٧٨﴾ مَّا كَانَ اللَّـهُ لِيَذَرَ الْمُؤْمِنِينَ <mark class="hl">عَلَىٰ مَا</mark> أَنتُمْ <mark class="hl">عَلَيْهِ</mark> حَتَّىٰ يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ ۗ وَمَا كَانَ اللَّـهُ لِيُطْلِعَكُمْ <mark class="hl">عَلَى الْغَيْبِ</mark> وَ<mark class="hl">لَـٰكِنَّ اللَّـهَ</mark> يَجْتَبِي <mark class="hl">مِن رُّسُلِهِ</mark> مَن يَشَاءُ ۖ فَآمِنُوا <mark class="hl">بِاللَّـهِ وَرُسُلِهِ</mark> ۚ وَإِن تُؤْمِنُوا وَتَتَّقُوا <mark class="hl">فَلَكُمْ</mark> أَجْرٌ عَظِيمٌ ﴿١٧٩﴾ وَلَا يَحْسَبَنَّ الَّذِينَ يَبْخَلُونَ بِمَا آتَاهُمُ اللَّـهُ <mark class="hl">مِن فَضْلِهِ</mark> <mark class="hl">هُوَ</mark> خَيْرًا <mark class="hl">لَّهُم</mark> ۖ بَلْ <mark class="hl">هُوَ</mark> شَرٌّ <mark class="hl">لَّهُمْ</mark> ۖ سَيُطَوَّقُونَ مَا بَخِلُوا بِهِ يَوْمَ الْقِيَامَةِ ۗ وَ<mark class="hl">لِلَّـهِ</mark> <mark class="hl">مِيرَاثُ السَّمَاوَاتِ وَالْأَرْضِ</mark> ۗ وَاللَّـهُ <mark class="hl">بِمَا</mark> تَعْمَلُونَ خَبِيرٌ ﴿١٨٠﴾</div>
+<div class="quran-ref">Surah Aal-Imran 3:178-180</div>
+</div>
+<div class="section-title"><i class="fas fa-link"></i> Rangkaian #4: Kepemilikan alias &ldquo;Ketika kamu memiliki sesuatu&rdquo;</div>
+<div class="note-box"><strong>Kepemilikan memiliki 2 bagian:</strong><ol class="rules"><li><span class="blank-line" style="min-width:400px;"></span></li>
+<li><span class="blank-line" style="min-width:400px;"></span></li></ol></div>
+<div class="quran-block"><div class="arabic large">دِيْنُ اللَّـهِ</div></div>
+<div style="text-align:center; margin:-8px 0 20px; color:var(--text-color);">Agama Allah (atau agama milik Allah)</div>
+<div class="quran-block"><div class="arabic large">مَالُهُ</div></div>
+<div style="text-align:center; margin:-8px 0 20px; color:var(--text-color);">Harta miliknya (atau hartanya)</div>
+<div class="note-box"><strong>Aturan untuk &ldquo;Barang&rdquo;:</strong><ol class="rules"><li><span class="blank-line" style="min-width:400px;"></span></li>
+<li><span class="blank-line" style="min-width:400px;"></span></li>
+<li><span class="blank-line" style="min-width:400px;"></span></li></ol></div>
+<div class="section-title"><i class="fas fa-circle"></i> 3.4: Lingkari barangnya dan garis bawahi pemiliknya.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">طَعَامِ الْمِسْكِيْنِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">نَصْرُ اللَّـهِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">أَهْلِ الْكِتَابِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">4.</td><td class="prompt">عِبَادِيْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">يَدَاهُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">بَلَاءٌ مِّن رَّبِّكُمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">شَرِّ حَاسِدٍ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">بِحَمْدِ رَبِّكَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">بِرَبِّ النَّاسِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">10.</td><td class="prompt">رَبُّ السَّمَاوَاتِ وَالْأَرْضِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 3.5: Terjemahkan setiap kepemilikan menggunakan arti yang diberikan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">طَعَامِ الْمِسْكِيْنِ</td><td class="def">memberi makan; orang miskin</td><td class="answer">Pemberian makan kepada orang miskin</td></tr><tr><td class="num">2.</td><td class="prompt">نَصْرُ اللَّـهِ</td><td class="def">pertolongan</td><td class="answer">Pertolongan Allah</td></tr><tr><td class="num">3.</td><td class="prompt">بِرَبِّ النَّاسِ</td><td class="def">&mdash;</td><td class="answer">Dengan Tuhan (Rabb) manusia</td></tr><tr><td class="num">4.</td><td class="prompt">رَبُّ السَّمَاوَاتِ وَالْأَرْضِ</td><td class="def">langit-langit</td><td class="answer">Tuhan langit dan bumi</td></tr><tr><td class="num">5.</td><td class="prompt">يَدَاهُ</td><td class="def">kedua tangan</td><td class="answer">Kedua tangan-Nya</td></tr><tr><td class="num">6.</td><td class="prompt">بَلَاءٌ مِّن رَّبِّكُمْ</td><td class="def">ujian</td><td class="answer">Ujian dari Tuhan kalian</td></tr><tr><td class="num">7.</td><td class="prompt">شَرِّ حَاسِدٍ</td><td class="def">keburukan; orang yang dengki</td><td class="answer">Keburukan orang yang dengki</td></tr><tr><td class="num">8.</td><td class="prompt">بِحَمْدِ رَبِّكَ</td><td class="def">pujian</td><td class="answer">Dengan memuji Tuhanmu</td></tr><tr><td class="num">9.</td><td class="prompt">أَهْلِ الْكِتَابِ</td><td class="def">ahli; kitab</td><td class="answer">Ahli kitab</td></tr><tr><td class="num">10.</td><td class="prompt">عِبَادِيْ</td><td class="def">hamba-hamba</td><td class="answer">Hamba-hamba-Ku</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 3.6: Lingkari rangkaian-rangkaiannya. Lalu temukan &ldquo;adalah&rdquo;. Lalu terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">وَاللَّـهُ ذُو الْفَضْلِ</td><td class="def">pemilik; karunia</td><td class="answer">Dan Allah adalah pemilik karunia</td></tr><tr><td class="num">2.</td><td class="prompt">وَهُوَ رَبُّنَا</td><td class="def">&mdash;</td><td class="answer">Dan Dia adalah Tuhan kami</td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّكَ سَمِيعُ الدُّعَاءِ</td><td class="def">Maha Mendengar</td><td class="answer">Sesungguhnya Engkau Maha Mendengar doa</td></tr><tr><td class="num">4.</td><td class="prompt">فِي قُلُوبِهِمْ زَيْغٌ</td><td class="def">hati; penyimpangan</td><td class="answer">Di dalam hati mereka ada penyimpangan</td></tr><tr><td class="num">5.</td><td class="prompt">وَاللَّـهُ خَيْرُ الْمَاكِرِينَ</td><td class="def">sebaik-baik; pembuat rencana</td><td class="answer">Dan Allah adalah sebaik-baik pembuat rencana</td></tr><tr><td class="num">6.</td><td class="prompt">إِنَّكَ جَامِعُ النَّاسِ</td><td class="def">pengumpul</td><td class="answer">Sesungguhnya Engkau adalah pengumpul manusia</td></tr><tr><td class="num">7.</td><td class="prompt">لَهُمْ جَنَّاتُ الْفِرْدَوْسِ</td><td class="def">taman-taman; surga Firdaus</td><td class="answer">Bagi mereka taman-taman surga Firdaus</td></tr><tr><td class="num">8.</td><td class="prompt">إِنَّ اللَّـهَ رَبِي وَرَبُّكُمْ</td><td class="def">&mdash;</td><td class="answer">Sesungguhnya Allah adalah Tuhanku dan Tuhan kalian</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-circle-exclamation"></i> Terkadang kata-kata terlihat seperti kepemilikan meski tidak &ldquo;bermakna&rdquo; demikian:</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>قَبْلَ</td><td>بَعْدَ</td><td>فَوْقَ</td><td>تَحْتَ</td><td>خَلْفَ | وَرَاءَ</td><td>عِندَ</td></tr>
+<tr><td class="gloss">sebelum</td><td class="gloss">sesudah</td><td class="gloss">di atas</td><td class="gloss">di bawah</td><td class="gloss">di belakang</td><td class="gloss">di dekat</td></tr>
+</tbody>
+</table></div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>بَيْنَ</td><td>مَعَ</td><td>غَيْرَ | دُونَ</td><td>بَعْضَ</td><td>كُلّ</td><td>أَيّ</td></tr>
+<tr><td class="gloss">di antara</td><td class="gloss">bersama</td><td class="gloss">selain</td><td class="gloss">sebagian (dari)</td><td class="gloss">setiap, seluruh</td><td class="gloss">yang mana, apa saja</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 3.7: Lingkari rangkaian-rangkaiannya. Lalu temukan &ldquo;adalah&rdquo; dan terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">جَزَاؤُهُمْ عِندَ رَبِّهِمْ</td><td class="def">balasan</td><td class="answer">Balasan mereka ada di sisi Tuhan mereka</td></tr><tr><td class="num">2.</td><td class="prompt">وَاللَّـهُ مِن وَرَائِهِم مُّحِيطٌ</td><td class="def">meliputi</td><td class="answer">Dan Allah meliputi mereka dari belakang</td></tr><tr><td class="num">3.</td><td class="prompt">يُبَايِعُونَكَ تَحْتَ الشَّجَرَةِ</td><td class="def">berbaiat; pohon</td><td class="answer">Mereka berbaiat kepadamu di bawah pohon</td></tr><tr><td class="num">4.</td><td class="prompt">إِنَّ الدِّينَ عِندَ اللَّـهِ الْإِسْلَامُ</td><td class="def">agama</td><td class="answer">Sesungguhnya agama di sisi Allah adalah Islam</td></tr><tr><td class="num">5.</td><td class="prompt">لَا تَرْفَعُوا أَصْوَاتَكُمْ فَوْقَ صَوْتِ النَّبِيِّ</td><td class="def">meninggikan; suara-suara; suara</td><td class="answer">Janganlah kalian meninggikan suara-suara kalian melebihi suara Nabi</td></tr><tr><td class="num">6.</td><td class="prompt">فَبِأَيِّ حَدِيثٍ بَعْدَهُ يُؤْمِنُونَ</td><td class="def">perkataan</td><td class="answer">Maka dengan perkataan apa setelah itu mereka akan beriman?</td></tr><tr><td class="num">7.</td><td class="prompt">بَيْنَكُمْ وَبَيْنَهُم مِّيثَاقٌ</td><td class="def">perjanjian</td><td class="answer">Di antara kalian dan mereka ada perjanjian</td></tr><tr><td class="num">8.</td><td class="prompt">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</td><td class="def">kesulitan; kemudahan</td><td class="answer">Maka sesungguhnya bersama kesulitan ada kemudahan</td></tr><tr><td class="num">9.</td><td class="prompt">إِنَّ بَعْضَ الظَّنِّ إِثْمٌ</td><td class="def">prasangka; dosa</td><td class="answer">Sesungguhnya sebagian prasangka adalah dosa</td></tr><tr><td class="num">10.</td><td class="prompt">وَاللَّـهُ عَلَىٰ كُلِّ شَيْءٍ شَهِيدٌ</td><td class="def">saksi</td><td class="answer">Dan Allah menyaksikan segala sesuatu</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 3.8: Bukalah Al-Qur&rsquo;an pada Surah Al-Kahf (Surah 18) dan temukan sebanyak mungkin bentuk kepemilikan pada ayat 1-14. Tuliskan temuanmu.</div>
+<div class="note-box" style="min-height:120px;"></div>
+<div class="note-box"><strong>Tugas:</strong> &#9744; Selesaikan Pelajaran 11-15 di aplikasi seluler</div>
+<div class="unit-pagination">
+<a href="level2-unit2.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 2</a>
+<a href="level2-unit4.html" class="pagination-next">Unit 4: Jenis Kelamin &amp; Jumlah <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>

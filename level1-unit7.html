@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 7 &middot; Level 1 | Quranic Arabic Workbook</title>
+<meta name="description" content="Grand Finale review - Quranic Arabic Level 1, Unit 7">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 1 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 1 &middot; UNIT 7</span></div>
+<h1 class="unit-title">Grand Finale</h1>
+
+<div class="section-title"><i class="fas fa-trophy"></i> 7.1: Underline the fi&rsquo;l once, the doer twice, and the details three times. Ignore the highlighted parts.</div>
+<div class="note-box">These verses are drawn from Surah An-Nas, Al-Ikhlas, Al-Kafirun, and Surah Ta-Ha (the story of Musa &lsquo;alayhis-salam at the burning bush and Mount Sinai). Practice identifying every fi&rsquo;l, its doer, and its details.</div>
+<div class="overflow-x"><table class="grid-table" style="background:var(--verse-bg);"><tbody><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قُلْ أَعُوذُ بِرَبِّ النَّاسِ<div class="quran-ref" style="text-align:right;">An-Nas 114:1</div></td><td style="border:none; vertical-align:middle;">Say, "I seek refuge in the Lord of mankind"</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ<div class="quran-ref" style="text-align:right;">An-Nas 114:4-5</div></td><td style="border:none; vertical-align:middle;">Who whispers into the chests of mankind -</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">لَمْ يَلِدْ وَلَمْ يُولَدْ<div class="quran-ref" style="text-align:right;">Al-Ikhlas 112:3</div></td><td style="border:none; vertical-align:middle;">He did not birth nor was born,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قُلْ يَا أَيُّهَا الْكَافِرُونَ<div class="quran-ref" style="text-align:right;">Al-Kafirun 109:1</div></td><td style="border:none; vertical-align:middle;">Say, "O disbelievers,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">لَا أَعْبُدُ مَا تَعْبُدُونَ<div class="quran-ref" style="text-align:right;">Al-Kafirun 109:2</div></td><td style="border:none; vertical-align:middle;">I do not worship what you worship.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">فَقَالَ لِأَهْلِهِ امْكُثُوا <mark class="hl">إِنِّي</mark> آنَسْتُ نَارًا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:10</div></td><td style="border:none; vertical-align:middle;">He said to his family, "Stay here; indeed, I have perceived a fire&hellip;</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَ<mark class="hl">أَنَا</mark> اخْتَرْتُكَ فَاسْتَمِعْ<div class="quran-ref" style="text-align:right;">Ta-Ha 20:13</div></td><td style="border:none; vertical-align:middle;">&hellip;And I have chosen you, so listen</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;"><mark class="hl">أَنَا</mark> اللَّهُ لَا إِلَـٰهَ إِلَّا أَنَا فَاعْبُدْنِي وَأَقِمِ الصَّلَاةَ لِذِكْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:14</div></td><td style="border:none; vertical-align:middle;">Indeed, I am Allah. There is no deity except Me, so worship Me and establish prayer for My remembrance.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">أَتَوَكَّأُ عَلَيْهَا وَأَهُشُّ بِهَا عَلَىٰ غَنَمِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:18</div></td><td style="border:none; vertical-align:middle;">I lean upon it, and I bring down leaves with it for my sheep</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قَالَ خُذْهَا وَلَا تَخَفْ ۖ سَنُعِيدُهَا سِيرَتَهَا <mark class="hl">الْأُولَىٰ</mark><div class="quran-ref" style="text-align:right;">Ta-Ha 20:21</div></td><td style="border:none; vertical-align:middle;">[Allah] said, "Seize it and fear not; We will return it to its former condition.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">لِنُرِيَكَ مِنْ آيَاتِنَا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:23</div></td><td style="border:none; vertical-align:middle;">That We may show you Our signs.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">اذْهَبْ إِلَىٰ فِرْعَوْنَ<div class="quran-ref" style="text-align:right;">Ta-Ha 20:24</div></td><td style="border:none; vertical-align:middle;">Go to Pharaoh.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قَالَ رَبِّ اشْرَحْ لِي صَدْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:25</div></td><td style="border:none; vertical-align:middle;">[Moses] said, "My Lord, expand for me my chest.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَيَسِّرْ لِي أَمْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:26</div></td><td style="border:none; vertical-align:middle;">And ease for me my task</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:27</div></td><td style="border:none; vertical-align:middle;">And untie the knot from my tongue</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَاجْعَل لِّي وَزِيرًا مِّنْ أَهْلِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:29</div></td><td style="border:none; vertical-align:middle;">And appoint for me a minister from my family</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">اشْدُدْ بِهِ أَزْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:31</div></td><td style="border:none; vertical-align:middle;">Increase through him my strength</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَأَشْرِكْهُ فِي أَمْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:32</div></td><td style="border:none; vertical-align:middle;">And let him share my task</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">كَيْ نُسَبِّحَكَ كَثِيرًا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:33</div></td><td style="border:none; vertical-align:middle;">That we may exalt You much</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَنَذْكُرَكَ كَثِيرًا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:34</div></td><td style="border:none; vertical-align:middle;">And remember You much.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قَالَ قَدْ أُوتِيتَ سُؤْلَكَ <mark class="hl">يَا مُوسَىٰ</mark><div class="quran-ref" style="text-align:right;">Ta-Ha 20:36</div></td><td style="border:none; vertical-align:middle;">[Allah] said, "You have been granted your request, O Moses.</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-graduation-cap"></i> Congratulations on completing Level 1!</div>
+<div class="intro-box">You now know the three kinds of words, both pronoun charts, the past and present tense, commanding and forbidding, and the most common harfs of the Qur&rsquo;an. Continue to Level 2 to keep building your understanding of the Qur&rsquo;an&rsquo;s language.</div>
+<div class="unit-pagination">
+<a href="level1-unit6.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 6</a>
+<a href="level2-index.html" class="pagination-next">Start Level 2 <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 1 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 1</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 1 &middot; UNIT 7</span></div>
+<h1 class="unit-title">Penutup Besar</h1>
+
+<div class="section-title"><i class="fas fa-trophy"></i> 7.1: Garis bawahi fi&rsquo;l satu kali, pelaku dua kali, dan detail tiga kali. Abaikan bagian yang disorot.</div>
+<div class="note-box">Ayat-ayat ini diambil dari Surah An-Nas, Al-Ikhlas, Al-Kafirun, dan Surah Ta-Ha (kisah Nabi Musa &lsquo;alaihissalam di lembah suci dan Gunung Sinai). Latihlah mengenali setiap fi&rsquo;l, pelakunya, dan detailnya.</div>
+<div class="overflow-x"><table class="grid-table" style="background:var(--verse-bg);"><tbody><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قُلْ أَعُوذُ بِرَبِّ النَّاسِ<div class="quran-ref" style="text-align:right;">An-Nas 114:1</div></td><td style="border:none; vertical-align:middle;">Katakanlah, "Aku berlindung kepada Tuhan (yang memelihara dan menguasai) manusia,"</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ<div class="quran-ref" style="text-align:right;">An-Nas 114:4-5</div></td><td style="border:none; vertical-align:middle;">yang membisikkan (kejahatan) ke dalam dada manusia,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">لَمْ يَلِدْ وَلَمْ يُولَدْ<div class="quran-ref" style="text-align:right;">Al-Ikhlas 112:3</div></td><td style="border:none; vertical-align:middle;">Dia tiada beranak dan tidak pula diperanakkan,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قُلْ يَا أَيُّهَا الْكَافِرُونَ<div class="quran-ref" style="text-align:right;">Al-Kafirun 109:1</div></td><td style="border:none; vertical-align:middle;">Katakanlah, "Wahai orang-orang kafir,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">لَا أَعْبُدُ مَا تَعْبُدُونَ<div class="quran-ref" style="text-align:right;">Al-Kafirun 109:2</div></td><td style="border:none; vertical-align:middle;">aku tidak akan menyembah apa yang kamu sembah.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">فَقَالَ لِأَهْلِهِ امْكُثُوا <mark class="hl">إِنِّي</mark> آنَسْتُ نَارًا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:10</div></td><td style="border:none; vertical-align:middle;">dia (Musa) berkata kepada keluarganya, "Tunggulah! Sesungguhnya aku melihat api,&hellip;</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَ<mark class="hl">أَنَا</mark> اخْتَرْتُكَ فَاسْتَمِعْ<div class="quran-ref" style="text-align:right;">Ta-Ha 20:13</div></td><td style="border:none; vertical-align:middle;">&hellip;dan Aku telah memilihmu, maka dengarkanlah</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;"><mark class="hl">أَنَا</mark> اللَّهُ لَا إِلَـٰهَ إِلَّا أَنَا فَاعْبُدْنِي وَأَقِمِ الصَّلَاةَ لِذِكْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:14</div></td><td style="border:none; vertical-align:middle;">Sesungguhnya Aku ini Allah, tidak ada tuhan (yang berhak disembah) selain Aku, maka sembahlah Aku dan laksanakanlah shalat untuk mengingat Aku.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">أَتَوَكَّأُ عَلَيْهَا وَأَهُشُّ بِهَا عَلَىٰ غَنَمِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:18</div></td><td style="border:none; vertical-align:middle;">aku bertumpu padanya, dan aku pukulkan dedaunan dengannya untuk kambingku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قَالَ خُذْهَا وَلَا تَخَفْ ۖ سَنُعِيدُهَا سِيرَتَهَا <mark class="hl">الْأُولَىٰ</mark><div class="quran-ref" style="text-align:right;">Ta-Ha 20:21</div></td><td style="border:none; vertical-align:middle;">(Allah) berfirman, "Peganglah ia dan jangan takut, Kami akan mengembalikannya kepada keadaannya semula.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">لِنُرِيَكَ مِنْ آيَاتِنَا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:23</div></td><td style="border:none; vertical-align:middle;">agar Kami perlihatkan kepadamu sebagian tanda-tanda (kebesaran) Kami.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">اذْهَبْ إِلَىٰ فِرْعَوْنَ<div class="quran-ref" style="text-align:right;">Ta-Ha 20:24</div></td><td style="border:none; vertical-align:middle;">Pergilah kepada Fir&rsquo;aun!</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قَالَ رَبِّ اشْرَحْ لِي صَدْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:25</div></td><td style="border:none; vertical-align:middle;">(Musa) berkata, "Ya Tuhanku, lapangkanlah dadaku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَيَسِّرْ لِي أَمْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:26</div></td><td style="border:none; vertical-align:middle;">dan mudahkanlah untukku urusanku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:27</div></td><td style="border:none; vertical-align:middle;">dan lepaskanlah kekakuan lidahku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَاجْعَل لِّي وَزِيرًا مِّنْ أَهْلِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:29</div></td><td style="border:none; vertical-align:middle;">dan jadikanlah untukku seorang pembantu dari keluargaku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">اشْدُدْ بِهِ أَزْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:31</div></td><td style="border:none; vertical-align:middle;">teguhkanlah dengannya kekuatanku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَأَشْرِكْهُ فِي أَمْرِي<div class="quran-ref" style="text-align:right;">Ta-Ha 20:32</div></td><td style="border:none; vertical-align:middle;">dan jadikanlah dia sekutu dalam urusanku,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">كَيْ نُسَبِّحَكَ كَثِيرًا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:33</div></td><td style="border:none; vertical-align:middle;">agar kami banyak bertasbih kepada-Mu,</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">وَنَذْكُرَكَ كَثِيرًا<div class="quran-ref" style="text-align:right;">Ta-Ha 20:34</div></td><td style="border:none; vertical-align:middle;">dan banyak mengingat-Mu.</td></tr><tr><td class="arabic" style="border:none; font-size:22px; width:48%;">قَالَ قَدْ أُوتِيتَ سُؤْلَكَ <mark class="hl">يَا مُوسَىٰ</mark><div class="quran-ref" style="text-align:right;">Ta-Ha 20:36</div></td><td style="border:none; vertical-align:middle;">(Allah) berfirman, "Sungguh, telah diperkenankan permohonanmu, wahai Musa!</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-graduation-cap"></i> Selamat, kamu telah menyelesaikan Level 1!</div>
+<div class="intro-box">Kamu sekarang telah mengenal tiga jenis kata, kedua tabel kata ganti, bentuk lampau dan sekarang, perintah dan larangan, serta harf-harf yang paling sering muncul dalam Al-Qur&rsquo;an. Lanjutkan ke Level 2 untuk terus membangun pemahamanmu terhadap bahasa Al-Qur&rsquo;an.</div>
+<div class="unit-pagination">
+<a href="level1-unit6.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 6</a>
+<a href="level2-index.html" class="pagination-next">Mulai Level 2 <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 1</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>

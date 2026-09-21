@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 4 &middot; Level 1 | Quranic Arabic Workbook</title>
+<meta name="description" content="Present Tense Fi'l - Quranic Arabic Level 1, Unit 4">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 1 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 1 &middot; UNIT 4</span></div>
+<h1 class="unit-title">Present Tense Fi&rsquo;l</h1>
+
+<div class="section-title"><i class="fas fa-book-quran"></i> 4.1: Identify the harfs, isms, and fi&rsquo;ls. For Fi&rsquo;l write the inside doer.</div>
+<div class="quran-block">
+<div class="arabic large">وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ ﴿٣٤﴾ وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَـٰذِهِ الشَّجَرَةَ فَتَكُونَا مِنَ الظَّالِمِينَ ﴿٣٥﴾ فَأَزَلَّهُمَا الشَّيْطَانُ عَنْهَا فَأَخْرَجَهُمَا مِمَّا كَانَا فِيهِ ۖ وَقُلْنَا اهْبِطُوا بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ ۖ وَلَكُمْ فِي الْأَرْضِ مُسْتَقَرٌّ وَمَتَاعٌ إِلَىٰ حِينٍ ﴿٣٦﴾ فَتَلَقَّىٰ آدَمُ مِن رَّبِّهِ كَلِمَاتٍ فَتَابَ عَلَيْهِ ۚ إِنَّهُ هُوَ التَّوَّابُ الرَّحِيمُ ﴿٣٧﴾</div>
+<div class="quran-ref">Surah Al-Baqarah 2:34-37</div>
+</div>
+<div class="section-title"><i class="fas fa-table"></i> Present Tense Fi&rsquo;l</div>
+<div class="overflow-x"><table class="grid-table conj-table">
+<thead><tr><th>Plural</th><th>Singular Female</th><th>Singular Male</th><th></th></tr></thead>
+<tbody>
+<tr><td><div class="arabic-cell">هُمْ يَعْلَمُونَ</div><div class="gloss-cell">They know</div></td><td><div class="arabic-cell">هِيَ تَعْلَمُ</div><div class="gloss-cell">She knows</div></td><td><div class="arabic-cell">هُوَ يَعْلَمُ</div><div class="gloss-cell">He knows</div></td><td class="person-cell">3<sup>rd</sup> person</td></tr><tr><td><div class="arabic-cell">أَنْتُمْ تَعْلَمُونَ</div><div class="gloss-cell">Y&rsquo;all know</div></td><td><div class="arabic-cell">أَنْتِ تَعْلَمِينَ</div><div class="gloss-cell">You (f) know</div></td><td><div class="arabic-cell">أَنْتَ تَعْلَمُ</div><div class="gloss-cell">You know</div></td><td class="person-cell">2<sup>nd</sup> person</td></tr><tr><td><div class="arabic-cell">نَحْنُ نَعْلَمُ</div><div class="gloss-cell">We know</div></td><td colspan="2"><div class="arabic-cell">أَنَا أَعْلَمُ</div><div class="gloss-cell">I know</div></td><td class="person-cell">1<sup>st</sup> person</td></tr>
+</tbody>
+</table></div>
+<div class="subsection-title">Present Tense tips</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td style="text-align:left; font-weight:700; width:110px;">He</td><td style="text-align:left;">starts with ي and ends in ُ (damma)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">She</td><td style="text-align:left;">starts with ت and ends in ُ (damma)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">They</td><td style="text-align:left;">starts with ي and ends in ونَ</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">You</td><td style="text-align:left;">starts with ت and ends in ُ (damma)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">You (f)</td><td style="text-align:left;">starts with ت and ends in ينَ</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">You all</td><td style="text-align:left;">starts with ت and ends in ونَ</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">I</td><td style="text-align:left;">starts with أ and ends in ُ (damma)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">We</td><td style="text-align:left;">starts with ن and ends in ُ (damma)</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 4.2: Circle the doer of the fi&rsquo;l below. If it is inside, then write it out.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">أَعُوذُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">يُنفِقُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">الَّذِي يُوَسْوِسُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">4.</td><td class="prompt">يَقُولُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">يَدْخُلُونَ فِي دِينِ اللَّـهِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">يُخَادِعُونَ اللَّـهَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">لَا أَعْبُدُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">نُؤْمِنُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">عَبَدتُّمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">10.</td><td class="prompt">لَا يَعْلَمُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">11.</td><td class="prompt">يُكَذِّبُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">12.</td><td class="prompt">يَسْتَهْزِئُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">13.</td><td class="prompt">الَّذِي يَدُعُّ الْيَتِيمَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">14.</td><td class="prompt">أَسْتَغْفِرُ اللَّه</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">15.</td><td class="prompt">يَحْسَبُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">16.</td><td class="prompt">سَمِعَ اللَّهُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">17.</td><td class="prompt">تَعْلَمُونَ عِلْمَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">18.</td><td class="prompt">تَحْمِلْهُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">19.</td><td class="prompt">يَصْدُرُ النَّاسُ أَشْتَاتًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">20.</td><td class="prompt">تُخَالِفُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">21.</td><td class="prompt">أَنْعَمْتَ عَلَيْهِمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">22.</td><td class="prompt">تَتَّقُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">23.</td><td class="prompt">يُؤْمِنُونَ بِالْغَيْبِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">24.</td><td class="prompt">تَكْفُرُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">25.</td><td class="prompt">وَيُقِيمُونَ الصَّلَاةَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">26.</td><td class="prompt">تُرْجَعُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">27.</td><td class="prompt">رَزَقْنَاهُمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">28.</td><td class="prompt">نُسَبِّحُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 4.3: Translate using the definitions given.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">أَعُوذُ بِاللَّهِ</td><td class="def">Seek protection</td><td class="answer">I seek protection in Allah</td></tr><tr><td class="num">2.</td><td class="prompt">الَّذِي يُوَسْوِسُ</td><td class="def">Whispers</td><td class="answer">The one who whispers</td></tr><tr><td class="num">3.</td><td class="prompt">يَدْخُلُونَ فِي دِينِ اللَّـهِ</td><td class="def">Enter</td><td class="answer">They enter into the religion of Allah</td></tr><tr><td class="num">4.</td><td class="prompt">لَا أَعْبُدُ</td><td class="def">Worship</td><td class="answer">I do not worship</td></tr><tr><td class="num">5.</td><td class="prompt">عَبَدتُّمْ</td><td class="def">Worship</td><td class="answer">You all worshipped</td></tr><tr><td class="num">6.</td><td class="prompt">يُكَذِّبُ</td><td class="def">Deny</td><td class="answer">He denies</td></tr><tr><td class="num">7.</td><td class="prompt">الَّذِي يَدُعُّ الْيَتِيمَ</td><td class="def">Abandon</td><td class="answer">The one who abandons the orphan</td></tr><tr><td class="num">8.</td><td class="prompt">يَحْسَبُ</td><td class="def">Assume</td><td class="answer">He assumes</td></tr><tr><td class="num">9.</td><td class="prompt">تَعْلَمُونَ عِلْمَ</td><td class="def">Know</td><td class="answer">You all know with certainty</td></tr><tr><td class="num">10.</td><td class="prompt">يَصْدُرُ النَّاسُ</td><td class="def">Come out</td><td class="answer">Mankind will come forth</td></tr><tr><td class="num">11.</td><td class="prompt">أَنْعَمْتَ عَلَيْهِمْ</td><td class="def">Blessed</td><td class="answer">You have blessed them</td></tr><tr><td class="num">12.</td><td class="prompt">يُؤْمِنُونَ بِالْغَيْبِ</td><td class="def">Believe</td><td class="answer">They believe in the unseen</td></tr><tr><td class="num">13.</td><td class="prompt">وَيُقِيمُونَ الصَّلَاةَ</td><td class="def">Establish</td><td class="answer">And they establish the prayer</td></tr><tr><td class="num">14.</td><td class="prompt">رَزَقْنَاهُمْ</td><td class="def">Provide</td><td class="answer">We have provided for them</td></tr><tr><td class="num">15.</td><td class="prompt">يُنفِقُونَ</td><td class="def">Spend</td><td class="answer">They spend</td></tr><tr><td class="num">16.</td><td class="prompt">يَقُولُ</td><td class="def">Say</td><td class="answer">He says</td></tr><tr><td class="num">17.</td><td class="prompt">يُخَادِعُونَ اللَّـه</td><td class="def">Try to deceive</td><td class="answer">They try to deceive Allah</td></tr><tr><td class="num">18.</td><td class="prompt">نُؤْمِنُ</td><td class="def">Believe</td><td class="answer">We believe</td></tr><tr><td class="num">19.</td><td class="prompt">لَا يَعْلَمُونَ</td><td class="def">Know</td><td class="answer">They do not know</td></tr><tr><td class="num">20.</td><td class="prompt">يَسْتَهْزِئُ</td><td class="def">Mock</td><td class="answer">He mocks</td></tr><tr><td class="num">21.</td><td class="prompt">أَسْتَغْفِرُ اللَّه</td><td class="def">Seek forgiveness</td><td class="answer">I seek forgiveness from Allah</td></tr><tr><td class="num">22.</td><td class="prompt">سَمِعَ اللَّهُ</td><td class="def">Hear</td><td class="answer">Allah heard</td></tr><tr><td class="num">23.</td><td class="prompt">تَحْمِلْهُ</td><td class="def">Carry</td><td class="answer">She carries it</td></tr><tr><td class="num">24.</td><td class="prompt">تُخَالِفُ</td><td class="def">Oppose</td><td class="answer">She opposes</td></tr><tr><td class="num">25.</td><td class="prompt">تَتَّقُونَ</td><td class="def">Mindful of Allah</td><td class="answer">You all are mindful of Allah</td></tr><tr><td class="num">26.</td><td class="prompt">تَكْفُرُونَ</td><td class="def">Disbelieve</td><td class="answer">You all disbelieve</td></tr><tr><td class="num">27.</td><td class="prompt">تُرْجَعُونَ</td><td class="def">Return</td><td class="answer">You all will be returned</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-clock"></i> How to make Present into Future</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>سَوْفَ</td><td>سَ</td></tr>
+<tr><td class="gloss">Will</td><td class="gloss">Will</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 4.4: Translate using the definitions given.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">سَيَعْلَمُونَ</td><td class="def">know</td><td class="answer">They will know</td></tr><tr><td class="num">2.</td><td class="prompt">سَوْفَ تَعْلَمُونَ</td><td class="def">know</td><td class="answer">You all will know</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-star"></i> Important common vocabulary</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>لَوْ</td><td>إِذَا</td><td>قَدْ</td><td>أَ</td></tr>
+<tr><td class="gloss">If only</td><td class="gloss">When</td><td class="gloss">Certainly</td><td class="gloss">Did?</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 4.5: Translate using the definitions given.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">أَرَأَيْتَ</td><td class="def">see</td><td class="answer">Have you seen?</td></tr><tr><td class="num">2.</td><td class="prompt">قَدْ تَعْلَمُونَ</td><td class="def"></td><td class="answer">You all certainly know</td></tr><tr><td class="num">3.</td><td class="prompt">إِذَا حَسَدَ</td><td class="def">be jealous</td><td class="answer">When he is jealous</td></tr><tr><td class="num">4.</td><td class="prompt">لَوْ آمَنُوا بِاللَّـهِ</td><td class="def"></td><td class="answer">If only they believed in Allah</td></tr></tbody>
+</table></div>
+<div class="unit-pagination">
+<a href="level1-unit3.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 3</a>
+<a href="level1-unit5.html" class="pagination-next">Unit 5: Harfs <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 1 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 1</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 1 &middot; UNIT 4</span></div>
+<h1 class="unit-title">Fi&rsquo;l Bentuk Sekarang (Mudhari&rsquo;)</h1>
+
+<div class="section-title"><i class="fas fa-book-quran"></i> 4.1: Tentukan harf, ism, dan fi&rsquo;l. Untuk Fi&rsquo;l, tuliskan pelaku di dalamnya.</div>
+<div class="quran-block">
+<div class="arabic large">وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ ﴿٣٤﴾ وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَـٰذِهِ الشَّجَرَةَ فَتَكُونَا مِنَ الظَّالِمِينَ ﴿٣٥﴾ فَأَزَلَّهُمَا الشَّيْطَانُ عَنْهَا فَأَخْرَجَهُمَا مِمَّا كَانَا فِيهِ ۖ وَقُلْنَا اهْبِطُوا بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ ۖ وَلَكُمْ فِي الْأَرْضِ مُسْتَقَرٌّ وَمَتَاعٌ إِلَىٰ حِينٍ ﴿٣٦﴾ فَتَلَقَّىٰ آدَمُ مِن رَّبِّهِ كَلِمَاتٍ فَتَابَ عَلَيْهِ ۚ إِنَّهُ هُوَ التَّوَّابُ الرَّحِيمُ ﴿٣٧﴾</div>
+<div class="quran-ref">Surah Al-Baqarah 2:34-37</div>
+</div>
+<div class="section-title"><i class="fas fa-table"></i> Fi&rsquo;l Bentuk Sekarang</div>
+<div class="overflow-x"><table class="grid-table conj-table">
+<thead><tr><th>Plural</th><th>Singular Female</th><th>Singular Male</th><th></th></tr></thead>
+<tbody>
+<tr><td><div class="arabic-cell">هُمْ يَعْلَمُونَ</div><div class="gloss-cell">Mereka tahu</div></td><td><div class="arabic-cell">هِيَ تَعْلَمُ</div><div class="gloss-cell">Dia(pr) tahu</div></td><td><div class="arabic-cell">هُوَ يَعْلَمُ</div><div class="gloss-cell">Dia(lk) tahu</div></td><td class="person-cell">Org ke-3</td></tr><tr><td><div class="arabic-cell">أَنْتُمْ تَعْلَمُونَ</div><div class="gloss-cell">Kalian tahu</div></td><td><div class="arabic-cell">أَنْتِ تَعْلَمِينَ</div><div class="gloss-cell">Kamu(pr) tahu</div></td><td><div class="arabic-cell">أَنْتَ تَعْلَمُ</div><div class="gloss-cell">Kamu(lk) tahu</div></td><td class="person-cell">Org ke-2</td></tr><tr><td><div class="arabic-cell">نَحْنُ نَعْلَمُ</div><div class="gloss-cell">Kami tahu</div></td><td colspan="2"><div class="arabic-cell">أَنَا أَعْلَمُ</div><div class="gloss-cell">Saya tahu</div></td><td class="person-cell">1<sup>st</sup> person</td></tr>
+</tbody>
+</table></div>
+<div class="subsection-title">Tips Bentuk Sekarang</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td style="text-align:left; font-weight:700; width:110px;">Dia (lk)</td><td style="text-align:left;">diawali ي dan diakhiri ُ (dhammah)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Dia (pr)</td><td style="text-align:left;">diawali ت dan diakhiri ُ (dhammah)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Mereka</td><td style="text-align:left;">diawali ي dan diakhiri ونَ</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Kamu (lk)</td><td style="text-align:left;">diawali ت dan diakhiri ُ (dhammah)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Kamu (pr)</td><td style="text-align:left;">diawali ت dan diakhiri ينَ</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Kalian</td><td style="text-align:left;">diawali ت dan diakhiri ونَ</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Saya</td><td style="text-align:left;">diawali أ dan diakhiri ُ (dhammah)</td></tr><tr><td style="text-align:left; font-weight:700; width:110px;">Kami</td><td style="text-align:left;">diawali ن dan diakhiri ُ (dhammah)</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 4.2: Lingkari pelaku dari fi&rsquo;l berikut. Jika pelakunya tersembunyi di dalam kata, tuliskan.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">أَعُوذُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">2.</td><td class="prompt">يُنفِقُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">3.</td><td class="prompt">الَّذِي يُوَسْوِسُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">4.</td><td class="prompt">يَقُولُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">5.</td><td class="prompt">يَدْخُلُونَ فِي دِينِ اللَّـهِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">6.</td><td class="prompt">يُخَادِعُونَ اللَّـهَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">7.</td><td class="prompt">لَا أَعْبُدُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">8.</td><td class="prompt">نُؤْمِنُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">9.</td><td class="prompt">عَبَدتُّمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">10.</td><td class="prompt">لَا يَعْلَمُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">11.</td><td class="prompt">يُكَذِّبُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">12.</td><td class="prompt">يَسْتَهْزِئُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">13.</td><td class="prompt">الَّذِي يَدُعُّ الْيَتِيمَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">14.</td><td class="prompt">أَسْتَغْفِرُ اللَّه</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">15.</td><td class="prompt">يَحْسَبُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">16.</td><td class="prompt">سَمِعَ اللَّهُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">17.</td><td class="prompt">تَعْلَمُونَ عِلْمَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">18.</td><td class="prompt">تَحْمِلْهُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">19.</td><td class="prompt">يَصْدُرُ النَّاسُ أَشْتَاتًا</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">20.</td><td class="prompt">تُخَالِفُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">21.</td><td class="prompt">أَنْعَمْتَ عَلَيْهِمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">22.</td><td class="prompt">تَتَّقُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">23.</td><td class="prompt">يُؤْمِنُونَ بِالْغَيْبِ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">24.</td><td class="prompt">تَكْفُرُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">25.</td><td class="prompt">وَيُقِيمُونَ الصَّلَاةَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">26.</td><td class="prompt">تُرْجَعُونَ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr><tr><td class="num">27.</td><td class="prompt">رَزَقْنَاهُمْ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td><td class="num">28.</td><td class="prompt">نُسَبِّحُ</td><td class="answer"><span class="blank-cell" style="display:block;">&nbsp;</span></td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 4.3: Terjemahkan menggunakan arti yang diberikan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">أَعُوذُ بِاللَّهِ</td><td class="def">Mencari perlindungan</td><td class="answer">Saya berlindung kepada Allah</td></tr><tr><td class="num">2.</td><td class="prompt">الَّذِي يُوَسْوِسُ</td><td class="def">Membisikkan</td><td class="answer">Yang membisikkan</td></tr><tr><td class="num">3.</td><td class="prompt">يَدْخُلُونَ فِي دِينِ اللَّـهِ</td><td class="def">Masuk</td><td class="answer">Mereka masuk ke dalam agama Allah</td></tr><tr><td class="num">4.</td><td class="prompt">لَا أَعْبُدُ</td><td class="def">Menyembah</td><td class="answer">Aku tidak menyembah</td></tr><tr><td class="num">5.</td><td class="prompt">عَبَدتُّمْ</td><td class="def">Menyembah</td><td class="answer">Kalian telah menyembah</td></tr><tr><td class="num">6.</td><td class="prompt">يُكَذِّبُ</td><td class="def">Mendustakan</td><td class="answer">Dia mendustakan</td></tr><tr><td class="num">7.</td><td class="prompt">الَّذِي يَدُعُّ الْيَتِيمَ</td><td class="def">Menghardik/mengabaikan</td><td class="answer">Yang menghardik anak yatim</td></tr><tr><td class="num">8.</td><td class="prompt">يَحْسَبُ</td><td class="def">Mengira</td><td class="answer">Dia mengira</td></tr><tr><td class="num">9.</td><td class="prompt">تَعْلَمُونَ عِلْمَ</td><td class="def">Mengetahui</td><td class="answer">Kalian mengetahui dengan yakin</td></tr><tr><td class="num">10.</td><td class="prompt">يَصْدُرُ النَّاسُ</td><td class="def">Keluar</td><td class="answer">Manusia akan keluar</td></tr><tr><td class="num">11.</td><td class="prompt">أَنْعَمْتَ عَلَيْهِمْ</td><td class="def">Memberi nikmat</td><td class="answer">Engkau telah memberi nikmat kepada mereka</td></tr><tr><td class="num">12.</td><td class="prompt">يُؤْمِنُونَ بِالْغَيْبِ</td><td class="def">Beriman</td><td class="answer">Mereka beriman kepada yang gaib</td></tr><tr><td class="num">13.</td><td class="prompt">وَيُقِيمُونَ الصَّلَاةَ</td><td class="def">Mendirikan</td><td class="answer">Dan mereka mendirikan salat</td></tr><tr><td class="num">14.</td><td class="prompt">رَزَقْنَاهُمْ</td><td class="def">Memberi rezeki</td><td class="answer">Kami telah memberi rezeki kepada mereka</td></tr><tr><td class="num">15.</td><td class="prompt">يُنفِقُونَ</td><td class="def">Menginfakkan</td><td class="answer">Mereka menginfakkan</td></tr><tr><td class="num">16.</td><td class="prompt">يَقُولُ</td><td class="def">Berkata</td><td class="answer">Dia berkata</td></tr><tr><td class="num">17.</td><td class="prompt">يُخَادِعُونَ اللَّـه</td><td class="def">Mencoba menipu</td><td class="answer">Mereka mencoba menipu Allah</td></tr><tr><td class="num">18.</td><td class="prompt">نُؤْمِنُ</td><td class="def">Beriman</td><td class="answer">Kami beriman</td></tr><tr><td class="num">19.</td><td class="prompt">لَا يَعْلَمُونَ</td><td class="def">Mengetahui</td><td class="answer">Mereka tidak mengetahui</td></tr><tr><td class="num">20.</td><td class="prompt">يَسْتَهْزِئُ</td><td class="def">Mengolok-olok</td><td class="answer">Dia mengolok-olok</td></tr><tr><td class="num">21.</td><td class="prompt">أَسْتَغْفِرُ اللَّه</td><td class="def">Memohon ampun</td><td class="answer">Aku memohon ampun kepada Allah</td></tr><tr><td class="num">22.</td><td class="prompt">سَمِعَ اللَّهُ</td><td class="def">Mendengar</td><td class="answer">Allah telah mendengar</td></tr><tr><td class="num">23.</td><td class="prompt">تَحْمِلْهُ</td><td class="def">Memikul</td><td class="answer">Dia memikulnya</td></tr><tr><td class="num">24.</td><td class="prompt">تُخَالِفُ</td><td class="def">Menentang</td><td class="answer">Dia menentang</td></tr><tr><td class="num">25.</td><td class="prompt">تَتَّقُونَ</td><td class="def">Bertakwa kepada Allah</td><td class="answer">Kalian bertakwa kepada Allah</td></tr><tr><td class="num">26.</td><td class="prompt">تَكْفُرُونَ</td><td class="def">Mengingkari</td><td class="answer">Kalian mengingkari</td></tr><tr><td class="num">27.</td><td class="prompt">تُرْجَعُونَ</td><td class="def">Dikembalikan</td><td class="answer">Kalian akan dikembalikan</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-clock"></i> Cara Mengubah Sekarang Menjadi Akan Datang</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>سَوْفَ</td><td>سَ</td></tr>
+<tr><td class="gloss">Akan</td><td class="gloss">Akan</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 4.4: Terjemahkan menggunakan arti yang diberikan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">سَيَعْلَمُونَ</td><td class="def">mengetahui</td><td class="answer">Mereka akan mengetahui</td></tr><tr><td class="num">2.</td><td class="prompt">سَوْفَ تَعْلَمُونَ</td><td class="def">mengetahui</td><td class="answer">Kalian akan mengetahui</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-star"></i> Kosakata Penting yang Umum</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>لَوْ</td><td>إِذَا</td><td>قَدْ</td><td>أَ</td></tr>
+<tr><td class="gloss">Seandainya</td><td class="gloss">Ketika</td><td class="gloss">Sungguh</td><td class="gloss">Apakah?</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-language"></i> 4.5: Terjemahkan menggunakan arti yang diberikan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">أَرَأَيْتَ</td><td class="def">melihat</td><td class="answer">Apakah engkau telah melihat?</td></tr><tr><td class="num">2.</td><td class="prompt">قَدْ تَعْلَمُونَ</td><td class="def"></td><td class="answer">Kalian sungguh mengetahui</td></tr><tr><td class="num">3.</td><td class="prompt">إِذَا حَسَدَ</td><td class="def">iri/dengki</td><td class="answer">Ketika dia dengki</td></tr><tr><td class="num">4.</td><td class="prompt">لَوْ آمَنُوا بِاللَّـهِ</td><td class="def"></td><td class="answer">Seandainya mereka beriman kepada Allah</td></tr></tbody>
+</table></div>
+<div class="unit-pagination">
+<a href="level1-unit3.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 3</a>
+<a href="level1-unit5.html" class="pagination-next">Unit 5: Harf-Harf <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 1</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>

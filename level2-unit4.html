@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 4 &middot; Level 2 | Quranic Arabic Workbook</title>
+<meta name="description" content="Gender and Number - Quranic Arabic Level 2, Unit 4">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 4</span></div>
+<h1 class="unit-title">All about Isms</h1>
+
+<div class="section-title"><i class="fas fa-shuffle"></i> 4.1: Unscramble. Draw a line from a word to its true definition.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">بِ</td><td style="text-align:right;">about/away</td><td class="arabic">مَنْ</td><td style="text-align:right;">to</td></tr><tr><td class="arabic">أَنَّ</td><td style="text-align:right;">then/so</td><td class="arabic">كَافِر</td><td style="text-align:right;">unjust, wrongdoer</td></tr><tr><td class="arabic">فَ</td><td style="text-align:right;">except</td><td class="arabic">وَ</td><td style="text-align:right;">from</td></tr><tr><td class="arabic">مَا</td><td style="text-align:right;">with</td><td class="arabic">ظَالِم</td><td style="text-align:right;">for/have</td></tr><tr><td class="arabic">عَنْ</td><td style="text-align:right;">no/not</td><td class="arabic">مِنْ</td><td style="text-align:right;">who</td></tr><tr><td class="arabic">لَا</td><td style="text-align:right;">what</td><td class="arabic">ل</td><td style="text-align:right;">and</td></tr><tr><td class="arabic">إِلَّا</td><td style="text-align:right;">that</td><td class="arabic">إِلَى</td><td style="text-align:right;">disbeliever</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-pen"></i> 4.2: Write the correct letter from the word bank to fill in the blanks.</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td></tr>
+<tr><td class="gloss">كِتَاب</td><td class="gloss">عَلِيْم</td><td class="gloss">مُؤْمِن</td><td class="gloss">آخِر</td><td class="gloss">أَهْل</td><td class="gloss">أَمْر</td><td class="gloss">الْجَنَّة</td></tr>
+</tbody>
+</table></div>
+<div class="note-box"><ol class="steps"><li>We said, "O Adam, you and your wife, live in _____ and eat freely there as you will, but do not go near this tree, or you will be among the wrongdoers."</li><li>Whoever does righteous deeds, whether male or female, while being a _____ - those people will enter Paradise and will not be wronged.</li><li>We responded to [Noah] and saved him and his _____ from the great flood.</li><li>When [Allah] decrees a _____, He only says to it, 'Be,' and it is.</li><li>Among the people are some who say, "We believe in Allah and the _____ Day."</li><li>Who revealed the _____ that Moses brought as light and guidance to the people?</li><li>Whatever you do of good - indeed, Allah is _____ of it.</li></ol></div>
+<div class="section-title"><i class="fas fa-rotate"></i> 4.3: Review: Circle the chains. Then find the &ldquo;is&rdquo; and translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">وَلِسُلَيْمَانَ الرِّيحَ</td><td class="def">wind</td><td class="answer">And to Solomon [We subjected] the wind</td></tr><tr><td class="num">2.</td><td class="prompt">وَمَأْوَاهُ جَهَنَّمُ</td><td class="def">refuge</td><td class="answer">And his refuge is Hell</td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّهَا بَقَرَةٌ</td><td class="def">cow</td><td class="answer">Indeed it is a cow</td></tr><tr><td class="num">4.</td><td class="prompt">كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ</td><td class="def">taster; death</td><td class="answer">Every soul is a taster of death</td></tr><tr><td class="num">5.</td><td class="prompt">وَمِنْ آيَاتِهِ اللَّيْلُ وَالنَّهَارُ وَالشَّمْسُ</td><td class="def">signs; night; day</td><td class="answer">And among His signs are the night, the day, and the sun</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-venus-mars"></i> Gender</div>
+<div class="intro-box">All words in Arabic are <strong>masculine</strong> by default unless they have a reason to be <strong>feminine</strong>.</div>
+<div class="subsection-title" style="font-style:italic;">Reasons to be feminine:</div>
+<div class="note-box"><ol class="steps"><li>Ending in &#1577; (e.g. مَدِيْنَة city, جَنَّة garden)</li><li>Actually feminine (e.g. أُخْت sister, بَقَرَة cow)</li><li>Names of places (e.g. مَكَّة Makkah, يَثْرِب Yathrib)</li><li>Non-human plurals (e.g. ظُلُمَات darkness&rsquo;s, أَنْهَار rivers)</li><li>Because the Arabs Said So (BASS):</li></ol></div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">سَمَاء</td><td>Sky</td><td class="arabic">أَرْض</td><td>Land</td></tr><tr><td class="arabic">شَمْس</td><td>Sun</td><td class="arabic">رِيْح</td><td>Wind</td></tr><tr><td class="arabic">نَفْس</td><td>Person</td><td class="arabic">دَار</td><td>Home</td></tr><tr><td class="arabic">نَار</td><td>Fire</td><td class="arabic">جَهَنَّم</td><td>Hellfire</td></tr><tr><td class="arabic">سَبِيل</td><td>Path</td><td></td><td></td></tr></tbody></table></div>
+<div class="note-box">One evening a <span class="arabic">نَفْس</span> was at the beach watching the <span class="arabic">شَمْس</span> set. While he was enjoying the view, he heard thunder rumbling above as lightning flashed across the <span class="arabic">سَمَاء</span>. He quickly stood up, afraid, and looked at the vast <span class="arabic">أَرْض</span> around him. He had forgotten the <span class="arabic">سَبِيل</span> to his <span class="arabic">دَار</span>. The cold <span class="arabic">رِيْح</span> whipped against him, and he remembered the punishment of <span class="arabic">جَهَنَّم</span>. He made du&rsquo;a to Allah and finally found his <span class="arabic">دَار</span>. He lit a <span class="arabic">نَار</span> and appreciated the warmth and blessing of being indoors.</div>
+<div class="section-title"><i class="fas fa-venus-mars"></i> 4.4: Identify if each word is masculine or feminine. Explain why verbally.</div>
+<div class="overflow-x"><table class="grid-table"><thead><tr><th>Word</th><th>Meaning</th><th>M or F?</th><th>Word</th><th>Meaning</th><th>M or F?</th></tr></thead><tbody><tr><td class="prompt">1. الْفِيْل</td><td>the elephant</td><td class="answer">&nbsp;</td><td class="prompt">2. كُتُبٌ</td><td>books</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">3. قَيِّمَةٌ</td><td>correct</td><td class="answer">&nbsp;</td><td class="prompt">4. بَشَرًا</td><td>person</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">5. الْأَرْض</td><td>the land, earth</td><td class="answer">&nbsp;</td><td class="prompt">6. الْفَلَق</td><td>the daybreak</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">7. نِسَاءٌ</td><td>women</td><td class="answer">&nbsp;</td><td class="prompt">8. مُوسَى</td><td>Musa</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">9. قَلْبٌ</td><td>heart</td><td class="answer">&nbsp;</td><td class="prompt">10. سَمَاوَاتٍ</td><td>skies</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">11. السَّاعَةُ</td><td>the Hour (of resurrection)</td><td class="answer">&nbsp;</td><td class="prompt">12. مِصْرَ</td><td>Egypt</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">13. بَيْتِ</td><td>house</td><td class="answer">&nbsp;</td><td class="prompt">14. مُؤْمِنُونَ</td><td>believers</td><td class="answer">&nbsp;</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 4.5: Open the Quran to Surah Nisa (Surah 4) and identify as many feminine words as you can in verses 75-79. Write your findings.</div>
+<div class="quran-block">
+<div class="arabic large">وَمَا لَكُمْ لَا تُقَاتِلُونَ فِي سَبِيلِ اللَّـهِ وَالْمُسْتَضْعَفِينَ مِنَ الرِّجَالِ وَالنِّسَاءِ وَالْوِلْدَانِ الَّذِينَ يَقُولُونَ رَبَّنَا أَخْرِجْنَا مِنْ هَـٰذِهِ الْقَرْيَةِ الظَّالِمِ أَهْلُهَا وَاجْعَل لَّنَا مِن لَّدُنكَ وَلِيًّا وَاجْعَل لَّنَا مِن لَّدُنكَ نَصِيرًا ﴿٧٥﴾ الَّذِينَ آمَنُوا يُقَاتِلُونَ فِي سَبِيلِ اللَّـهِ ۖ وَالَّذِينَ كَفَرُوا يُقَاتِلُونَ فِي سَبِيلِ الطَّاغُوتِ فَقَاتِلُوا أَوْلِيَاءَ الشَّيْطَانِ ۖ إِنَّ كَيْدَ الشَّيْطَانِ كَانَ ضَعِيفًا ﴿٧٦﴾ أَلَمْ تَرَ إِلَى الَّذِينَ قِيلَ لَهُمْ كُفُّوا أَيْدِيَكُمْ وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ فَلَمَّا كُتِبَ عَلَيْهِمُ الْقِتَالُ إِذَا فَرِيقٌ مِّنْهُمْ يَخْشَوْنَ النَّاسَ كَخَشْيَةِ اللَّـهِ أَوْ أَشَدَّ خَشْيَةً ۚ وَقَالُوا رَبَّنَا لِمَ كَتَبْتَ عَلَيْنَا الْقِتَالَ لَوْلَا أَخَّرْتَنَا إِلَىٰ أَجَلٍ قَرِيبٍ ۗ قُلْ مَتَاعُ الدُّنْيَا قَلِيلٌ وَالْآخِرَةُ خَيْرٌ لِّمَنِ اتَّقَىٰ وَلَا تُظْلَمُونَ فَتِيلًا ﴿٧٧﴾ أَيْنَمَا تَكُونُوا يُدْرِككُّمُ الْمَوْتُ وَلَوْ كُنتُمْ فِي بُرُوجٍ مُّشَيَّدَةٍ ۗ وَإِن تُصِبْهُمْ حَسَنَةٌ يَقُولُوا هَـٰذِهِ مِنْ عِندِ اللَّـهِ ۖ وَإِن تُصِبْهُمْ سَيِّئَةٌ يَقُولُوا هَـٰذِهِ مِنْ عِندِكَ ۚ قُلْ كُلٌّ مِّنْ عِندِ اللَّـهِ ۖ فَمَالِ هَـٰؤُلَاءِ الْقَوْمِ لَا يَكَادُونَ يَفْقَهُونَ حَدِيثًا ﴿٧٨﴾ مَّا أَصَابَكَ مِنْ حَسَنَةٍ فَمِنَ اللَّـهِ ۖ وَمَا أَصَابَكَ مِن سَيِّئَةٍ فَمِن نَّفْسِكَ ۚ وَأَرْسَلْنَاكَ لِلنَّاسِ رَسُولًا ۚ وَكَفَىٰ بِاللَّـهِ شَهِيدًا ﴿٧٩﴾</div>
+<div class="quran-ref">Surah An-Nisa 4:75-79</div>
+</div>
+<div class="note-box"><strong>Sample answer (some feminine words found in 4:75-79):</strong><ul class="example-list"><li>النِّسَاءِ &mdash; &ldquo;the women&rdquo;, feminine by meaning (4:75)</li><li>هَـٰذِهِ &mdash; &ldquo;this&rdquo;, feminine demonstrative pronoun (4:75, 78 x2)</li><li>الْقَرْيَةِ &mdash; &ldquo;the town&rdquo;, feminine by the taa marbuta ending (4:75)</li><li>الصَّلَاةَ, الزَّكَاةَ &mdash; &ldquo;the prayer&rdquo;, &ldquo;the charity&rdquo;, feminine by the taa marbuta ending (4:77)</li><li>خَشْيَةِ, خَشْيَةً &mdash; &ldquo;fear&rdquo;, feminine by the taa marbuta ending (4:77)</li><li>الدُّنْيَا &mdash; &ldquo;this world&rdquo;, feminine by its alif ending (4:77)</li><li>الْآخِرَةُ &mdash; &ldquo;the Hereafter&rdquo;, feminine by the taa marbuta ending (4:77)</li><li>مُّشَيَّدَةٍ &mdash; &ldquo;well-built&rdquo;, feminine adjective (4:78)</li><li>حَسَنَةٌ / حَسَنَةٍ, سَيِّئَةٌ / سَيِّئَةٍ &mdash; &ldquo;a good thing&rdquo;, &ldquo;a bad thing&rdquo;, feminine by the taa marbuta ending (4:78, 79)</li><li>نَفْسِكَ &mdash; &ldquo;yourself&rdquo;, نَفْس is feminine even without a taa marbuta (4:79)</li></ul></div>
+<div class="section-title"><i class="fas fa-hashtag"></i> Number</div>
+<div class="intro-box">In Arabic there are <strong>three</strong> types of number. They are <strong>singular</strong>, <strong>dual</strong>, and <strong>plural</strong>. We will focus on singular and plural only.</div>
+<div class="subsection-title" style="font-style:italic;">Masculine:</div><div class="overflow-x"><table class="grid-table"><thead><tr><th>Plural</th><th>Singular</th><th>Sound</th></tr></thead><tbody><tr><td class="arabic">مُسْلِمُوْنَ</td><td class="arabic">مُسْلِمٌ</td><td>UU</td></tr><tr><td class="arabic">مُسْلِمِيْنَ</td><td class="arabic">مُسْلِمًا</td><td>AA</td></tr><tr><td class="arabic">مُسْلِمِيْنَ</td><td class="arabic">مُسْلِمٍ</td><td>EE</td></tr></tbody></table></div>
+<div class="subsection-title" style="font-style:italic;">Feminine:</div><div class="overflow-x"><table class="grid-table"><thead><tr><th>Plural</th><th>Singular</th><th>Sound</th></tr></thead><tbody><tr><td class="arabic">مُسْلِمَاتٌ</td><td class="arabic">مُسْلِمَةٌ</td><td>UU</td></tr><tr><td class="arabic">مُسْلِمَاتٍ</td><td class="arabic">مُسْلِمَةً</td><td>AA</td></tr><tr><td class="arabic">مُسْلِمَاتٍ</td><td class="arabic">مُسْلِمَةٍ</td><td>EE</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-hashtag"></i> 4.6: Write each word&rsquo;s number above the word in the verses below.</div>
+<div class="quran-block">
+<div class="arabic large">فَإِذَا اسْتَوَيْتَ <mark class="hl">أَنتَ</mark> وَمَن <mark class="hl">مَّعَكَ</mark> عَلَى <mark class="hl">الْفُلْكِ</mark> فَقُلِ <mark class="hl">الْحَمْدُ</mark> <mark class="hl">لِلَّـهِ</mark> الَّذِي <mark class="hl">نَجَّانَا</mark> مِنَ <mark class="hl">الْقَوْمِ</mark> الظَّالِمِينَ</div>
+<div class="quran-ref">Surah Al-Mu&rsquo;minun 23:28</div>
+</div>
+<div class="quran-block">
+<div class="arabic large">وَإِنْ كُنَّا <mark class="hl">لَمُبْتَلِينَ</mark> ثُمَّ <mark class="hl">أَنشَأْنَا</mark> مِن بَعْدِهِمْ قَرْنًا <mark class="hl">آخَرِينَ</mark> فَأَرْسَلْنَا فِيهِمْ <mark class="hl">رَسُولًا</mark> <mark class="hl">مِّنْهُمْ</mark> أَنِ <mark class="hl">اعْبُدُوا</mark> اللَّـهَ مَا لَكُم مِّنْ <mark class="hl">إِلَـٰهٍ</mark> غَيْرُهُ ۖ أَفَلَا تَتَّقُونَ وَقَالَ <mark class="hl">الْمَلَأُ</mark> مِن <mark class="hl">قَوْمِهِ</mark> <mark class="hl">الَّذِينَ</mark> <mark class="hl">كَفَرُوا</mark> <mark class="hl">وَكَذَّبُوا</mark> <mark class="hl">بِلِقَاءِ</mark> <mark class="hl">الْآخِرَةِ</mark> <mark class="hl">وَأَتْرَفْنَاهُمْ</mark> فِي الْحَيَاةِ الدُّنْيَا مَا هَـٰذَا إِلَّا <mark class="hl">بَشَرٌ</mark> <mark class="hl">مِّثْلُكُمْ</mark> <mark class="hl">يَأْكُلُ</mark> مِمَّا <mark class="hl">تَأْكُلُونَ</mark> <mark class="hl">مِنْهُ</mark> <mark class="hl">وَيَشْرَبُ</mark> مِمَّا <mark class="hl">تَشْرَبُونَ</mark> وَلَئِنْ أَطَعْتُم <mark class="hl">بَشَرًا</mark> <mark class="hl">مِّثْلَكُمْ</mark> إِنَّكُمْ إِذًا <mark class="hl">لَّخَاسِرُونَ</mark></div>
+<div class="quran-ref">Surah Al-Mu&rsquo;minun 23:30-34</div>
+</div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 4.7: Circle the chains. Then find the &ldquo;is&rdquo; and translate.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">هُمُ الْخَاسِرُونَ</td><td class="def">loser</td><td class="answer">They are the losers</td></tr><tr><td class="num">2.</td><td class="prompt">إِنَّهُ مِن سُلَيْمَانَ</td><td class="def">&mdash;</td><td class="answer">Indeed it is from Solomon</td></tr><tr><td class="num">3.</td><td class="prompt">وَأَنَا أَوَّلُ الْمُسْلِمِينَ</td><td class="def">first</td><td class="answer">And I am the first of the Muslims</td></tr><tr><td class="num">4.</td><td class="prompt">وَاللَّـهُ وَلِيُّ الْمُؤْمِنِينَ</td><td class="def">ally; believer</td><td class="answer">And Allah is the ally of the believers</td></tr><tr><td class="num">5.</td><td class="prompt">وَإِنِّي مُرْسِلَةٌ إِلَيْهِم</td><td class="def">messenger</td><td class="answer">And indeed I am sending a messenger to them</td></tr><tr><td class="num">6.</td><td class="prompt">لَهُمْ جَنَّاتٍ</td><td class="def">garden</td><td class="answer">For them are gardens</td></tr><tr><td class="num">7.</td><td class="prompt">رَبَّنَا آمَنَّا فَاكْتُبْنَا مَعَ الشَّاهِدِينَ</td><td class="def">register; witness</td><td class="answer">Our Lord, we have believed, so register us among the witnesses</td></tr><tr><td class="num">8.</td><td class="prompt">لَهُ مُلْكُ السَّمَاوَاتِ</td><td class="def">dominion</td><td class="answer">To Him belongs the dominion of the heavens</td></tr><tr><td class="num">9.</td><td class="prompt">وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ</td><td class="def">follow; footstep</td><td class="answer">And do not follow the footsteps of Satan</td></tr><tr><td class="num">10.</td><td class="prompt">نَحْنُ مُصْلِحُونَ</td><td class="def">reformer</td><td class="answer">We are reformers</td></tr><tr><td class="num">11.</td><td class="prompt">وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ</td><td class="def">vision; veil</td><td class="answer">And over their vision is a veil</td></tr><tr><td class="num">12.</td><td class="prompt">وَهُوَ الَّذِي خَلَقَ اللَّيْلَ وَالنَّهَارَ وَالشَّمْسَ</td><td class="def">night; day</td><td class="answer">And He is the one who created the night, the day, and the sun</td></tr><tr><td class="num">13.</td><td class="prompt">وَأَنتُمْ ظَالِمُونَ</td><td class="def">wrongdoer</td><td class="answer">And you all are wrongdoers</td></tr><tr><td class="num">14.</td><td class="prompt">يَسْجُدُونَ لِلشَّمْسِ مِن دُونِ اللَّـهِ</td><td class="def">prostrate</td><td class="answer">They prostrate to the sun instead of Allah</td></tr></tbody>
+</table></div>
+<div class="note-box"><strong>Homework:</strong> &#9744; Complete Lessons 16-20 in the mobile app</div>
+<div class="unit-pagination">
+<a href="level2-unit3.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 3</a>
+<a href="level2-unit5.html" class="pagination-next">Unit 5: Adjectives <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 2 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 2 &middot; UNIT 4</span></div>
+<h1 class="unit-title">Semua tentang Ism</h1>
+
+<div class="section-title"><i class="fas fa-shuffle"></i> 4.1: Acak. Tariklah garis dari sebuah kata ke arti yang benar.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">بِ</td><td style="text-align:right;">tentang/jauh</td><td class="arabic">مَنْ</td><td style="text-align:right;">kepada</td></tr><tr><td class="arabic">أَنَّ</td><td style="text-align:right;">maka/jadi</td><td class="arabic">كَافِر</td><td style="text-align:right;">zalim, orang yang aniaya</td></tr><tr><td class="arabic">فَ</td><td style="text-align:right;">kecuali</td><td class="arabic">وَ</td><td style="text-align:right;">dari</td></tr><tr><td class="arabic">مَا</td><td style="text-align:right;">dengan</td><td class="arabic">ظَالِم</td><td style="text-align:right;">untuk/memiliki</td></tr><tr><td class="arabic">عَنْ</td><td style="text-align:right;">tidak</td><td class="arabic">مِنْ</td><td style="text-align:right;">siapa</td></tr><tr><td class="arabic">لَا</td><td style="text-align:right;">apa</td><td class="arabic">ل</td><td style="text-align:right;">dan</td></tr><tr><td class="arabic">إِلَّا</td><td style="text-align:right;">bahwa</td><td class="arabic">إِلَى</td><td style="text-align:right;">orang kafir</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-pen"></i> 4.2: Tuliskan huruf yang benar dari kumpulan kata untuk mengisi bagian yang kosong.</div>
+<div class="overflow-x"><table class="grid-table harf-table">
+<tbody>
+<tr><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td></tr>
+<tr><td class="gloss">كِتَاب</td><td class="gloss">عَلِيْم</td><td class="gloss">مُؤْمِن</td><td class="gloss">آخِر</td><td class="gloss">أَهْل</td><td class="gloss">أَمْر</td><td class="gloss">الْجَنَّة</td></tr>
+</tbody>
+</table></div>
+<div class="note-box"><ol class="steps"><li>Kami berfirman, "Wahai Adam, tinggallah engkau dan istrimu di _____ ini dan makanlah dengan leluasa apa yang kalian kehendaki, tetapi janganlah kalian dekati pohon ini, sehingga kalian termasuk orang-orang zalim."</li><li>Barang siapa mengerjakan kebajikan, baik laki-laki maupun perempuan, sedangkan dia seorang _____ - mereka itu akan masuk surga dan tidak akan dizalimi.</li><li>Kami kabulkan permohonannya lalu Kami selamatkan dia dan _____-nya dari bencana yang besar.</li><li>Apabila [Allah] hendak menetapkan suatu _____, Dia hanya berkata kepadanya, 'Jadilah,' maka jadilah ia.</li><li>Di antara manusia ada yang berkata, "Kami beriman kepada Allah dan hari _____."</li><li>Siapakah yang menurunkan _____ yang dibawa Musa sebagai cahaya dan petunjuk bagi manusia?</li><li>Apa saja kebaikan yang kamu kerjakan - sesungguhnya Allah Maha _____ terhadapnya.</li></ol></div>
+<div class="section-title"><i class="fas fa-rotate"></i> 4.3: Ulasan: Lingkari rangkaian-rangkaiannya. Lalu temukan &ldquo;adalah&rdquo; dan terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">وَلِسُلَيْمَانَ الرِّيحَ</td><td class="def">angin</td><td class="answer">Dan untuk Sulaiman, angin (Kami tundukkan)</td></tr><tr><td class="num">2.</td><td class="prompt">وَمَأْوَاهُ جَهَنَّمُ</td><td class="def">tempat kembali</td><td class="answer">Dan tempat kembalinya adalah neraka Jahanam</td></tr><tr><td class="num">3.</td><td class="prompt">إِنَّهَا بَقَرَةٌ</td><td class="def">sapi betina</td><td class="answer">Sesungguhnya ia adalah seekor sapi betina</td></tr><tr><td class="num">4.</td><td class="prompt">كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ</td><td class="def">perasa; kematian</td><td class="answer">Setiap jiwa akan merasakan kematian</td></tr><tr><td class="num">5.</td><td class="prompt">وَمِنْ آيَاتِهِ اللَّيْلُ وَالنَّهَارُ وَالشَّمْسُ</td><td class="def">tanda-tanda; malam; siang</td><td class="answer">Dan di antara tanda-tanda-Nya adalah malam, siang, dan matahari</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-venus-mars"></i> Jenis Kelamin (Gender)</div>
+<div class="intro-box">Semua kata dalam bahasa Arab bersifat <strong>maskulin</strong> secara default kecuali ada alasan untuk menjadi <strong>feminin</strong>.</div>
+<div class="subsection-title" style="font-style:italic;">Alasan untuk menjadi feminin:</div>
+<div class="note-box"><ol class="steps"><li>Diakhiri dengan &#1577; (mis. مَدِيْنَة kota, جَنَّة taman)</li><li>Memang feminin secara alami (mis. أُخْت saudari, بَقَرَة sapi)</li><li>Nama tempat (mis. مَكَّة Makkah, يَثْرِب Yatsrib)</li><li>Bentuk jamak bukan manusia (mis. ظُلُمَات kegelapan-kegelapan, أَنْهَار sungai-sungai)</li><li>Karena Orang Arab Menetapkannya Demikian (BASS):</li></ol></div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">سَمَاء</td><td>Langit</td><td class="arabic">أَرْض</td><td>Tanah</td></tr><tr><td class="arabic">شَمْس</td><td>Matahari</td><td class="arabic">رِيْح</td><td>Angin</td></tr><tr><td class="arabic">نَفْس</td><td>Jiwa/orang</td><td class="arabic">دَار</td><td>Rumah</td></tr><tr><td class="arabic">نَار</td><td>Api</td><td class="arabic">جَهَنَّم</td><td>Neraka Jahanam</td></tr><tr><td class="arabic">سَبِيل</td><td>Jalan</td><td></td><td></td></tr></tbody></table></div>
+<div class="note-box">Suatu malam seorang <span class="arabic">نَفْس</span> berada di pantai menyaksikan <span class="arabic">شَمْس</span> terbenam. Sambil menikmati pemandangan itu, ia mendengar gemuruh guntur di atas sementara kilat menyambar di seluruh <span class="arabic">سَمَاء</span>. Ia segera berdiri, ketakutan, dan memandang <span class="arabic">أَرْض</span> yang luas di sekelilingnya. Ia telah lupa <span class="arabic">سَبِيل</span> menuju <span class="arabic">دَار</span>-nya. <span class="arabic">رِيْح</span> yang dingin menerpanya, dan ia teringat akan siksa <span class="arabic">جَهَنَّم</span>. Ia berdoa kepada Allah dan akhirnya menemukan <span class="arabic">دَار</span>-nya. Ia menyalakan <span class="arabic">نَار</span> dan mensyukuri kehangatan serta nikmat berada di dalam rumah.</div>
+<div class="section-title"><i class="fas fa-venus-mars"></i> 4.4: Tentukan apakah setiap kata bersifat maskulin atau feminin. Jelaskan alasannya secara lisan.</div>
+<div class="overflow-x"><table class="grid-table"><thead><tr><th>Word</th><th>Meaning</th><th>L atau P?</th><th>Word</th><th>Meaning</th><th>L atau P?</th></tr></thead><tbody><tr><td class="prompt">1. الْفِيْل</td><td>gajah</td><td class="answer">&nbsp;</td><td class="prompt">2. كُتُبٌ</td><td>buku-buku</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">3. قَيِّمَةٌ</td><td>benar, lurus</td><td class="answer">&nbsp;</td><td class="prompt">4. بَشَرًا</td><td>manusia</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">5. الْأَرْض</td><td>bumi, tanah</td><td class="answer">&nbsp;</td><td class="prompt">6. الْفَلَق</td><td>waktu subuh</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">7. نِسَاءٌ</td><td>perempuan-perempuan</td><td class="answer">&nbsp;</td><td class="prompt">8. مُوسَى</td><td>Musa</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">9. قَلْبٌ</td><td>hati</td><td class="answer">&nbsp;</td><td class="prompt">10. سَمَاوَاتٍ</td><td>langit-langit</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">11. السَّاعَةُ</td><td>hari Kiamat</td><td class="answer">&nbsp;</td><td class="prompt">12. مِصْرَ</td><td>Mesir</td><td class="answer">&nbsp;</td></tr><tr><td class="prompt">13. بَيْتِ</td><td>rumah</td><td class="answer">&nbsp;</td><td class="prompt">14. مُؤْمِنُونَ</td><td>orang-orang beriman</td><td class="answer">&nbsp;</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 4.5: Bukalah Al-Qur&rsquo;an pada Surah An-Nisa (Surah 4) dan temukan sebanyak mungkin kata feminin pada ayat 75-79. Tuliskan temuanmu.</div>
+<div class="quran-block">
+<div class="arabic large">وَمَا لَكُمْ لَا تُقَاتِلُونَ فِي سَبِيلِ اللَّـهِ وَالْمُسْتَضْعَفِينَ مِنَ الرِّجَالِ وَالنِّسَاءِ وَالْوِلْدَانِ الَّذِينَ يَقُولُونَ رَبَّنَا أَخْرِجْنَا مِنْ هَـٰذِهِ الْقَرْيَةِ الظَّالِمِ أَهْلُهَا وَاجْعَل لَّنَا مِن لَّدُنكَ وَلِيًّا وَاجْعَل لَّنَا مِن لَّدُنكَ نَصِيرًا ﴿٧٥﴾ الَّذِينَ آمَنُوا يُقَاتِلُونَ فِي سَبِيلِ اللَّـهِ ۖ وَالَّذِينَ كَفَرُوا يُقَاتِلُونَ فِي سَبِيلِ الطَّاغُوتِ فَقَاتِلُوا أَوْلِيَاءَ الشَّيْطَانِ ۖ إِنَّ كَيْدَ الشَّيْطَانِ كَانَ ضَعِيفًا ﴿٧٦﴾ أَلَمْ تَرَ إِلَى الَّذِينَ قِيلَ لَهُمْ كُفُّوا أَيْدِيَكُمْ وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ فَلَمَّا كُتِبَ عَلَيْهِمُ الْقِتَالُ إِذَا فَرِيقٌ مِّنْهُمْ يَخْشَوْنَ النَّاسَ كَخَشْيَةِ اللَّـهِ أَوْ أَشَدَّ خَشْيَةً ۚ وَقَالُوا رَبَّنَا لِمَ كَتَبْتَ عَلَيْنَا الْقِتَالَ لَوْلَا أَخَّرْتَنَا إِلَىٰ أَجَلٍ قَرِيبٍ ۗ قُلْ مَتَاعُ الدُّنْيَا قَلِيلٌ وَالْآخِرَةُ خَيْرٌ لِّمَنِ اتَّقَىٰ وَلَا تُظْلَمُونَ فَتِيلًا ﴿٧٧﴾ أَيْنَمَا تَكُونُوا يُدْرِككُّمُ الْمَوْتُ وَلَوْ كُنتُمْ فِي بُرُوجٍ مُّشَيَّدَةٍ ۗ وَإِن تُصِبْهُمْ حَسَنَةٌ يَقُولُوا هَـٰذِهِ مِنْ عِندِ اللَّـهِ ۖ وَإِن تُصِبْهُمْ سَيِّئَةٌ يَقُولُوا هَـٰذِهِ مِنْ عِندِكَ ۚ قُلْ كُلٌّ مِّنْ عِندِ اللَّـهِ ۖ فَمَالِ هَـٰؤُلَاءِ الْقَوْمِ لَا يَكَادُونَ يَفْقَهُونَ حَدِيثًا ﴿٧٨﴾ مَّا أَصَابَكَ مِنْ حَسَنَةٍ فَمِنَ اللَّـهِ ۖ وَمَا أَصَابَكَ مِن سَيِّئَةٍ فَمِن نَّفْسِكَ ۚ وَأَرْسَلْنَاكَ لِلنَّاسِ رَسُولًا ۚ وَكَفَىٰ بِاللَّـهِ شَهِيدًا ﴿٧٩﴾</div>
+<div class="quran-ref">Surah An-Nisa 4:75-79</div>
+</div>
+<div class="note-box"><strong>Contoh jawaban (beberapa kata feminin pada 4:75-79):</strong><ul class="example-list"><li>النِّسَاءِ &mdash; &ldquo;para wanita&rdquo;, feminin karena maknanya (4:75)</li><li>هَـٰذِهِ &mdash; &ldquo;ini&rdquo;, kata tunjuk feminin (4:75, 78 x2)</li><li>الْقَرْيَةِ &mdash; &ldquo;negeri/kota&rdquo;, feminin karena akhiran taa marbuta (4:75)</li><li>الصَّلَاةَ, الزَّكَاةَ &mdash; &ldquo;shalat&rdquo;, &ldquo;zakat&rdquo;, feminin karena akhiran taa marbuta (4:77)</li><li>خَشْيَةِ, خَشْيَةً &mdash; &ldquo;rasa takut&rdquo;, feminin karena akhiran taa marbuta (4:77)</li><li>الدُّنْيَا &mdash; &ldquo;dunia&rdquo;, feminin karena akhiran alif-nya (4:77)</li><li>الْآخِرَةُ &mdash; &ldquo;akhirat&rdquo;, feminin karena akhiran taa marbuta (4:77)</li><li>مُّشَيَّدَةٍ &mdash; &ldquo;yang tinggi/kokoh&rdquo;, kata sifat feminin (4:78)</li><li>حَسَنَةٌ / حَسَنَةٍ, سَيِّئَةٌ / سَيِّئَةٍ &mdash; &ldquo;kebaikan&rdquo;, &ldquo;keburukan&rdquo;, feminin karena akhiran taa marbuta (4:78, 79)</li><li>نَفْسِكَ &mdash; &ldquo;dirimu&rdquo;, نَفْس bersifat feminin meskipun tanpa taa marbuta (4:79)</li></ul></div>
+<div class="section-title"><i class="fas fa-hashtag"></i> Jumlah (Number)</div>
+<div class="intro-box">Dalam bahasa Arab terdapat <strong>tiga</strong> jenis jumlah. Yaitu <strong>tunggal</strong>, <strong>dua (mutsanna)</strong>, dan <strong>jamak</strong>. Kita akan fokus pada tunggal dan jamak saja.</div>
+<div class="subsection-title" style="font-style:italic;">Maskulin:</div><div class="overflow-x"><table class="grid-table"><thead><tr><th>Plural</th><th>Singular</th><th>Sound</th></tr></thead><tbody><tr><td class="arabic">مُسْلِمُوْنَ</td><td class="arabic">مُسْلِمٌ</td><td>UU</td></tr><tr><td class="arabic">مُسْلِمِيْنَ</td><td class="arabic">مُسْلِمًا</td><td>AA</td></tr><tr><td class="arabic">مُسْلِمِيْنَ</td><td class="arabic">مُسْلِمٍ</td><td>EE</td></tr></tbody></table></div>
+<div class="subsection-title" style="font-style:italic;">Feminin:</div><div class="overflow-x"><table class="grid-table"><thead><tr><th>Plural</th><th>Singular</th><th>Sound</th></tr></thead><tbody><tr><td class="arabic">مُسْلِمَاتٌ</td><td class="arabic">مُسْلِمَةٌ</td><td>UU</td></tr><tr><td class="arabic">مُسْلِمَاتٍ</td><td class="arabic">مُسْلِمَةً</td><td>AA</td></tr><tr><td class="arabic">مُسْلِمَاتٍ</td><td class="arabic">مُسْلِمَةٍ</td><td>EE</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-hashtag"></i> 4.6: Tuliskan jumlah setiap kata di atas kata tersebut pada ayat-ayat berikut.</div>
+<div class="quran-block">
+<div class="arabic large">فَإِذَا اسْتَوَيْتَ <mark class="hl">أَنتَ</mark> وَمَن <mark class="hl">مَّعَكَ</mark> عَلَى <mark class="hl">الْفُلْكِ</mark> فَقُلِ <mark class="hl">الْحَمْدُ</mark> <mark class="hl">لِلَّـهِ</mark> الَّذِي <mark class="hl">نَجَّانَا</mark> مِنَ <mark class="hl">الْقَوْمِ</mark> الظَّالِمِينَ</div>
+<div class="quran-ref">Surah Al-Mu&rsquo;minun 23:28</div>
+</div>
+<div class="quran-block">
+<div class="arabic large">وَإِنْ كُنَّا <mark class="hl">لَمُبْتَلِينَ</mark> ثُمَّ <mark class="hl">أَنشَأْنَا</mark> مِن بَعْدِهِمْ قَرْنًا <mark class="hl">آخَرِينَ</mark> فَأَرْسَلْنَا فِيهِمْ <mark class="hl">رَسُولًا</mark> <mark class="hl">مِّنْهُمْ</mark> أَنِ <mark class="hl">اعْبُدُوا</mark> اللَّـهَ مَا لَكُم مِّنْ <mark class="hl">إِلَـٰهٍ</mark> غَيْرُهُ ۖ أَفَلَا تَتَّقُونَ وَقَالَ <mark class="hl">الْمَلَأُ</mark> مِن <mark class="hl">قَوْمِهِ</mark> <mark class="hl">الَّذِينَ</mark> <mark class="hl">كَفَرُوا</mark> <mark class="hl">وَكَذَّبُوا</mark> <mark class="hl">بِلِقَاءِ</mark> <mark class="hl">الْآخِرَةِ</mark> <mark class="hl">وَأَتْرَفْنَاهُمْ</mark> فِي الْحَيَاةِ الدُّنْيَا مَا هَـٰذَا إِلَّا <mark class="hl">بَشَرٌ</mark> <mark class="hl">مِّثْلُكُمْ</mark> <mark class="hl">يَأْكُلُ</mark> مِمَّا <mark class="hl">تَأْكُلُونَ</mark> <mark class="hl">مِنْهُ</mark> <mark class="hl">وَيَشْرَبُ</mark> مِمَّا <mark class="hl">تَشْرَبُونَ</mark> وَلَئِنْ أَطَعْتُم <mark class="hl">بَشَرًا</mark> <mark class="hl">مِّثْلَكُمْ</mark> إِنَّكُمْ إِذًا <mark class="hl">لَّخَاسِرُونَ</mark></div>
+<div class="quran-ref">Surah Al-Mu&rsquo;minun 23:30-34</div>
+</div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 4.7: Lingkari rangkaian-rangkaiannya. Lalu temukan &ldquo;adalah&rdquo; dan terjemahkan.</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">هُمُ الْخَاسِرُونَ</td><td class="def">orang yang merugi</td><td class="answer">Mereka adalah orang-orang yang merugi</td></tr><tr><td class="num">2.</td><td class="prompt">إِنَّهُ مِن سُلَيْمَانَ</td><td class="def">&mdash;</td><td class="answer">Sesungguhnya ia dari Sulaiman</td></tr><tr><td class="num">3.</td><td class="prompt">وَأَنَا أَوَّلُ الْمُسْلِمِينَ</td><td class="def">pertama</td><td class="answer">Dan aku adalah orang muslim yang pertama</td></tr><tr><td class="num">4.</td><td class="prompt">وَاللَّـهُ وَلِيُّ الْمُؤْمِنِينَ</td><td class="def">pelindung; orang beriman</td><td class="answer">Dan Allah adalah pelindung orang-orang yang beriman</td></tr><tr><td class="num">5.</td><td class="prompt">وَإِنِّي مُرْسِلَةٌ إِلَيْهِم</td><td class="def">utusan</td><td class="answer">Dan sesungguhnya aku akan mengirimkan seorang utusan kepada mereka</td></tr><tr><td class="num">6.</td><td class="prompt">لَهُمْ جَنَّاتٍ</td><td class="def">taman/surga</td><td class="answer">Bagi mereka ada taman-taman (surga)</td></tr><tr><td class="num">7.</td><td class="prompt">رَبَّنَا آمَنَّا فَاكْتُبْنَا مَعَ الشَّاهِدِينَ</td><td class="def">catatan; saksi</td><td class="answer">Wahai Tuhan kami, kami telah beriman, maka catatlah kami bersama orang-orang yang bersaksi</td></tr><tr><td class="num">8.</td><td class="prompt">لَهُ مُلْكُ السَّمَاوَاتِ</td><td class="def">kekuasaan</td><td class="answer">Milik-Nya kerajaan langit</td></tr><tr><td class="num">9.</td><td class="prompt">وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ</td><td class="def">mengikuti; langkah</td><td class="answer">Dan janganlah kalian mengikuti langkah-langkah setan</td></tr><tr><td class="num">10.</td><td class="prompt">نَحْنُ مُصْلِحُونَ</td><td class="def">pembuat kebaikan</td><td class="answer">Kami adalah orang-orang yang membuat kebaikan</td></tr><tr><td class="num">11.</td><td class="prompt">وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ</td><td class="def">penglihatan; penutup</td><td class="answer">Dan pada penglihatan mereka ada penutup</td></tr><tr><td class="num">12.</td><td class="prompt">وَهُوَ الَّذِي خَلَقَ اللَّيْلَ وَالنَّهَارَ وَالشَّمْسَ</td><td class="def">malam; siang</td><td class="answer">Dan Dialah yang menciptakan malam, siang, dan matahari</td></tr><tr><td class="num">13.</td><td class="prompt">وَأَنتُمْ ظَالِمُونَ</td><td class="def">zalim</td><td class="answer">Dan kalian adalah orang-orang yang zalim</td></tr><tr><td class="num">14.</td><td class="prompt">يَسْجُدُونَ لِلشَّمْسِ مِن دُونِ اللَّـهِ</td><td class="def">sujud</td><td class="answer">Mereka sujud kepada matahari selain kepada Allah</td></tr></tbody>
+</table></div>
+<div class="note-box"><strong>Tugas:</strong> &#9744; Selesaikan Pelajaran 16-20 di aplikasi seluler</div>
+<div class="unit-pagination">
+<a href="level2-unit3.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 3</a>
+<a href="level2-unit5.html" class="pagination-next">Unit 5: Kata Sifat <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level2-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 2</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 6 &middot; Level 3 | Quranic Arabic Workbook</title>
+<meta name="description" content="Negation - Quranic Arabic Level 3, Unit 6">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 3 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 3 &middot; UNIT 6</span></div>
+<h1 class="unit-title">Negation</h1>
+
+<div class="section-title"><i class="fas fa-shuffle"></i> 6.1: Unscramble. Draw a line from a word to its true definition.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">دُوْنَ</td><td style="text-align:right;">that (m)</td><td class="arabic">يَ</td><td style="text-align:right;">no, not</td></tr><tr><td class="arabic">ذَلِكَ</td><td style="text-align:right;">path</td><td class="arabic">ل (before ism)</td><td style="text-align:right;">so that</td></tr><tr><td class="arabic">رَبّ</td><td style="text-align:right;">will (near future)</td><td class="arabic">ل (before present tense)</td><td style="text-align:right;">did not</td></tr><tr><td class="arabic">رَسُوْل</td><td style="text-align:right;">other than</td><td class="arabic">لا</td><td style="text-align:right;">however</td></tr><tr><td class="arabic">رِيْح</td><td style="text-align:right;">messenger</td><td class="arabic">لَعَلَّ</td><td style="text-align:right;">so that</td></tr><tr><td class="arabic">سَ</td><td style="text-align:right;">Lord</td><td class="arabic">لَكِنَّ</td><td style="text-align:right;">to, for</td></tr><tr><td class="arabic">سَبِيْل</td><td style="text-align:right;">wind</td><td class="arabic">لَمْ</td><td style="text-align:right;">so that, hopefully, maybe</td></tr></tbody></table></div>
+<div class="subsection-title">6.1b:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">سَمَاء</td><td style="text-align:right;">he wanted/willed</td><td class="arabic">لَمَّا</td><td style="text-align:right;">will not</td></tr><tr><td class="arabic">سَوْفَ</td><td style="text-align:right;">sun</td><td class="arabic">لَنْ</td><td style="text-align:right;">alas</td></tr><tr><td class="arabic">شَاءَ</td><td style="text-align:right;">sky</td><td class="arabic">لَوْ</td><td style="text-align:right;">what</td></tr><tr><td class="arabic">شَمْس</td><td style="text-align:right;">people</td><td class="arabic">لَيْتَ</td><td style="text-align:right;">when</td></tr><tr><td class="arabic">نَار</td><td style="text-align:right;">will (far future)</td><td class="arabic">مِنْ</td><td style="text-align:right;">if only</td></tr><tr><td class="arabic">نَاس</td><td style="text-align:right;">fire</td><td class="arabic">مَا</td><td style="text-align:right;">from</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-ban"></i> Negation with Past Tense</div>
+<div style="text-align:center; color:var(--text-color); font-weight:600; margin-bottom:8px;">ما + past tense fi&rsquo;l</div>
+<div class="quran-block"><div class="arabic large">مَا كَفَرَ</div></div>
+<div class="intro-box">Where does ما of negation appear in a sentence? It appears at the very beginning of the sentence, directly before the fi&rsquo;l it negates (e.g. مَا كَفَرَ &mdash; &ldquo;he did not disbelieve&rdquo;).</div>
+<div class="intro-box">Where does ما meaning &lsquo;what&rsquo; appear? Also at the beginning of a sentence, but it is followed by an ism and used to ask a question rather than negate (e.g. مَا هَـٰذَا &mdash; &ldquo;what is this?&rdquo;).</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 6.2: Which of the following are negation sentences? Circle them.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">مَا ظَلَمَهُمُ اللَّـهُ</td><td class="arabic">لَكُم مَّا كَسَبْتُمْ</td><td class="arabic">مَا اخْتَلَفَ فِيهِ</td></tr><tr><td class="arabic">خَلَقَ لَكُم مَّا فِي الْأَرْضِ</td><td class="arabic">مَا كَانَ مِنَ الْمُشْرِكِينَ</td><td class="arabic">مَا خَلَقْتَ هَـٰذَا بَاطِلًا</td></tr><tr><td class="arabic">فَمَا رَبِحَت تِّجَارَتُهُمْ</td><td class="arabic">يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ</td><td class="arabic">خُلِقَ مِن مَّاءٍ دَافِقٍ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-language"></i> 6.3: Translate</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">مَا تَفَرَّقُ</td><td class="def">become divided</td><td class="answer">They did not become divided</td></tr><tr><td class="num">2.</td><td class="prompt">مَا قَتَلُوهُ</td><td class="def">kill</td><td class="answer">They did not kill him</td></tr><tr><td class="num">3.</td><td class="prompt">مَا كَانُوا مُهْتَدِينَ</td><td class="def">guided ones</td><td class="answer">They were not guided</td></tr><tr><td class="num">4.</td><td class="prompt">وَمَا ظَلَمَهُمُ اللَّـهُ</td><td class="def">wrong</td><td class="answer">And Allah did not wrong them</td></tr><tr><td class="num">5.</td><td class="prompt">مَا خَلَقْتَ هَـٰذَا بَاطِلًا</td><td class="def">aimlessly</td><td class="answer">You did not create this aimlessly</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-ban"></i> Negation with Present Tense</div>
+<div class="intro-box">There are four ways a present tense fi&rsquo;l can be negated:</div>
+<div class="note-box"><ol class="steps"><li>ما (not)</li><li>لا (not)</li><li>لَمْ (did not)</li><li>لَنْ (will not)</li></ol></div>
+<div class="subsection-title">Examples:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَن تَمَسَّ</td><td class="arabic">لَمْ يَجِدْ</td><td class="arabic">لَا تَعْلَمُونَ</td><td class="arabic">مَا يَضُرُّونَ</td></tr></tbody></table></div>
+<div class="subsection-title">Recap</div>
+<div class="intro-box">Does لا of negation have an effect on present tense endings? No, لا of negation does not change the ending of a present tense fi&rsquo;l.<br><br>What about لا of forbidding? Yes &mdash; لا of forbidding (لا الناهية) does affect the ending, giving the fi&rsquo;l a Sukun-harf style (jussive) ending, similar to لَمْ.</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 6.4: Which of the following are negation sentences? Circle them.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَا يُؤْمِنُونَ بِاللَّـهِ</td><td class="arabic">مَا يَخْدَعُونَ إِلَّا أَنفُسَهُمْ</td><td class="arabic">لَا تُفْسِدُوا فِي الْأَرْضِ</td></tr><tr><td class="arabic">لَن يُخْلِفَ اللَّـهُ عَهْدَهُ</td><td class="arabic">أَعْلَمُ مَا تُبْدُونَ</td><td class="arabic">وَاللَّـهُ لَا يُحِبُّ الظَّالِمِينَ</td></tr><tr><td class="arabic">لَا تَجْعَلُوا لِلَّـهِ أَندَادًا</td><td class="arabic">وَيَتَعَلَّمُونَ مَا يَضُرُّهُمْ</td><td class="arabic">أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-language"></i> 6.5: Translate</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">مَا يَشْعُرُونَ</td><td class="def">realize</td><td class="answer">They do not realize</td></tr><tr><td class="num">2.</td><td class="prompt">لَا يَنفَعُهُمْ</td><td class="def">benefit</td><td class="answer">It does not benefit them</td></tr><tr><td class="num">3.</td><td class="prompt">أَلَمْ يَجِدْكَ يَتِيمًا</td><td class="def">orphan</td><td class="answer">Did He not find you an orphan?</td></tr><tr><td class="num">4.</td><td class="prompt">وَمَا يُضِلُّ بِهِ إِلَّا الْفَاسِقِينَ</td><td class="def">misguide; disobedient ones</td><td class="answer">And He does not misguide by it except the disobedient</td></tr><tr><td class="num">5.</td><td class="prompt">لَن نَّصْبِرَ عَلَىٰ طَعَامٍ وَاحِدٍ</td><td class="def">be patient (with); food; one</td><td class="answer">We will never be patient with one kind of food</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-headphones"></i> 6.6: Let&rsquo;s listen to Surah Waqi&rsquo;ah verses 57-61. How many pronouns did you hear? Write them down.</div>
+<div class="note-box" style="min-height:100px;"></div>
+<div class="section-title"><i class="fas fa-ban"></i> Negation with Ism Sentences</div>
+<div class="intro-box">There are three ways an ism sentence can be negated:</div>
+<div class="note-box"><ol class="steps"><li>ما</li><li>لا</li><li>لَيْسَ</li></ol></div>
+<div class="subsection-title">Examples:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَيْسُوا سَوَاءً</td><td class="arabic">لَا خَوْفٌ عَلَيْهِمْ</td><td class="arabic">مَا هُم مِّنكُمْ</td></tr></tbody></table></div>
+<div class="intro-box">لَيْسَ is a unique negation word because it is conjugated.</div>
+<div class="subsection-title">Laysa chart:</div>
+<div class="overflow-x"><table class="grid-table conj-table"><thead><tr><th>Plural</th><th>Singular Female</th><th>Singular Male</th><th></th></tr></thead><tbody><tr><td class="arabic-cell" style="text-align:center;">هُمْ لَيْسُوا<div class="gloss-cell">They are not</div></td><td class="arabic-cell" style="text-align:center;">هِيَ لَيْسَتْ<div class="gloss-cell">She is not</div></td><td class="arabic-cell" style="text-align:center;">هُوَ لَيْسَ<div class="gloss-cell">He is not</div></td><td class="person-cell">3<sup>rd</sup> person</td></tr><tr><td class="arabic-cell" style="text-align:center;">أَنْتُمْ لَسْتُمْ<div class="gloss-cell">Y&rsquo;all are not</div></td><td class="arabic-cell" style="text-align:center;">أَنْتِ لَسْتِ<div class="gloss-cell">You (f) are not</div></td><td class="arabic-cell" style="text-align:center;">أَنْتَ لَسْتَ<div class="gloss-cell">You are not</div></td><td class="person-cell">2<sup>nd</sup> person</td></tr><tr><td class="arabic-cell" style="text-align:center;">نَحْنُ لَسْنَا<div class="gloss-cell">We are not</div></td><td class="arabic-cell" style="text-align:center;">--<div class="gloss-cell">--</div></td><td class="arabic-cell" style="text-align:center;">أَنَا لَسْتُ<div class="gloss-cell">I am not</div></td><td class="person-cell">1<sup>st</sup> person</td></tr></tbody></table></div>
+<div class="subsection-title">Absolute Negation:</div>
+<div class="quran-block"><div class="arabic large">لَا رَيْبَ فِيهِ</div></div>
+<div class="intro-box">What is absolute negation? A stronger form of negation using لا that negates an entire category or type altogether, not just one instance &mdash; equivalent to English &ldquo;no ___ at all&rdquo;. E.g. لَا رَيْبَ فِيهِ &mdash; &ldquo;There is absolutely no doubt in it.&rdquo;</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 6.7: Which of the following are negation sentences? Circle them.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَا جُنَاحَ عَلَيْهِ</td><td class="arabic">مَا أَمْرُنَا إِلَّا وَاحِدَةٌ</td><td class="arabic">لَيْسَ عَلَيْكُمْ جُنَاحٌ</td></tr><tr><td class="arabic">إِنَّمَا أَنَا نَذِيرٌ مُّبِينٌ</td><td class="arabic">لَّا بَيْعٌ فِيهِ</td><td class="arabic">لَهُ مَا فِي السَّمَاوَاتِ</td></tr><tr><td class="arabic">لِلَّـهِ مَا فِي السَّمَاوَاتِ</td><td class="arabic">لَسْتَ مِنْهُمْ فِي شَيْءٍ</td><td class="arabic">مَا هَـٰذَا إِلَّا بَشَرٌ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-language"></i> 6.8: Translate</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">لَسْتَ مِنْهُمْ</td><td class="def">&mdash;</td><td class="answer">You are not among them</td></tr><tr><td class="num">2.</td><td class="prompt">لَّا بَيْعٌ فِيهِ</td><td class="def">bargaining</td><td class="answer">There is no bargaining in it</td></tr><tr><td class="num">3.</td><td class="prompt">لَيْسَ لَهُ وَلَدٌ</td><td class="def">child</td><td class="answer">He has no child</td></tr><tr><td class="num">4.</td><td class="prompt">لَا جُنَاحَ عَلَيْكُمْ</td><td class="def">blame</td><td class="answer">There is no blame upon you</td></tr><tr><td class="num">5.</td><td class="prompt">مَا هَـٰذَا إِلَّا أَسَاطِيرُ الْأَوَّلِينَ</td><td class="def">tales; former people</td><td class="answer">This is nothing but tales of the former peoples</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 6.9: Quran Translation:</div>
+<div class="quran-block">
+<div class="arabic large">وَقَالَ ارْكَبُوا فِيهَا بِسْمِ اللَّـهِ مَجْرَاهَا وَمُرْسَاهَا ۚ إِنَّ رَبِّي لَغَفُورٌ رَّحِيمٌ ﴿٤١﴾ وَهِيَ تَجْرِي بِهِمْ فِي مَوْجٍ كَالْجِبَالِ وَنَادَىٰ نُوحٌ ابْنَهُ وَكَانَ فِي مَعْزِلٍ يَا بُنَيَّ ارْكَب مَّعَنَا وَلَا تَكُن مَّعَ الْكَافِرِينَ ﴿٤٢﴾ قَالَ سَآوِي إِلَىٰ جَبَلٍ يَعْصِمُنِي مِنَ الْمَاءِ ۚ قَالَ لَا عَاصِمَ الْيَوْمَ مِنْ أَمْرِ اللَّـهِ إِلَّا مَن رَّحِمَ ۚ وَحَالَ بَيْنَهُمَا الْمَوْجُ فَكَانَ مِنَ الْمُغْرَقِينَ ﴿٤٣﴾</div>
+<div class="quran-ref">Surah Hud 11:41-43</div>
+</div>
+<div class="note-box"><strong>Vocabulary hints (in order of appearance):</strong> ride, anchorage, course, Save, Isolation, take refuge, wave, called, ran, Drowned ones, to come, have mercy (on), saviour</div>
+<div class="note-box"><strong>Homework:</strong> &#9744; Complete Lessons 61-65 in the mobile app</div>
+<div class="subsection-title">Term Glossary</div>
+<div class="overflow-x"><table class="grid-table"><thead><tr><th>Our Term</th><th>Arabic Term</th></tr></thead>
+<tbody>
+<tr><td>ما of negation</td><td class="arabic" style="text-align:center;">ما نَافِيَة</td></tr>
+<tr><td>ما of questioning</td><td class="arabic" style="text-align:center;">ما اِسْتِفْهَامِيَّة</td></tr>
+<tr><td>لا of negation</td><td class="arabic" style="text-align:center;">لا نَافِيَة</td></tr>
+<tr><td>لا of forbidding</td><td class="arabic" style="text-align:center;">لا نَاهِيَة</td></tr>
+<tr><td>Absolute negation</td><td class="arabic" style="text-align:center;">لا نَافِيَة لِلْجِنْس</td></tr>
+<tr><td>&ldquo;A&rdquo; harf</td><td class="arabic" style="text-align:center;">حَرْف نَاصِبَة لِلْمُضَارِع</td></tr>
+<tr><td>Sukun harf</td><td class="arabic" style="text-align:center;">حَرْف جَازِمَة لِلْمُضَارِع</td></tr>
+</tbody></table></div>
+<div class="unit-pagination">
+<a href="level3-unit5.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 5</a>
+<a href="level3-unit7.html" class="pagination-next">Unit 7: Conditional Sentences <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 3 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 3</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 3 &middot; UNIT 6</span></div>
+<h1 class="unit-title">Negasi</h1>
+
+<div class="section-title"><i class="fas fa-shuffle"></i> 6.1: Acak. Tariklah garis dari sebuah kata ke arti yang benar.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">دُوْنَ</td><td style="text-align:right;">itu (lk)</td><td class="arabic">يَ</td><td style="text-align:right;">tidak</td></tr><tr><td class="arabic">ذَلِكَ</td><td style="text-align:right;">jalan</td><td class="arabic">ل (sebelum ism)</td><td style="text-align:right;">agar</td></tr><tr><td class="arabic">رَبّ</td><td style="text-align:right;">akan (masa depan dekat)</td><td class="arabic">ل (sebelum bentuk sekarang)</td><td style="text-align:right;">tidak (lampau)</td></tr><tr><td class="arabic">رَسُوْل</td><td style="text-align:right;">selain</td><td class="arabic">لا</td><td style="text-align:right;">akan tetapi</td></tr><tr><td class="arabic">رِيْح</td><td style="text-align:right;">rasul/utusan</td><td class="arabic">لَعَلَّ</td><td style="text-align:right;">agar</td></tr><tr><td class="arabic">سَ</td><td style="text-align:right;">Tuhan</td><td class="arabic">لَكِنَّ</td><td style="text-align:right;">untuk, bagi</td></tr><tr><td class="arabic">سَبِيْل</td><td style="text-align:right;">angin</td><td class="arabic">لَمْ</td><td style="text-align:right;">semoga, mudah-mudahan</td></tr></tbody></table></div>
+<div class="subsection-title">6.1b:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">سَمَاء</td><td style="text-align:right;">dia menghendaki</td><td class="arabic">لَمَّا</td><td style="text-align:right;">tidak akan</td></tr><tr><td class="arabic">سَوْفَ</td><td style="text-align:right;">matahari</td><td class="arabic">لَنْ</td><td style="text-align:right;">alangkah</td></tr><tr><td class="arabic">شَاءَ</td><td style="text-align:right;">langit</td><td class="arabic">لَوْ</td><td style="text-align:right;">apa</td></tr><tr><td class="arabic">شَمْس</td><td style="text-align:right;">manusia</td><td class="arabic">لَيْتَ</td><td style="text-align:right;">kapan</td></tr><tr><td class="arabic">نَار</td><td style="text-align:right;">akan (masa depan jauh)</td><td class="arabic">مِنْ</td><td style="text-align:right;">seandainya saja</td></tr><tr><td class="arabic">نَاس</td><td style="text-align:right;">api</td><td class="arabic">مَا</td><td style="text-align:right;">dari</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-ban"></i> Negasi dengan Bentuk Lampau</div>
+<div style="text-align:center; color:var(--text-color); font-weight:600; margin-bottom:8px;">ما + fi&rsquo;l bentuk lampau</div>
+<div class="quran-block"><div class="arabic large">مَا كَفَرَ</div></div>
+<div class="intro-box">Di mana ما negasi muncul dalam sebuah kalimat? Ia muncul di awal kalimat, tepat sebelum fi&rsquo;l yang dinegasikannya (misalnya مَا كَفَرَ &mdash; &ldquo;dia tidak ingkar&rdquo;).</div>
+<div class="intro-box">Di mana ما yang berarti &lsquo;apa&rsquo; muncul? Juga di awal kalimat, tetapi diikuti oleh ism dan digunakan untuk bertanya, bukan untuk menegasikan (misalnya مَا هَـٰذَا &mdash; &ldquo;apa ini?&rdquo;).</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 6.2: Mana di antara berikut ini yang merupakan kalimat negasi? Lingkari.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">مَا ظَلَمَهُمُ اللَّـهُ</td><td class="arabic">لَكُم مَّا كَسَبْتُمْ</td><td class="arabic">مَا اخْتَلَفَ فِيهِ</td></tr><tr><td class="arabic">خَلَقَ لَكُم مَّا فِي الْأَرْضِ</td><td class="arabic">مَا كَانَ مِنَ الْمُشْرِكِينَ</td><td class="arabic">مَا خَلَقْتَ هَـٰذَا بَاطِلًا</td></tr><tr><td class="arabic">فَمَا رَبِحَت تِّجَارَتُهُمْ</td><td class="arabic">يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ</td><td class="arabic">خُلِقَ مِن مَّاءٍ دَافِقٍ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-language"></i> 6.3: Terjemahkan</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">مَا تَفَرَّقُ</td><td class="def">terpecah belah</td><td class="answer">Mereka tidak terpecah belah</td></tr><tr><td class="num">2.</td><td class="prompt">مَا قَتَلُوهُ</td><td class="def">membunuh</td><td class="answer">Mereka tidak membunuhnya</td></tr><tr><td class="num">3.</td><td class="prompt">مَا كَانُوا مُهْتَدِينَ</td><td class="def">orang-orang yang mendapat petunjuk</td><td class="answer">Mereka bukanlah orang-orang yang mendapat petunjuk</td></tr><tr><td class="num">4.</td><td class="prompt">وَمَا ظَلَمَهُمُ اللَّـهُ</td><td class="def">menzalimi</td><td class="answer">Dan Allah tidak menzalimi mereka</td></tr><tr><td class="num">5.</td><td class="prompt">مَا خَلَقْتَ هَـٰذَا بَاطِلًا</td><td class="def">sia-sia</td><td class="answer">Engkau tidak menciptakan ini dengan sia-sia</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-ban"></i> Negasi dengan Bentuk Sekarang</div>
+<div class="intro-box">Ada empat cara untuk menegasikan fi&rsquo;l bentuk sekarang:</div>
+<div class="note-box"><ol class="steps"><li>ما (tidak)</li><li>لا (tidak)</li><li>لَمْ (tidak, lampau)</li><li>لَنْ (tidak akan)</li></ol></div>
+<div class="subsection-title">Contoh:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَن تَمَسَّ</td><td class="arabic">لَمْ يَجِدْ</td><td class="arabic">لَا تَعْلَمُونَ</td><td class="arabic">مَا يَضُرُّونَ</td></tr></tbody></table></div>
+<div class="subsection-title">Ringkasan</div>
+<div class="intro-box">Apakah لا negasi memengaruhi akhiran bentuk sekarang? Tidak, لا negasi tidak mengubah akhiran fi&rsquo;l bentuk sekarang.<br><br>Bagaimana dengan لا larangan? Ya &mdash; لا larangan (لا الناهية) memengaruhi akhirannya, memberikan fi&rsquo;l akhiran bergaya harf sukun (jussive), seperti لَمْ.</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 6.4: Mana di antara berikut ini yang merupakan kalimat negasi? Lingkari.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَا يُؤْمِنُونَ بِاللَّـهِ</td><td class="arabic">مَا يَخْدَعُونَ إِلَّا أَنفُسَهُمْ</td><td class="arabic">لَا تُفْسِدُوا فِي الْأَرْضِ</td></tr><tr><td class="arabic">لَن يُخْلِفَ اللَّـهُ عَهْدَهُ</td><td class="arabic">أَعْلَمُ مَا تُبْدُونَ</td><td class="arabic">وَاللَّـهُ لَا يُحِبُّ الظَّالِمِينَ</td></tr><tr><td class="arabic">لَا تَجْعَلُوا لِلَّـهِ أَندَادًا</td><td class="arabic">وَيَتَعَلَّمُونَ مَا يَضُرُّهُمْ</td><td class="arabic">أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-language"></i> 6.5: Terjemahkan</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">مَا يَشْعُرُونَ</td><td class="def">menyadari</td><td class="answer">Mereka tidak menyadari</td></tr><tr><td class="num">2.</td><td class="prompt">لَا يَنفَعُهُمْ</td><td class="def">memberi manfaat</td><td class="answer">Ia tidak memberi manfaat kepada mereka</td></tr><tr><td class="num">3.</td><td class="prompt">أَلَمْ يَجِدْكَ يَتِيمًا</td><td class="def">anak yatim</td><td class="answer">Bukankah Dia mendapatimu sebagai anak yatim?</td></tr><tr><td class="num">4.</td><td class="prompt">وَمَا يُضِلُّ بِهِ إِلَّا الْفَاسِقِينَ</td><td class="def">menyesatkan; orang-orang fasik</td><td class="answer">Dan Dia tidak menyesatkan dengannya kecuali orang-orang fasik</td></tr><tr><td class="num">5.</td><td class="prompt">لَن نَّصْبِرَ عَلَىٰ طَعَامٍ وَاحِدٍ</td><td class="def">bersabar (dengan); makanan; satu</td><td class="answer">Kami tidak akan pernah bersabar dengan satu macam makanan saja</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-headphones"></i> 6.6: Ayo dengarkan Surah Al-Waqi&rsquo;ah ayat 57-61. Berapa banyak kata ganti yang kamu dengar? Tuliskan.</div>
+<div class="note-box" style="min-height:100px;"></div>
+<div class="section-title"><i class="fas fa-ban"></i> Negasi dengan Kalimat Ism</div>
+<div class="intro-box">Ada tiga cara untuk menegasikan kalimat ism:</div>
+<div class="note-box"><ol class="steps"><li>ما</li><li>لا</li><li>لَيْسَ</li></ol></div>
+<div class="subsection-title">Contoh:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَيْسُوا سَوَاءً</td><td class="arabic">لَا خَوْفٌ عَلَيْهِمْ</td><td class="arabic">مَا هُم مِّنكُمْ</td></tr></tbody></table></div>
+<div class="intro-box">لَيْسَ adalah kata negasi yang unik karena ia dikonjugasikan (berubah bentuk).</div>
+<div class="subsection-title">Tabel Laysa:</div>
+<div class="overflow-x"><table class="grid-table conj-table"><thead><tr><th>Plural</th><th>Singular Female</th><th>Singular Male</th><th></th></tr></thead><tbody><tr><td class="arabic-cell" style="text-align:center;">هُمْ لَيْسُوا<div class="gloss-cell">Mereka bukanlah</div></td><td class="arabic-cell" style="text-align:center;">هِيَ لَيْسَتْ<div class="gloss-cell">Dia (pr) bukanlah</div></td><td class="arabic-cell" style="text-align:center;">هُوَ لَيْسَ<div class="gloss-cell">Dia (lk) bukanlah</div></td><td class="person-cell">Orang ke-3</td></tr><tr><td class="arabic-cell" style="text-align:center;">أَنْتُمْ لَسْتُمْ<div class="gloss-cell">Kalian bukanlah</div></td><td class="arabic-cell" style="text-align:center;">أَنْتِ لَسْتِ<div class="gloss-cell">Kamu (pr) bukanlah</div></td><td class="arabic-cell" style="text-align:center;">أَنْتَ لَسْتَ<div class="gloss-cell">Kamu bukanlah</div></td><td class="person-cell">Orang ke-2</td></tr><tr><td class="arabic-cell" style="text-align:center;">نَحْنُ لَسْنَا<div class="gloss-cell">Kami bukanlah</div></td><td class="arabic-cell" style="text-align:center;">--<div class="gloss-cell">--</div></td><td class="arabic-cell" style="text-align:center;">أَنَا لَسْتُ<div class="gloss-cell">Aku bukanlah</div></td><td class="person-cell">Orang ke-1</td></tr></tbody></table></div>
+<div class="subsection-title">Negasi Mutlak:</div>
+<div class="quran-block"><div class="arabic large">لَا رَيْبَ فِيهِ</div></div>
+<div class="intro-box">Apa itu negasi mutlak? Bentuk negasi yang lebih kuat menggunakan لا yang menegasikan seluruh kategori atau jenis sekaligus, bukan hanya satu contoh saja &mdash; setara dengan &ldquo;sama sekali tidak ada ___&rdquo; dalam bahasa Indonesia. Misalnya لَا رَيْبَ فِيهِ &mdash; &ldquo;Sama sekali tidak ada keraguan di dalamnya.&rdquo;</div>
+<div class="section-title"><i class="fas fa-circle-dot"></i> 6.7: Mana di antara berikut ini yang merupakan kalimat negasi? Lingkari.</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">لَا جُنَاحَ عَلَيْهِ</td><td class="arabic">مَا أَمْرُنَا إِلَّا وَاحِدَةٌ</td><td class="arabic">لَيْسَ عَلَيْكُمْ جُنَاحٌ</td></tr><tr><td class="arabic">إِنَّمَا أَنَا نَذِيرٌ مُّبِينٌ</td><td class="arabic">لَّا بَيْعٌ فِيهِ</td><td class="arabic">لَهُ مَا فِي السَّمَاوَاتِ</td></tr><tr><td class="arabic">لِلَّـهِ مَا فِي السَّمَاوَاتِ</td><td class="arabic">لَسْتَ مِنْهُمْ فِي شَيْءٍ</td><td class="arabic">مَا هَـٰذَا إِلَّا بَشَرٌ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-language"></i> 6.8: Terjemahkan</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">لَسْتَ مِنْهُمْ</td><td class="def">&mdash;</td><td class="answer">Kamu bukanlah termasuk dari mereka</td></tr><tr><td class="num">2.</td><td class="prompt">لَّا بَيْعٌ فِيهِ</td><td class="def">jual beli</td><td class="answer">Tidak ada jual beli di dalamnya</td></tr><tr><td class="num">3.</td><td class="prompt">لَيْسَ لَهُ وَلَدٌ</td><td class="def">anak</td><td class="answer">Dia tidak memiliki anak</td></tr><tr><td class="num">4.</td><td class="prompt">لَا جُنَاحَ عَلَيْكُمْ</td><td class="def">dosa/celaan</td><td class="answer">Tidak ada dosa/celaan atas kalian</td></tr><tr><td class="num">5.</td><td class="prompt">مَا هَـٰذَا إِلَّا أَسَاطِيرُ الْأَوَّلِينَ</td><td class="def">dongeng; orang-orang terdahulu</td><td class="answer">Ini tidak lain hanyalah dongeng-dongeng orang-orang terdahulu</td></tr></tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-book-quran"></i> 6.9: Terjemahan Al-Qur&rsquo;an:</div>
+<div class="quran-block">
+<div class="arabic large">وَقَالَ ارْكَبُوا فِيهَا بِسْمِ اللَّـهِ مَجْرَاهَا وَمُرْسَاهَا ۚ إِنَّ رَبِّي لَغَفُورٌ رَّحِيمٌ ﴿٤١﴾ وَهِيَ تَجْرِي بِهِمْ فِي مَوْجٍ كَالْجِبَالِ وَنَادَىٰ نُوحٌ ابْنَهُ وَكَانَ فِي مَعْزِلٍ يَا بُنَيَّ ارْكَب مَّعَنَا وَلَا تَكُن مَّعَ الْكَافِرِينَ ﴿٤٢﴾ قَالَ سَآوِي إِلَىٰ جَبَلٍ يَعْصِمُنِي مِنَ الْمَاءِ ۚ قَالَ لَا عَاصِمَ الْيَوْمَ مِنْ أَمْرِ اللَّـهِ إِلَّا مَن رَّحِمَ ۚ وَحَالَ بَيْنَهُمَا الْمَوْجُ فَكَانَ مِنَ الْمُغْرَقِينَ ﴿٤٣﴾</div>
+<div class="quran-ref">Surah Hud 11:41-43</div>
+</div>
+<div class="note-box"><strong>Petunjuk kosakata (sesuai urutan kemunculan):</strong> mengendarai, tempat berlabuh, perjalanan, selamat, keterasingan, berlindung, gelombang, memanggil, berlari, orang-orang yang tenggelam, datang, merahmati, penyelamat</div>
+<div class="note-box"><strong>Tugas:</strong> &#9744; Selesaikan Pelajaran 61-65 di aplikasi seluler</div>
+<div class="subsection-title">Daftar Istilah</div>
+<div class="overflow-x"><table class="grid-table"><thead><tr><th>Istilah Kami</th><th>Istilah Arab</th></tr></thead>
+<tbody>
+<tr><td>ما negasi</td><td class="arabic" style="text-align:center;">ما نَافِيَة</td></tr>
+<tr><td>ما tanya</td><td class="arabic" style="text-align:center;">ما اِسْتِفْهَامِيَّة</td></tr>
+<tr><td>لا negasi</td><td class="arabic" style="text-align:center;">لا نَافِيَة</td></tr>
+<tr><td>لا larangan</td><td class="arabic" style="text-align:center;">لا نَاهِيَة</td></tr>
+<tr><td>Negasi mutlak</td><td class="arabic" style="text-align:center;">لا نَافِيَة لِلْجِنْس</td></tr>
+<tr><td>Harf &ldquo;A&rdquo;</td><td class="arabic" style="text-align:center;">حَرْف نَاصِبَة لِلْمُضَارِع</td></tr>
+<tr><td>Harf sukun</td><td class="arabic" style="text-align:center;">حَرْف جَازِمَة لِلْمُضَارِع</td></tr>
+</tbody></table></div>
+<div class="unit-pagination">
+<a href="level3-unit5.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 5</a>
+<a href="level3-unit7.html" class="pagination-next">Unit 7: Kalimat Bersyarat <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 3</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
