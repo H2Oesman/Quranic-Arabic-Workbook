@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Appendix II &middot; Level 3 | Quranic Arabic Workbook</title>
+<meta name="description" content="Vocabulary - Quranic Arabic Level 3, Appendix II">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 3 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 3 &middot; APPENDIX II</span></div>
+<h1 class="unit-title">Vocabulary</h1>
+<div class="unit-subtitle">A complete alphabetical vocabulary list covering all three levels of this workbook.</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">آتَى</td><td class="en">he gave</td><td class="ar">آخِر</td><td class="en">hereafter, last</td></tr><tr><td class="ar">آمَنَ</td><td class="en">he believed</td><td class="ar">آيَة</td><td class="en">sign, verse</td></tr><tr><td class="ar">أَ</td><td class="en">Did?</td><td class="ar">أَتَى</td><td class="en">he came</td></tr><tr><td class="ar">أَجْر</td><td class="en">reward</td><td class="ar">أَحَد</td><td class="en">one</td></tr><tr><td class="ar">أَخَذَ</td><td class="en">he took/seized</td><td class="ar">أَخْ</td><td class="en">brother</td></tr><tr><td class="ar">أَخْرَجَ</td><td class="en">he brought forth/expelled</td><td class="ar">أَرَادَ</td><td class="en">he wanted/intended</td></tr><tr><td class="ar">أَرْسَلَ</td><td class="en">he sent</td><td class="ar">أَرْض</td><td class="en">land</td></tr><tr><td class="ar">أَشْرَكَ</td><td class="en">he associated partners</td><td class="ar">أَصْحَاب</td><td class="en">companions</td></tr><tr><td class="ar">أَطَاعَ</td><td class="en">he obeyed</td><td class="ar">أَكَلَ</td><td class="en">he ate</td></tr><tr><td class="ar">أَكْثَر</td><td class="en">most</td><td class="ar">أَلِيْم</td><td class="en">painful</td></tr><tr><td class="ar">أَلْقَى</td><td class="en">he met, threw</td><td class="ar">أَمَرَ</td><td class="en">he commanded</td></tr><tr><td class="ar">أَمْ</td><td class="en">or</td><td class="ar">أَمْر</td><td class="en">command, matter</td></tr><tr><td class="ar">أَنَا/ي/ْفِيْ</td><td class="en">I, me, mine</td><td class="ar">أَنَّ</td><td class="en">that</td></tr><tr><td class="ar">أَنْ</td><td class="en">to, that</td><td class="ar">أَنْتَ/ك</td><td class="en">you (m)</td></tr><tr><td class="ar">أَنْتُمْ/كُمْ</td><td class="en">you all</td><td class="ar">أَنْتِ/ك</td><td class="en">you (f)</td></tr><tr><td class="ar">أَنْزَلَ</td><td class="en">he revealed</td><td class="ar">أَهْل</td><td class="en">family, people</td></tr><tr><td class="ar">أَوَّل</td><td class="en">first, former</td><td class="ar">أَوْ</td><td class="en">or</td></tr><tr><td class="ar">أَوْحَى</td><td class="en">he revealed, inspired</td><td class="ar">أَيْ</td><td class="en">which, any</td></tr><tr><td class="ar">أَيْنَ</td><td class="en">where?</td><td class="ar">أَيْنَمَا</td><td class="en">wherever</td></tr><tr><td class="ar">أُولَاءِكَ</td><td class="en">those</td><td class="ar">إِذَا</td><td class="en">when</td></tr><tr><td class="ar">إِلَه</td><td class="en">god</td><td class="ar">إِلَى</td><td class="en">to</td></tr><tr><td class="ar">إِلَّا</td><td class="en">except</td><td class="ar">إِنَّ</td><td class="en">indeed</td></tr><tr><td class="ar">إِنْ</td><td class="en">if</td><td class="ar">إِنْسَان</td><td class="en">mankind</td></tr><tr><td class="ar">الَّتِي</td><td class="en">the one who (f)</td><td class="ar">الَّذِيْ</td><td class="en">the one who (m)</td></tr><tr><td class="ar">الَّذِيْنَ</td><td class="en">the ones who</td><td class="ar">اِتَّبَعَ</td><td class="en">he followed</td></tr><tr><td class="ar">اِتَّخَذَ</td><td class="en">he took</td><td class="ar">اِتَّقَى</td><td class="en">he feared (Allah)</td></tr><tr><td class="ar">بِ</td><td class="en">with</td><td class="ar">بَعْدَ</td><td class="en">after</td></tr><tr><td class="ar">بَعْض</td><td class="en">some (of)</td><td class="ar">بَلْ</td><td class="en">rather</td></tr><tr><td class="ar">بَنِيْ</td><td class="en">sons, children</td><td class="ar">بَيِّنَة</td><td class="en">clear proof</td></tr><tr><td class="ar">بَيْنَ</td><td class="en">between</td><td class="ar">بِأَنَّ</td><td class="en">because</td></tr><tr><td class="ar">تَحْتَ</td><td class="en">below</td><td class="ar">تَوَلَّى</td><td class="en">he turned</td></tr><tr><td class="ar">جَزَى</td><td class="en">he rewarded, recompensed</td><td class="ar">جَعَلَ</td><td class="en">he made</td></tr><tr><td class="ar">جَنَّة</td><td class="en">paradise, garden</td><td class="ar">جَهَنَّم</td><td class="en">hellfire</td></tr><tr><td class="ar">حَتَّى</td><td class="en">until</td><td class="ar">حَقّ</td><td class="en">truth</td></tr><tr><td class="ar">حَكِيْم</td><td class="en">All-Wise</td><td class="ar">حَيَاة</td><td class="en">life</td></tr><tr><td class="ar">خَافَ</td><td class="en">he feared</td><td class="ar">خَالِد</td><td class="en">abiding eternally</td></tr><tr><td class="ar">خَلَقَ</td><td class="en">he created</td><td class="ar">خَلْف</td><td class="en">behind</td></tr><tr><td class="ar">خَيْر</td><td class="en">good, better</td><td class="ar">دَار</td><td class="en">home</td></tr><tr><td class="ar">دَخَلَ</td><td class="en">he entered</td><td class="ar">دَعَا</td><td class="en">he called</td></tr><tr><td class="ar">دُنْيَا</td><td class="en">world</td><td class="ar">دُوْنَ</td><td class="en">other than</td></tr><tr><td class="ar">دِيْن</td><td class="en">religion, judgement</td><td class="ar">ذَا/ذُوْ/ذِيْ</td><td class="en">possessor of</td></tr><tr><td class="ar">ذَكَرَ</td><td class="en">he remembered, mentioned</td><td class="ar">ذَلِكَ</td><td class="en">that (m)</td></tr><tr><td class="ar">ذُكْر</td><td class="en">reminder, mention</td><td class="ar">رَأَى</td><td class="en">he saw</td></tr><tr><td class="ar">رَبّ</td><td class="en">Lord</td><td class="ar">رَجَعَ</td><td class="en">he returned</td></tr><tr><td class="ar">رَحِيْم</td><td class="en">All-Merciful</td><td class="ar">رَحْمَة</td><td class="en">mercy</td></tr><tr><td class="ar">رَسُوْل</td><td class="en">messenger</td><td class="ar">رِيْح</td><td class="en">wind</td></tr><tr><td class="ar">زَوْج</td><td class="en">spouse, pair</td><td class="ar">سَ</td><td class="en">will (near future)</td></tr><tr><td class="ar">سَأَلَ</td><td class="en">he asked</td><td class="ar">سَبِيْل</td><td class="en">path</td></tr><tr><td class="ar">سَمَاء</td><td class="en">sky</td><td class="ar">سَمِعَ</td><td class="en">he heard, listened</td></tr><tr><td class="ar">سَوْفَ</td><td class="en">will (far future)</td><td class="ar">شَاءَ</td><td class="en">he wanted</td></tr><tr><td class="ar">شَمْس</td><td class="en">sun</td><td class="ar">شَيْء</td><td class="en">thing</td></tr><tr><td class="ar">صَلاة</td><td class="en">prayer</td><td class="ar">ظَالِم</td><td class="en">unjust, wrongdoer</td></tr><tr><td class="ar">ظَلَمَ</td><td class="en">he oppressed/wronged</td><td class="ar">عَالَم</td><td class="en">world</td></tr><tr><td class="ar">عَبَدَ</td><td class="en">he worshipped</td><td class="ar">عَبْد</td><td class="en">slave</td></tr><tr><td class="ar">عَذَاب</td><td class="en">punishment</td><td class="ar">عَزِيْز</td><td class="en">All-Mighty</td></tr><tr><td class="ar">عَظِيْم</td><td class="en">great</td><td class="ar">عَلَى</td><td class="en">on, upon</td></tr><tr><td class="ar">عَلِمَ</td><td class="en">he knew</td><td class="ar">عَلِيْم</td><td class="en">knowing</td></tr><tr><td class="ar">عَمَل</td><td class="en">deed</td><td class="ar">عَمِلَ</td><td class="en">he did</td></tr><tr><td class="ar">عَنْ</td><td class="en">about, away</td><td class="ar">عِلْم</td><td class="en">knowledge</td></tr><tr><td class="ar">عِنْدَ</td><td class="en">near</td><td class="ar">غَفُوْر</td><td class="en">forgiving</td></tr><tr><td class="ar">غَيْر</td><td class="en">other than</td><td class="ar">فَ</td><td class="en">then, so</td></tr><tr><td class="ar">فَضْل</td><td class="en">bounty</td><td class="ar">فَعَلَ</td><td class="en">he did</td></tr><tr><td class="ar">فَلْ</td><td class="en">so should</td><td class="ar">فَوْقَ</td><td class="en">above</td></tr><tr><td class="ar">فِيْ</td><td class="en">in</td><td class="ar">قَالَ</td><td class="en">he said</td></tr><tr><td class="ar">قَبْلَ</td><td class="en">before</td><td class="ar">قَتَلَ</td><td class="en">he killed</td></tr><tr><td class="ar">قَدْ</td><td class="en">certainly</td><td class="ar">قَلْب</td><td class="en">heart</td></tr><tr><td class="ar">قَوْل</td><td class="en">speech</td><td class="ar">قَوْم</td><td class="en">nation, people</td></tr><tr><td class="ar">كَ</td><td class="en">like</td><td class="ar">كَأَنَّ</td><td class="en">as if</td></tr><tr><td class="ar">كَافِر</td><td class="en">disbeliever</td><td class="ar">كَانَ</td><td class="en">he/it was</td></tr><tr><td class="ar">كَذَّبَ</td><td class="en">he denied/rejected</td><td class="ar">كَفَرَ</td><td class="en">he disbelieved</td></tr><tr><td class="ar">كَيْ</td><td class="en">so that</td><td class="ar">كَيْفَ</td><td class="en">how</td></tr><tr><td class="ar">كُلّ</td><td class="en">each, all, every</td><td class="ar">كِتَاب</td><td class="en">book</td></tr><tr><td class="ar">ل</td><td class="en">(before ism) to, for</td><td class="ar">لا</td><td class="en">no, not</td></tr><tr><td class="ar">لَعَلَّ</td><td class="en">so that, hopefully, maybe</td><td class="ar">لَكِنَّ</td><td class="en">however</td></tr><tr><td class="ar">لَمَّا</td><td class="en">when</td><td class="ar">لَمْ</td><td class="en">did not</td></tr><tr><td class="ar">لَنْ</td><td class="en">will not</td><td class="ar">لَوْ</td><td class="en">if only</td></tr><tr><td class="ar">لَيْتَ</td><td class="en">alas</td><td class="ar">لَيْسَ</td><td class="en">he is not</td></tr><tr><td class="ar">لَيْل</td><td class="en">night</td><td class="ar">لِ</td><td class="en">(before present tense) so that</td></tr><tr><td class="ar">لِمَ</td><td class="en">why?</td><td class="ar">مَاذَا</td><td class="en">what?</td></tr><tr><td class="ar">مَا</td><td class="en">what</td><td class="ar">مَال</td><td class="en">wealth</td></tr><tr><td class="ar">مَتَى</td><td class="en">when?</td><td class="ar">مَثَل</td><td class="en">example</td></tr><tr><td class="ar">مَعَ</td><td class="en">with</td><td class="ar">مَلَك</td><td class="en">angel</td></tr><tr><td class="ar">مَنْ</td><td class="en">who</td><td class="ar">مُؤْمِن</td><td class="en">believer</td></tr><tr><td class="ar">مُبِيْن</td><td class="en">clear</td><td class="ar">مِثْل</td><td class="en">like</td></tr><tr><td class="ar">مِنْ</td><td class="en">from</td><td class="ar">نَار</td><td class="en">fire</td></tr><tr><td class="ar">نَاس</td><td class="en">people</td><td class="ar">نَبِيّ</td><td class="en">prophet</td></tr><tr><td class="ar">نَحْنُ/نَا</td><td class="en">we</td><td class="ar">نَظَرَ</td><td class="en">he looked, saw</td></tr><tr><td class="ar">نَفْس</td><td class="en">person</td><td class="ar">هَؤُلَاءِ</td><td class="en">these</td></tr><tr><td class="ar">هَدَى</td><td class="en">he guided</td><td class="ar">هَذَا</td><td class="en">this (m)</td></tr><tr><td class="ar">هَذِهِ</td><td class="en">this (f)</td><td class="ar">هَلْ</td><td class="en">did?</td></tr><tr><td class="ar">هُدَى</td><td class="en">guidance</td><td class="ar">هُمْ</td><td class="en">they</td></tr><tr><td class="ar">هُوَ/ه</td><td class="en">he</td><td class="ar">هِيَ/هَا</td><td class="en">she</td></tr><tr><td class="ar">وَ</td><td class="en">and; oath (E harf)</td><td class="ar">وَجَدَ</td><td class="en">he found</td></tr><tr><td class="ar">وَجْه</td><td class="en">face</td><td class="ar">وَرَاءَ</td><td class="en">behind</td></tr><tr><td class="ar">وَعَدَ</td><td class="en">he promised</td><td class="ar">وَلِيّ</td><td class="en">protector</td></tr><tr><td class="ar">وَلْ</td><td class="en">and should</td><td class="ar">يَا (أَيُّهَا)</td><td class="en">O</td></tr><tr><td class="ar">يَد</td><td class="en">hand</td><td class="ar">يَكُوْنُ</td><td class="en">he/it is</td></tr><tr><td class="ar">يَوْم</td><td class="en">day</td><td class="ar"></td><td class="en"></td></tr></tbody>
+</table></div>
+<div class="unit-pagination">
+<a href="level3-appendix1.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Appendix I</a>
+<a href="level3-appendix3.html" class="pagination-next">Appendix III: Cheat Sheets <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 3 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 3</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 3 &middot; APPENDIX II</span></div>
+<h1 class="unit-title">Kosakata</h1>
+<div class="unit-subtitle">Daftar kosakata lengkap secara alfabetis yang mencakup ketiga level dalam buku kerja ini.</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Kata</th><th>Arti</th><th>Kata</th><th>Arti</th></tr></thead>
+<tbody><tr><td class="ar">آتَى</td><td class="en">dia memberi</td><td class="ar">آخِر</td><td class="en">akhirat, terakhir</td></tr><tr><td class="ar">آمَنَ</td><td class="en">dia beriman</td><td class="ar">آيَة</td><td class="en">tanda, ayat</td></tr><tr><td class="ar">أَ</td><td class="en">Apakah?</td><td class="ar">أَتَى</td><td class="en">dia datang</td></tr><tr><td class="ar">أَجْر</td><td class="en">pahala</td><td class="ar">أَحَد</td><td class="en">satu</td></tr><tr><td class="ar">أَخَذَ</td><td class="en">dia mengambil/merebut</td><td class="ar">أَخْ</td><td class="en">saudara laki-laki</td></tr><tr><td class="ar">أَخْرَجَ</td><td class="en">dia mengeluarkan/mengusir</td><td class="ar">أَرَادَ</td><td class="en">dia menginginkan/bermaksud</td></tr><tr><td class="ar">أَرْسَلَ</td><td class="en">dia mengirim</td><td class="ar">أَرْض</td><td class="en">bumi/tanah</td></tr><tr><td class="ar">أَشْرَكَ</td><td class="en">dia menyekutukan</td><td class="ar">أَصْحَاب</td><td class="en">para sahabat</td></tr><tr><td class="ar">أَطَاعَ</td><td class="en">dia menaati</td><td class="ar">أَكَلَ</td><td class="en">dia makan</td></tr><tr><td class="ar">أَكْثَر</td><td class="en">kebanyakan</td><td class="ar">أَلِيْم</td><td class="en">pedih</td></tr><tr><td class="ar">أَلْقَى</td><td class="en">dia bertemu, melempar</td><td class="ar">أَمَرَ</td><td class="en">dia memerintahkan</td></tr><tr><td class="ar">أَمْ</td><td class="en">atau</td><td class="ar">أَمْر</td><td class="en">perintah, urusan</td></tr><tr><td class="ar">أَنَا/ي/ْفِيْ</td><td class="en">saya, aku, milikku</td><td class="ar">أَنَّ</td><td class="en">bahwa</td></tr><tr><td class="ar">أَنْ</td><td class="en">untuk, bahwa</td><td class="ar">أَنْتَ/ك</td><td class="en">kamu (lk)</td></tr><tr><td class="ar">أَنْتُمْ/كُمْ</td><td class="en">kalian semua</td><td class="ar">أَنْتِ/ك</td><td class="en">kamu (pr)</td></tr><tr><td class="ar">أَنْزَلَ</td><td class="en">dia menurunkan</td><td class="ar">أَهْل</td><td class="en">keluarga, kaum</td></tr><tr><td class="ar">أَوَّل</td><td class="en">pertama, terdahulu</td><td class="ar">أَوْ</td><td class="en">atau</td></tr><tr><td class="ar">أَوْحَى</td><td class="en">dia mewahyukan, mengilhami</td><td class="ar">أَيْ</td><td class="en">yang mana, apa saja</td></tr><tr><td class="ar">أَيْنَ</td><td class="en">di mana?</td><td class="ar">أَيْنَمَا</td><td class="en">di mana saja</td></tr><tr><td class="ar">أُولَاءِكَ</td><td class="en">mereka itu</td><td class="ar">إِذَا</td><td class="en">ketika/apabila</td></tr><tr><td class="ar">إِلَه</td><td class="en">tuhan (sesembahan)</td><td class="ar">إِلَى</td><td class="en">ke, kepada</td></tr><tr><td class="ar">إِلَّا</td><td class="en">kecuali</td><td class="ar">إِنَّ</td><td class="en">sesungguhnya</td></tr><tr><td class="ar">إِنْ</td><td class="en">jika</td><td class="ar">إِنْسَان</td><td class="en">manusia</td></tr><tr><td class="ar">الَّتِي</td><td class="en">yang (pr)</td><td class="ar">الَّذِيْ</td><td class="en">yang (lk)</td></tr><tr><td class="ar">الَّذِيْنَ</td><td class="en">yang (jamak)</td><td class="ar">اِتَّبَعَ</td><td class="en">dia mengikuti</td></tr><tr><td class="ar">اِتَّخَذَ</td><td class="en">dia mengambil</td><td class="ar">اِتَّقَى</td><td class="en">dia takut (kepada Allah)</td></tr><tr><td class="ar">بِ</td><td class="en">dengan</td><td class="ar">بَعْدَ</td><td class="en">setelah</td></tr><tr><td class="ar">بَعْض</td><td class="en">sebagian (dari)</td><td class="ar">بَلْ</td><td class="en">melainkan</td></tr><tr><td class="ar">بَنِيْ</td><td class="en">anak-anak</td><td class="ar">بَيِّنَة</td><td class="en">bukti yang jelas</td></tr><tr><td class="ar">بَيْنَ</td><td class="en">di antara</td><td class="ar">بِأَنَّ</td><td class="en">karena</td></tr><tr><td class="ar">تَحْتَ</td><td class="en">di bawah</td><td class="ar">تَوَلَّى</td><td class="en">dia berpaling</td></tr><tr><td class="ar">جَزَى</td><td class="en">dia membalas, memberi ganjaran</td><td class="ar">جَعَلَ</td><td class="en">dia menjadikan</td></tr><tr><td class="ar">جَنَّة</td><td class="en">surga, kebun</td><td class="ar">جَهَنَّم</td><td class="en">neraka jahanam</td></tr><tr><td class="ar">حَتَّى</td><td class="en">sampai</td><td class="ar">حَقّ</td><td class="en">kebenaran</td></tr><tr><td class="ar">حَكِيْم</td><td class="en">Maha Bijaksana</td><td class="ar">حَيَاة</td><td class="en">kehidupan</td></tr><tr><td class="ar">خَافَ</td><td class="en">dia takut</td><td class="ar">خَالِد</td><td class="en">kekal selamanya</td></tr><tr><td class="ar">خَلَقَ</td><td class="en">dia menciptakan</td><td class="ar">خَلْف</td><td class="en">di belakang</td></tr><tr><td class="ar">خَيْر</td><td class="en">kebaikan, lebih baik</td><td class="ar">دَار</td><td class="en">rumah</td></tr><tr><td class="ar">دَخَلَ</td><td class="en">dia masuk</td><td class="ar">دَعَا</td><td class="en">dia memanggil</td></tr><tr><td class="ar">دُنْيَا</td><td class="en">dunia</td><td class="ar">دُوْنَ</td><td class="en">selain</td></tr><tr><td class="ar">دِيْن</td><td class="en">agama, pembalasan</td><td class="ar">ذَا/ذُوْ/ذِيْ</td><td class="en">pemilik</td></tr><tr><td class="ar">ذَكَرَ</td><td class="en">dia mengingat, menyebutkan</td><td class="ar">ذَلِكَ</td><td class="en">itu (lk)</td></tr><tr><td class="ar">ذُكْر</td><td class="en">peringatan, penyebutan</td><td class="ar">رَأَى</td><td class="en">dia melihat</td></tr><tr><td class="ar">رَبّ</td><td class="en">Tuhan</td><td class="ar">رَجَعَ</td><td class="en">dia kembali</td></tr><tr><td class="ar">رَحِيْم</td><td class="en">Maha Penyayang</td><td class="ar">رَحْمَة</td><td class="en">rahmat</td></tr><tr><td class="ar">رَسُوْل</td><td class="en">rasul/utusan</td><td class="ar">رِيْح</td><td class="en">angin</td></tr><tr><td class="ar">زَوْج</td><td class="en">pasangan, jodoh</td><td class="ar">سَ</td><td class="en">akan (masa depan dekat)</td></tr><tr><td class="ar">سَأَلَ</td><td class="en">dia bertanya</td><td class="ar">سَبِيْل</td><td class="en">jalan</td></tr><tr><td class="ar">سَمَاء</td><td class="en">langit</td><td class="ar">سَمِعَ</td><td class="en">dia mendengar</td></tr><tr><td class="ar">سَوْفَ</td><td class="en">akan (masa depan jauh)</td><td class="ar">شَاءَ</td><td class="en">dia menghendaki</td></tr><tr><td class="ar">شَمْس</td><td class="en">matahari</td><td class="ar">شَيْء</td><td class="en">sesuatu</td></tr><tr><td class="ar">صَلاة</td><td class="en">salat</td><td class="ar">ظَالِم</td><td class="en">zalim, orang yang zalim</td></tr><tr><td class="ar">ظَلَمَ</td><td class="en">dia menzalimi</td><td class="ar">عَالَم</td><td class="en">alam</td></tr><tr><td class="ar">عَبَدَ</td><td class="en">dia menyembah</td><td class="ar">عَبْد</td><td class="en">hamba</td></tr><tr><td class="ar">عَذَاب</td><td class="en">azab</td><td class="ar">عَزِيْز</td><td class="en">Maha Perkasa</td></tr><tr><td class="ar">عَظِيْم</td><td class="en">Maha Agung/besar</td><td class="ar">عَلَى</td><td class="en">di atas</td></tr><tr><td class="ar">عَلِمَ</td><td class="en">dia mengetahui</td><td class="ar">عَلِيْم</td><td class="en">Maha Mengetahui</td></tr><tr><td class="ar">عَمَل</td><td class="en">perbuatan/amal</td><td class="ar">عَمِلَ</td><td class="en">dia melakukan/beramal</td></tr><tr><td class="ar">عَنْ</td><td class="en">tentang, dari</td><td class="ar">عِلْم</td><td class="en">ilmu</td></tr><tr><td class="ar">عِنْدَ</td><td class="en">di sisi/dekat</td><td class="ar">غَفُوْر</td><td class="en">Maha Pengampun</td></tr><tr><td class="ar">غَيْر</td><td class="en">selain</td><td class="ar">فَ</td><td class="en">maka</td></tr><tr><td class="ar">فَضْل</td><td class="en">karunia</td><td class="ar">فَعَلَ</td><td class="en">dia melakukan</td></tr><tr><td class="ar">فَلْ</td><td class="en">maka hendaklah</td><td class="ar">فَوْقَ</td><td class="en">di atas</td></tr><tr><td class="ar">فِيْ</td><td class="en">di dalam</td><td class="ar">قَالَ</td><td class="en">dia berkata</td></tr><tr><td class="ar">قَبْلَ</td><td class="en">sebelum</td><td class="ar">قَتَلَ</td><td class="en">dia membunuh</td></tr><tr><td class="ar">قَدْ</td><td class="en">sungguh</td><td class="ar">قَلْب</td><td class="en">hati</td></tr><tr><td class="ar">قَوْل</td><td class="en">perkataan</td><td class="ar">قَوْم</td><td class="en">kaum</td></tr><tr><td class="ar">كَ</td><td class="en">seperti</td><td class="ar">كَأَنَّ</td><td class="en">seakan-akan</td></tr><tr><td class="ar">كَافِر</td><td class="en">orang kafir</td><td class="ar">كَانَ</td><td class="en">dia/itu adalah (dahulu)</td></tr><tr><td class="ar">كَذَّبَ</td><td class="en">dia mendustakan/menolak</td><td class="ar">كَفَرَ</td><td class="en">dia kufur/mengingkari</td></tr><tr><td class="ar">كَيْ</td><td class="en">agar</td><td class="ar">كَيْفَ</td><td class="en">bagaimana</td></tr><tr><td class="ar">كُلّ</td><td class="en">setiap, semua</td><td class="ar">كِتَاب</td><td class="en">kitab</td></tr><tr><td class="ar">ل</td><td class="en">(sebelum ism) untuk, bagi</td><td class="ar">لا</td><td class="en">tidak</td></tr><tr><td class="ar">لَعَلَّ</td><td class="en">agar, semoga, mudah-mudahan</td><td class="ar">لَكِنَّ</td><td class="en">akan tetapi/namun</td></tr><tr><td class="ar">لَمَّا</td><td class="en">ketika</td><td class="ar">لَمْ</td><td class="en">tidak (lampau)</td></tr><tr><td class="ar">لَنْ</td><td class="en">tidak akan</td><td class="ar">لَوْ</td><td class="en">seandainya</td></tr><tr><td class="ar">لَيْتَ</td><td class="en">alangkah</td><td class="ar">لَيْسَ</td><td class="en">dia bukan/tidak</td></tr><tr><td class="ar">لَيْل</td><td class="en">malam</td><td class="ar">لِ</td><td class="en">(sebelum bentuk sekarang) agar</td></tr><tr><td class="ar">لِمَ</td><td class="en">mengapa?</td><td class="ar">مَاذَا</td><td class="en">apa?</td></tr><tr><td class="ar">مَا</td><td class="en">apa</td><td class="ar">مَال</td><td class="en">harta</td></tr><tr><td class="ar">مَتَى</td><td class="en">kapan?</td><td class="ar">مَثَل</td><td class="en">contoh/perumpamaan</td></tr><tr><td class="ar">مَعَ</td><td class="en">bersama</td><td class="ar">مَلَك</td><td class="en">malaikat</td></tr><tr><td class="ar">مَنْ</td><td class="en">siapa</td><td class="ar">مُؤْمِن</td><td class="en">orang yang beriman</td></tr><tr><td class="ar">مُبِيْن</td><td class="en">jelas/nyata</td><td class="ar">مِثْل</td><td class="en">seperti</td></tr><tr><td class="ar">مِنْ</td><td class="en">dari</td><td class="ar">نَار</td><td class="en">api</td></tr><tr><td class="ar">نَاس</td><td class="en">manusia</td><td class="ar">نَبِيّ</td><td class="en">nabi</td></tr><tr><td class="ar">نَحْنُ/نَا</td><td class="en">kami</td><td class="ar">نَظَرَ</td><td class="en">dia melihat</td></tr><tr><td class="ar">نَفْس</td><td class="en">jiwa/orang</td><td class="ar">هَؤُلَاءِ</td><td class="en">ini semua</td></tr><tr><td class="ar">هَدَى</td><td class="en">dia memberi petunjuk</td><td class="ar">هَذَا</td><td class="en">ini (lk)</td></tr><tr><td class="ar">هَذِهِ</td><td class="en">ini (pr)</td><td class="ar">هَلْ</td><td class="en">apakah?</td></tr><tr><td class="ar">هُدَى</td><td class="en">petunjuk</td><td class="ar">هُمْ</td><td class="en">mereka</td></tr><tr><td class="ar">هُوَ/ه</td><td class="en">dia (lk)</td><td class="ar">هِيَ/هَا</td><td class="en">dia (pr)</td></tr><tr><td class="ar">وَ</td><td class="en">dan; sumpah (harf E)</td><td class="ar">وَجَدَ</td><td class="en">dia menemukan</td></tr><tr><td class="ar">وَجْه</td><td class="en">wajah</td><td class="ar">وَرَاءَ</td><td class="en">di belakang</td></tr><tr><td class="ar">وَعَدَ</td><td class="en">dia berjanji</td><td class="ar">وَلِيّ</td><td class="en">pelindung</td></tr><tr><td class="ar">وَلْ</td><td class="en">dan hendaklah</td><td class="ar">يَا (أَيُّهَا)</td><td class="en">wahai</td></tr><tr><td class="ar">يَد</td><td class="en">tangan</td><td class="ar">يَكُوْنُ</td><td class="en">dia/itu adalah</td></tr><tr><td class="ar">يَوْم</td><td class="en">hari</td><td class="ar"></td><td class="en"></td></tr></tbody>
+</table></div>
+<div class="unit-pagination">
+<a href="level3-appendix1.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Lampiran I</a>
+<a href="level3-appendix3.html" class="pagination-next">Lampiran III: Lembar Contekan <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 3</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
