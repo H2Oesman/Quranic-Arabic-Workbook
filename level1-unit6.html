@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 6 &middot; Level 1 | Quranic Arabic Workbook</title>
+<meta name="description" content="Commanding and Forbidding Fi'l - Quranic Arabic Level 1, Unit 6">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 1 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 1 &middot; UNIT 6</span></div>
+<h1 class="unit-title">Commanding and Forbidding</h1>
+
+<div class="section-title"><i class="fas fa-rotate"></i> 6.1: Open book review</div>
+<div class="note-box"><ol class="steps"><li><strong>3 kinds of words and their definition</strong><br><strong>Ism</strong> = a word that names a person, place, thing or idea and is <em>not</em> tied to a time (recognise it by <bdi>ال</bdi>, tanween, a kasra ending or a harf in front). <strong>Fi&rsquo;l</strong> = a word tied to a time (an action in the past, present or future). <strong>Harf</strong> = a word that has a meaning only when it connects or affects other words (in, from, and, not&hellip;).</li><li><strong>Pronouns (both charts)</strong><br><strong>Separate:</strong> <bdi>هُوَ</bdi> he, <bdi>هِيَ</bdi> she, <bdi>هُمْ</bdi> they, <bdi>أَنْتَ</bdi> you, <bdi>أَنْتِ</bdi> you (f), <bdi>أَنْتُمْ</bdi> y&rsquo;all, <bdi>أَنَا</bdi> I, <bdi>نَحْنُ</bdi> we. <strong>Attached:</strong> <bdi>ـهُ</bdi> him/it, <bdi>ـهَا</bdi> her/it, <bdi>ـهُمْ</bdi> them, <bdi>ـكَ</bdi> you, <bdi>ـكِ</bdi> you (f), <bdi>ـكُمْ</bdi> y&rsquo;all, <bdi>ـنِي</bdi> me, <bdi>ـنَا</bdi> us.</li><li><strong>Two types of Sentences</strong><br><strong>Fi&rsquo;l sentence</strong> &mdash; starts with a fi&rsquo;l. <strong>Ism sentence</strong> &mdash; starts with an ism.</li><li><strong>Parts of Fi&rsquo;l Sentence. What ending do the parts get?</strong><br>Fi&rsquo;l + Doer + Detail. When the doer and detail are outside isms, the <strong>doer gets a dhamma</strong> (<bdi>ـُ</bdi>) and the <strong>detail gets a fat-ha</strong> (<bdi>ـَ</bdi>).</li><li><strong>Past tense chart and how to recognize each form</strong><br>He <bdi>ـَ</bdi> &middot; She <bdi>ـَتْ</bdi> &middot; They <bdi>ـُوا</bdi> &middot; You <bdi>ـْتَ</bdi> &middot; You (f) <bdi>ـْتِ</bdi> &middot; Y&rsquo;all <bdi>ـْتُمْ</bdi> &middot; I <bdi>ـْتُ</bdi> &middot; We <bdi>ـْنَا</bdi>. Look at the <strong>ending</strong> of the fi&rsquo;l to know the form.</li><li><strong>How to find inside doer</strong><br>If no outside ism does the action, the doer is hidden <strong>inside</strong> the fi&rsquo;l: read the ending of a past-tense fi&rsquo;l, or the beginning (<bdi>ي ت أ ن</bdi>) and ending of a present-tense fi&rsquo;l.</li><li><strong>How do we translate the attached pronoun (when it&rsquo;s attached to a fi&rsquo;l)</strong><br>Translate the fi&rsquo;l first, then the attached pronoun(s) at its end: the first is the doer, the last is the detail (object). Example: <bdi>جَعَلْنَاكُمْ</bdi> = <em>we</em> made <em>you (all)</em>.</li><li><strong>Rules of outside doer</strong><br>The doer ends with a dhamma, the detail with a fat-ha, so their order can swap. The fi&rsquo;l stays in the singular he/she form and matches the doer&rsquo;s gender. Example: <bdi>قَتَلَ دَاوُدُ جَالُوتَ</bdi> = David killed Goliath.</li><li><strong>&ldquo;E&rdquo; Harfs</strong><br><bdi>إِلَى</bdi>, <bdi>حَتَّى</bdi>, <bdi>عَلَى</bdi>, <bdi>عَنْ</bdi>, <bdi>فِي</bdi>, <bdi>مِنْ</bdi>, <bdi>وَ</bdi> (oath), <bdi>لِ</bdi>, <bdi>كَ</bdi>, <bdi>بِ</bdi>. They come <strong>before isms</strong> and give the ism an &ldquo;E&rdquo; ending (kasra).</li><li><strong>Connector Harfs</strong><br><bdi>إِلَّا</bdi>, <bdi>لَا</bdi>, <bdi>ثُمَّ</bdi>, <bdi>فَ</bdi>, <bdi>وَ</bdi>. They connect sentences and can come before <strong>anything</strong> (ism, fi&rsquo;l or harf) without changing it.</li><li><strong>Connector Isms</strong><br><bdi>الَّذِي</bdi>, <bdi>ذَلِكَ</bdi>, <bdi>مَنْ</bdi>, <bdi>مَا</bdi> (the one who, that, who, what). They are isms that connect one part of a sentence to another.</li><li><strong>Present tense. How to recognize each form.</strong><br>He <bdi>يـ ـُ</bdi> &middot; She <bdi>تـ ـُ</bdi> &middot; They <bdi>يـ ـُونَ</bdi> &middot; You <bdi>تـ ـُ</bdi> &middot; You (f) <bdi>تـ ـِينَ</bdi> &middot; Y&rsquo;all <bdi>تـ ـُونَ</bdi> &middot; I <bdi>أ ـُ</bdi> &middot; We <bdi>نـ ـُ</bdi>. The <strong>first letter</strong> and the <strong>ending</strong> tell you the doer.</li><li><strong>What happens if we add لَنْ in front of present tense?</strong><br><strong><bdi>لَنْ</bdi></strong> + present tense: the fi&rsquo;l ends in a <strong>fat-ha</strong> instead of a damma and the meaning becomes &ldquo;will never&rdquo;. <bdi>يَعْلَمُ</bdi> &rarr; <bdi>لَنْ يَعْلَمَ</bdi> (he will never know). For they / you (f) the <bdi>ن</bdi> drops: <bdi>لَنْ يَعْلَمُوا</bdi>, <bdi>لَنْ تَعْلَمِي</bdi>.</li><li><strong>All the &ldquo;A&rdquo; Harfs, Sukun Harfs, Future tense harfs, and General harfs.</strong><br><strong>&ldquo;A&rdquo; harfs</strong> (the fi&rsquo;l ends in fat-ha; the <bdi>ن</bdi> drops for they / you f): <bdi>حَتَّى</bdi> until, <bdi>كَيْ</bdi> so that, <bdi>لِ</bdi> so that, <bdi>لَنْ</bdi> will not, <bdi>أَنْ</bdi> to / that. <strong>Sukun harfs</strong> (the fi&rsquo;l ends in sukun): <bdi>فَلْ</bdi> so _ should, <bdi>وَلْ</bdi> and _ should, <bdi>لَمْ</bdi> did not, <bdi>إِنْ</bdi> if. <strong>Future harfs:</strong> <bdi>سَ</bdi> / <bdi>سَوْفَ</bdi> will (<bdi>يَعْلَمُ</bdi> &rarr; <bdi>سَيَعْلَمُ</bdi>). <strong>General harfs:</strong> <bdi>لَوْ</bdi> if only, <bdi>إِذَا</bdi> when, <bdi>قَدْ</bdi> certainly, <bdi>أَ</bdi> did? (a question).</li></ol></div>
+<div class="section-title"><i class="fas fa-hand-point-right"></i> Commanding and Forbidding</div>
+<div class="two-col"><div class="note-box"><strong>How to recognize forbidding:</strong><ol class="steps"><li>Start with لَا</li><li>End in sukun</li></ol></div><div class="note-box"><strong>How to recognize a command:</strong><ol class="steps"><li>End in sukun</li><li>Sometimes begin with a &ldquo;helper alif&rdquo;</li></ol></div></div>
+<div class="overflow-x"><table class="grid-table conj-table">
+<thead><tr><th>Plural</th><th>Singular Female</th><th>Singular Male</th><th></th></tr></thead>
+<tbody>
+<tr><td><div class="arabic-cell">أَنْتُمْ اِعْلَمُوا</div><div class="gloss-cell">You all know!</div></td><td><div class="arabic-cell">أَنْتِ اِعْلَمِي</div><div class="gloss-cell">You (f) know!</div></td><td><div class="arabic-cell">أَنْتَ اِعْلَمْ</div><div class="gloss-cell">Know!</div></td><td class="person-cell">Word with helper alif</td></tr><tr><td><div class="arabic-cell">أَنْتُمْ سَبِّحُوا</div><div class="gloss-cell">You all praise!</div></td><td><div class="arabic-cell">أَنْتِ سَبِّحِي</div><div class="gloss-cell">You (f) praise!</div></td><td><div class="arabic-cell">أَنْتَ سَبِّحْ</div><div class="gloss-cell">Praise!</div></td><td class="person-cell">Word without helper alif</td></tr>
+</tbody>
+</table></div>
+<div class="note-box"><strong>How do you read the &ldquo;helper alif&rdquo;?</strong><br>Normally, the helper alif gets EE as above.<br><em>Unless</em>: the third letter is UU, in that case it also gets UU.</div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 6.2: Identify the doer of the commanding and forbidding fi&rsquo;ls below.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">لَا تُطِعْ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; do not obey</td></tr><tr><td class="num">2.</td><td class="prompt">فَسَبِّحْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; so glorify!</td></tr><tr><td class="num">3.</td><td class="prompt">اُسْجُدُوا</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>y&rsquo;all</strong> &mdash; prostrate!</td></tr><tr><td class="num">4.</td><td class="prompt">وَاسْجُدْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and prostrate!</td></tr><tr><td class="num">5.</td><td class="prompt">اِقْرَأْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; read!</td></tr><tr><td class="num">6.</td><td class="prompt">فَاكْتُبُوهُ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>y&rsquo;all</strong> &mdash; so write it (<bdi>هُ</bdi> = it)</td></tr><tr><td class="num">7.</td><td class="prompt">وَاسْتَغْفِرْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and seek forgiveness!</td></tr><tr><td class="num">8.</td><td class="prompt">لَا تُطِعْهُ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; do not obey him (<bdi>هُ</bdi> = him)</td></tr><tr><td class="num">9.</td><td class="prompt">يَدْخُلُونَ</td><td class="answer"><strong>Present</strong> (not a command: ends in <bdi>ـُونَ</bdi>) &middot; doer: <strong>they</strong> &mdash; they enter</td></tr><tr><td class="num">10.</td><td class="prompt">لَا تَقْرَبُوا</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>y&rsquo;all</strong> &mdash; do not approach</td></tr><tr><td class="num">11.</td><td class="prompt">وَاقْتَرِبْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and draw near!</td></tr><tr><td class="num">12.</td><td class="prompt">فَانصَبْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; so strive!</td></tr><tr><td class="num">13.</td><td class="prompt">اِرْجِعِي</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you (f)</strong> &mdash; return!</td></tr><tr><td class="num">14.</td><td class="prompt">ثَبِّتْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; make firm!</td></tr><tr><td class="num">15.</td><td class="prompt">فَادْخُلِي</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you (f)</strong> &mdash; so enter!</td></tr><tr><td class="num">16.</td><td class="prompt">فَلَا تَقُلْ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; so do not say</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-circle-question"></i> 6.3: Review: How do we recognize:</div>
+<ul class="definition-list"><li><span class="label">1. Past tense?</span> <span style="flex:1; min-width:200px;">Look at the <strong>ending</strong>: he <bdi>ـَ</bdi> &middot; she <bdi>ـَتْ</bdi> &middot; they <bdi>ـُوا</bdi> &middot; you <bdi>ـْتَ</bdi> &middot; you (f) <bdi>ـْتِ</bdi> &middot; y&rsquo;all <bdi>ـْتُمْ</bdi> &middot; I <bdi>ـْتُ</bdi> &middot; we <bdi>ـْنَا</bdi>. Example: <bdi>جَاءَتْ</bdi>.</span></li>
+<li><span class="label">2. Present tense?</span> <span style="flex:1; min-width:200px;">It <strong>starts</strong> with <bdi>ي</bdi> / <bdi>ت</bdi> / <bdi>أ</bdi> / <bdi>ن</bdi> and ends in a damma (<bdi>ـُ</bdi>), <bdi>ـُونَ</bdi> or <bdi>ـِينَ</bdi>. Example: <bdi>يَعْلَمُ</bdi>, <bdi>تَعْلَمُونَ</bdi>.</span></li>
+<li><span class="label">3. Commanding?</span> <span style="flex:1; min-width:200px;">It is spoken to &ldquo;you&rdquo;, has <strong>no prefix letter</strong>, <strong>ends in sukun</strong> (or <bdi>ـُوا</bdi> / <bdi>ـِي</bdi>), and sometimes begins with a helper alif. Example: <bdi>اِقْرَأْ</bdi>, <bdi>سَبِّحْ</bdi>.</span></li>
+<li><span class="label">4. Forbidding?</span> <span style="flex:1; min-width:200px;">It <strong>starts with <bdi>لَا</bdi></strong> followed by a present-tense fi&rsquo;l that <strong>ends in sukun</strong> (or <bdi>ـُوا</bdi> / <bdi>ـِي</bdi>). Example: <bdi>لَا تُطِعْ</bdi>. (<bdi>لَا</bdi> + a fi&rsquo;l ending in damma is only &ldquo;does not&rdquo;.)</span></li></ul>
+<div class="section-title"><i class="fas fa-list-check"></i> 6.3: Label each fi&rsquo;l as commanding, forbidding, present, or past and then write the inside doer.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">بَشِّرْهُمْ (Cmd, أَنْتَ)</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; give good news to them (<bdi>هُمْ</bdi>)!</td></tr><tr><td class="num">2.</td><td class="prompt">تُحَدِّثُ (Pre, أَنْتَ)</td><td class="answer"><strong>Present</strong> &middot; doer: <strong>you</strong> &mdash; you report / tell</td></tr><tr><td class="num">3.</td><td class="prompt">لَا تُطِعْ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; do not obey</td></tr><tr><td class="num">4.</td><td class="prompt">أَنزَلْنَاهُ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>we</strong> &mdash; we revealed it (<bdi>هُ</bdi>)</td></tr><tr><td class="num">5.</td><td class="prompt">لَا يُغَادِرُ</td><td class="answer"><strong>Present</strong> (negated with <bdi>لَا</bdi>; ends in damma) &middot; doer: <strong>he</strong> &mdash; he does not leave behind</td></tr><tr><td class="num">6.</td><td class="prompt">حَتَّىٰ تَأْتِيَهُمْ</td><td class="answer"><strong>Present</strong> (after <bdi>حَتَّى</bdi>; ends in fat-ha) &middot; doer: <strong>she</strong> &mdash; until it comes to them (<bdi>هُمْ</bdi>)</td></tr><tr><td class="num">7.</td><td class="prompt">اُسْجُدُوا</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>y&rsquo;all</strong> &mdash; prostrate!</td></tr><tr><td class="num">8.</td><td class="prompt">جَاءَتْهُمْ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>she</strong> &mdash; she came to them (<bdi>هُمْ</bdi>)</td></tr><tr><td class="num">9.</td><td class="prompt">لَا نُضِيعُ</td><td class="answer"><strong>Present</strong> (negated with <bdi>لَا</bdi>; ends in damma) &middot; doer: <strong>we</strong> &mdash; we do not waste</td></tr><tr><td class="num">10.</td><td class="prompt">لِيَعْبُدُوا اللَّهَ</td><td class="answer"><strong>Present</strong> (after <bdi>لِ</bdi>; ends in fat-ha / no <bdi>ن</bdi>) &middot; doer: <strong>they</strong> &mdash; so that they worship Allah</td></tr><tr><td class="num">11.</td><td class="prompt">يُوَسْوِسُ</td><td class="answer"><strong>Present</strong> &middot; doer: <strong>he</strong> &mdash; he whispers</td></tr><tr><td class="num">12.</td><td class="prompt">الَّذِينَ كَفَرُوا</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>they</strong> &mdash; those who disbelieved</td></tr><tr><td class="num">13.</td><td class="prompt">لَمْ يَلِدْ</td><td class="answer"><strong>Present</strong> (after <bdi>لَمْ</bdi>, past meaning) &middot; doer: <strong>he</strong> &mdash; he did not give birth</td></tr><tr><td class="num">14.</td><td class="prompt">اِقْرَأْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; read!</td></tr><tr><td class="num">15.</td><td class="prompt">جَاءَ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>he</strong> &mdash; he came</td></tr><tr><td class="num">16.</td><td class="prompt">مَا لَمْ يَعْلَمْ</td><td class="answer"><strong>Present</strong> (after <bdi>لَمْ</bdi>, past meaning) &middot; doer: <strong>he</strong> &mdash; what he did not know</td></tr><tr><td class="num">17.</td><td class="prompt">رَأَيْتَ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>you</strong> &mdash; you saw</td></tr><tr><td class="num">18.</td><td class="prompt">أَلَمْ يَعْلَمْ</td><td class="answer"><strong>Present</strong> (after <bdi>لَمْ</bdi>, past meaning) &middot; doer: <strong>he</strong> &mdash; did he not know?</td></tr><tr><td class="num">19.</td><td class="prompt">يَدْخُلُونَ</td><td class="answer"><strong>Present</strong> &middot; doer: <strong>they</strong> &mdash; they enter</td></tr><tr><td class="num">20.</td><td class="prompt">لَا تُطِعْهُ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; do not obey him (<bdi>هُ</bdi>)</td></tr><tr><td class="num">21.</td><td class="prompt">فَسَبِّحْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; so glorify!</td></tr><tr><td class="num">22.</td><td class="prompt">وَاسْجُدْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and prostrate!</td></tr><tr><td class="num">23.</td><td class="prompt">وَاسْتَغْفِرْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and seek forgiveness!</td></tr><tr><td class="num">24.</td><td class="prompt">وَاقْتَرِبْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and draw near!</td></tr><tr><td class="num">25.</td><td class="prompt">لَا أَعْبُدُ</td><td class="answer"><strong>Present</strong> (negated with <bdi>لَا</bdi>; ends in damma) &middot; doer: <strong>I</strong> &mdash; I do not worship</td></tr><tr><td class="num">26.</td><td class="prompt">أَلَمْ نَشْرَحْ</td><td class="answer"><strong>Present</strong> (after <bdi>لَمْ</bdi>, past meaning) &middot; doer: <strong>we</strong> &mdash; did We not expand?</td></tr><tr><td class="num">27.</td><td class="prompt">تَعْبُدُونَ</td><td class="answer"><strong>Present</strong> &middot; doer: <strong>y&rsquo;all</strong> &mdash; you all worship</td></tr><tr><td class="num">28.</td><td class="prompt">فَإِذَا فَرَغْتَ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>you</strong> &mdash; so when you finish</td></tr><tr><td class="num">29.</td><td class="prompt">فَلْيَعْبُدُوا</td><td class="answer"><strong>Present</strong> (after <bdi>فَلْ</bdi>, sukun harf) &middot; doer: <strong>they</strong> &mdash; so let them worship</td></tr><tr><td class="num">30.</td><td class="prompt">فَانصَبْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; so strive!</td></tr><tr><td class="num">31.</td><td class="prompt">أَطْعَمَهُمْ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>he</strong> &mdash; he fed them (<bdi>هُمْ</bdi>)</td></tr><tr><td class="num">32.</td><td class="prompt">فَارْغَبْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; so turn eagerly!</td></tr><tr><td class="num">33.</td><td class="prompt">وَلَا يَحُضُّ</td><td class="answer"><strong>Present</strong> (negated with <bdi>لَا</bdi>; ends in damma) &middot; doer: <strong>he</strong> &mdash; and he does not urge</td></tr><tr><td class="num">34.</td><td class="prompt">فَلَا تَنْهَرْ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; so do not repel</td></tr><tr><td class="num">35.</td><td class="prompt">يُرَاءُونَ</td><td class="answer"><strong>Present</strong> &middot; doer: <strong>they</strong> &mdash; they show off</td></tr><tr><td class="num">36.</td><td class="prompt">فَاكْتُبُوهُ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>y&rsquo;all</strong> &mdash; so write it (<bdi>هُ</bdi>)!</td></tr><tr><td class="num">37.</td><td class="prompt">وَانْحَرْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; and sacrifice!</td></tr><tr><td class="num">38.</td><td class="prompt">ثَبِّتْ</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you</strong> &mdash; make firm!</td></tr><tr><td class="num">39.</td><td class="prompt">فَلَا تَقُلْ</td><td class="answer"><strong>Forbidding</strong> &middot; doer: <strong>you</strong> &mdash; so do not say</td></tr><tr><td class="num">40.</td><td class="prompt">فَسَيُيَسِّرُهُ</td><td class="answer"><strong>Present</strong> (after the future harf <bdi>سَ</bdi>) &middot; doer: <strong>he</strong> &mdash; so He will ease it (<bdi>هُ</bdi>)</td></tr><tr><td class="num">41.</td><td class="prompt">أَلَمْ يَجْعَلْ</td><td class="answer"><strong>Present</strong> (after <bdi>لَمْ</bdi>, past meaning) &middot; doer: <strong>he</strong> &mdash; did He not make?</td></tr><tr><td class="num">42.</td><td class="prompt">فَأَنذَرْتُكُمْ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>I</strong> &mdash; so I warned you all (<bdi>كُمْ</bdi>)</td></tr><tr><td class="num">43.</td><td class="prompt">وَأَرْسَلَ عَلَيْهِمْ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>he</strong> &mdash; and He sent upon them</td></tr><tr><td class="num">44.</td><td class="prompt">كَذَّبَتْ ثَمُودُ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>Thamud (outside doer)</strong> &mdash; Thamud denied</td></tr><tr><td class="num">45.</td><td class="prompt">ثَقُلَتْ مَوَازِينُهُ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>his scales (outside doer)</strong> &mdash; his scales became heavy</td></tr><tr><td class="num">46.</td><td class="prompt">اِرْجِعِي</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you (f)</strong> &mdash; return!</td></tr><tr><td class="num">47.</td><td class="prompt">أَفَلَا يَعْلَمُ</td><td class="answer"><strong>Present</strong> &middot; doer: <strong>he</strong> &mdash; does he not know?</td></tr><tr><td class="num">48.</td><td class="prompt">فَادْخُلِي</td><td class="answer"><strong>Command</strong> &middot; doer: <strong>you (f)</strong> &mdash; so enter!</td></tr><tr><td class="num">49.</td><td class="prompt">إِذَا بُعْثِرَ</td><td class="answer"><strong>Past (passive)</strong> &middot; doer: <strong>none named</strong> &mdash; when (the graves) are scattered</td></tr><tr><td class="num">50.</td><td class="prompt">قَدَّمَتْ</td><td class="answer"><strong>Past</strong> &middot; doer: <strong>she</strong> &mdash; she sent forward</td></tr>
+</tbody>
+</table></div>
+<div class="unit-pagination">
+<a href="level1-unit5.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 5</a>
+<a href="level1-unit7.html" class="pagination-next">Unit 7: Grand Finale <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 1 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 1</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 1 &middot; UNIT 6</span></div>
+<h1 class="unit-title">Perintah dan Larangan</h1>
+
+<div class="section-title"><i class="fas fa-rotate"></i> 6.1: Ulasan buku terbuka</div>
+<div class="note-box"><ol class="steps"><li><strong>3 jenis kata dan definisinya</strong><br><strong>Ism</strong> = kata yang menamai orang, tempat, benda atau gagasan dan <em>tidak</em> terikat waktu (kenali dengan <bdi>ال</bdi>, tanwin, akhiran kasrah, atau harf di depannya). <strong>Fi&rsquo;l</strong> = kata yang terikat waktu (perbuatan lampau, sekarang atau akan datang). <strong>Harf</strong> = kata yang baru bermakna ketika menghubungkan atau memengaruhi kata lain (di, dari, dan, tidak&hellip;).</li><li><strong>Kata ganti (kedua tabel)</strong><br><strong>Terpisah:</strong> <bdi>هُوَ</bdi> dia (lk), <bdi>هِيَ</bdi> dia (pr), <bdi>هُمْ</bdi> mereka, <bdi>أَنْتَ</bdi> kamu (lk), <bdi>أَنْتِ</bdi> kamu (pr), <bdi>أَنْتُمْ</bdi> kalian, <bdi>أَنَا</bdi> saya, <bdi>نَحْنُ</bdi> kami. <strong>Melekat:</strong> <bdi>ـهُ</bdi> dia/-nya (lk), <bdi>ـهَا</bdi> -nya (pr), <bdi>ـهُمْ</bdi> mereka, <bdi>ـكَ</bdi> engkau, <bdi>ـكِ</bdi> engkau (pr), <bdi>ـكُمْ</bdi> kalian, <bdi>ـنِي</bdi> saya, <bdi>ـنَا</bdi> kami.</li><li><strong>Dua jenis kalimat</strong><br><strong>Kalimat Fi&rsquo;l</strong> &mdash; diawali fi&rsquo;l. <strong>Kalimat Ism</strong> &mdash; diawali ism.</li><li><strong>Bagian-bagian kalimat Fi&rsquo;l. Akhiran apa yang didapat tiap bagian?</strong><br>Fi&rsquo;l + Pelaku + Detail. Jika pelaku dan detail adalah ism luar, <strong>pelaku berakhiran dhammah</strong> (<bdi>ـُ</bdi>) dan <strong>detail berakhiran fat-hah</strong> (<bdi>ـَ</bdi>).</li><li><strong>Tabel bentuk lampau dan cara mengenali tiap bentuknya</strong><br>Dia lk <bdi>ـَ</bdi> &middot; Dia pr <bdi>ـَتْ</bdi> &middot; Mereka <bdi>ـُوا</bdi> &middot; Kamu lk <bdi>ـْتَ</bdi> &middot; Kamu pr <bdi>ـْتِ</bdi> &middot; Kalian <bdi>ـْتُمْ</bdi> &middot; Saya <bdi>ـْتُ</bdi> &middot; Kami <bdi>ـْنَا</bdi>. Lihat <strong>akhiran</strong> fi&rsquo;l untuk mengenali bentuknya.</li><li><strong>Cara menemukan pelaku di dalam kata</strong><br>Jika tidak ada ism luar yang melakukan perbuatan, pelakunya tersembunyi <strong>di dalam</strong> fi&rsquo;l: baca akhiran fi&rsquo;l lampau, atau huruf awal (<bdi>ي ت أ ن</bdi>) dan akhiran fi&rsquo;l bentuk sekarang.</li><li><strong>Cara menerjemahkan kata ganti yang melekat (pada fi&rsquo;l)</strong><br>Terjemahkan fi&rsquo;l dahulu, lalu kata ganti yang melekat di akhirnya: yang pertama adalah pelaku, yang terakhir adalah detail (objek). Contoh: <bdi>جَعَلْنَاكُمْ</bdi> = <em>kami</em> menjadikan <em>kalian</em>.</li><li><strong>Aturan pelaku luar (isim)</strong><br>Pelaku berakhiran dhammah, detail berakhiran fat-hah, sehingga urutannya boleh tertukar. Fi&rsquo;l tetap berbentuk tunggal dia lk/pr dan mengikuti jenis kelamin pelaku. Contoh: <bdi>قَتَلَ دَاوُدُ جَالُوتَ</bdi> = Daud membunuh Jalut.</li><li><strong>Harf &ldquo;E&rdquo;</strong><br><bdi>إِلَى</bdi>, <bdi>حَتَّى</bdi>, <bdi>عَلَى</bdi>, <bdi>عَنْ</bdi>, <bdi>فِي</bdi>, <bdi>مِنْ</bdi>, <bdi>وَ</bdi> (sumpah), <bdi>لِ</bdi>, <bdi>كَ</bdi>, <bdi>بِ</bdi>. Datang <strong>sebelum ism</strong> dan memberi akhiran &ldquo;E&rdquo; (kasrah) pada ism.</li><li><strong>Harf Penghubung</strong><br><bdi>إِلَّا</bdi>, <bdi>لَا</bdi>, <bdi>ثُمَّ</bdi>, <bdi>فَ</bdi>, <bdi>وَ</bdi>. Menghubungkan kalimat dan bisa datang sebelum <strong>apa saja</strong> (ism, fi&rsquo;l atau harf) tanpa mengubahnya.</li><li><strong>Ism Penghubung</strong><br><bdi>الَّذِي</bdi>, <bdi>ذَلِكَ</bdi>, <bdi>مَنْ</bdi>, <bdi>مَا</bdi> (yang, itu, siapa, apa). Ism yang menghubungkan satu bagian kalimat dengan bagian lain.</li><li><strong>Bentuk sekarang. Bagaimana cara mengenali tiap bentuknya?</strong><br>Dia lk <bdi>يـ ـُ</bdi> &middot; Dia pr <bdi>تـ ـُ</bdi> &middot; Mereka <bdi>يـ ـُونَ</bdi> &middot; Kamu lk <bdi>تـ ـُ</bdi> &middot; Kamu pr <bdi>تـ ـِينَ</bdi> &middot; Kalian <bdi>تـ ـُونَ</bdi> &middot; Saya <bdi>أ ـُ</bdi> &middot; Kami <bdi>نـ ـُ</bdi>. <strong>Huruf pertama</strong> dan <strong>akhiran</strong> menunjukkan pelaku.</li><li><strong>Apa yang terjadi jika kita tambahkan لَنْ di depan bentuk sekarang?</strong><br><strong><bdi>لَنْ</bdi></strong> + bentuk sekarang: fi&rsquo;l berakhiran <strong>fat-hah</strong> (bukan dhammah) dan maknanya menjadi &ldquo;tidak akan pernah&rdquo;. <bdi>يَعْلَمُ</bdi> &rarr; <bdi>لَنْ يَعْلَمَ</bdi> (dia tidak akan pernah tahu). Untuk mereka / kamu pr, huruf <bdi>ن</bdi> gugur: <bdi>لَنْ يَعْلَمُوا</bdi>, <bdi>لَنْ تَعْلَمِي</bdi>.</li><li><strong>Semua harf &ldquo;A&rdquo;, harf sukun, harf bentuk akan datang, dan harf umum.</strong><br><strong>Harf &ldquo;A&rdquo;</strong> (fi&rsquo;l berakhiran fat-hah; <bdi>ن</bdi> gugur untuk mereka / kamu pr): <bdi>حَتَّى</bdi> hingga, <bdi>كَيْ</bdi> agar, <bdi>لِ</bdi> agar, <bdi>لَنْ</bdi> tidak akan, <bdi>أَنْ</bdi> untuk / bahwa. <strong>Harf sukun</strong> (fi&rsquo;l berakhiran sukun): <bdi>فَلْ</bdi> maka hendaklah _, <bdi>وَلْ</bdi> dan hendaklah _, <bdi>لَمْ</bdi> tidak (lampau), <bdi>إِنْ</bdi> jika. <strong>Harf bentuk akan datang:</strong> <bdi>سَ</bdi> / <bdi>سَوْفَ</bdi> akan (<bdi>يَعْلَمُ</bdi> &rarr; <bdi>سَيَعْلَمُ</bdi>). <strong>Harf umum:</strong> <bdi>لَوْ</bdi> seandainya, <bdi>إِذَا</bdi> ketika, <bdi>قَدْ</bdi> sungguh, <bdi>أَ</bdi> apakah? (pertanyaan).</li></ol></div>
+<div class="section-title"><i class="fas fa-hand-point-right"></i> Perintah dan Larangan</div>
+<div class="two-col"><div class="note-box"><strong>Cara mengenali larangan:</strong><ol class="steps"><li>Diawali dengan لَا</li><li>Diakhiri sukun</li></ol></div><div class="note-box"><strong>Cara mengenali perintah:</strong><ol class="steps"><li>Diakhiri sukun</li><li>Kadang diawali &ldquo;alif bantu&rdquo;</li></ol></div></div>
+<div class="overflow-x"><table class="grid-table conj-table">
+<thead><tr><th>Jamak</th><th>Tunggal Perempuan</th><th>Tunggal Laki-laki</th><th></th></tr></thead>
+<tbody>
+<tr><td><div class="arabic-cell">أَنْتُمْ اِعْلَمُوا</div><div class="gloss-cell">Ketahuilah kalian!</div></td><td><div class="arabic-cell">أَنْتِ اِعْلَمِي</div><div class="gloss-cell">Ketahuilah kamu(pr)!</div></td><td><div class="arabic-cell">أَنْتَ اِعْلَمْ</div><div class="gloss-cell">Ketahuilah!</div></td><td class="person-cell">Kata dengan alif bantu</td></tr><tr><td><div class="arabic-cell">أَنْتُمْ سَبِّحُوا</div><div class="gloss-cell">Bertasbihlah kalian!</div></td><td><div class="arabic-cell">أَنْتِ سَبِّحِي</div><div class="gloss-cell">Bertasbihlah kamu(pr)!</div></td><td><div class="arabic-cell">أَنْتَ سَبِّحْ</div><div class="gloss-cell">Bertasbihlah!</div></td><td class="person-cell">Kata tanpa alif bantu</td></tr>
+</tbody>
+</table></div>
+<div class="note-box"><strong>Bagaimana cara membaca &ldquo;alif bantu&rdquo;?</strong><br>Biasanya, alif bantu dibaca EE seperti di atas.<br><em>Kecuali</em>: jika huruf ketiga adalah UU, maka alif bantu juga dibaca UU.</div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 6.2: Tentukan pelaku dari fi&rsquo;l perintah dan larangan berikut.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">لَا تُطِعْ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; jangan menaati</td></tr><tr><td class="num">2.</td><td class="prompt">فَسَبِّحْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka bertasbihlah!</td></tr><tr><td class="num">3.</td><td class="prompt">اُسْجُدُوا</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kalian</strong> &mdash; bersujudlah!</td></tr><tr><td class="num">4.</td><td class="prompt">وَاسْجُدْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan bersujudlah!</td></tr><tr><td class="num">5.</td><td class="prompt">اِقْرَأْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; bacalah!</td></tr><tr><td class="num">6.</td><td class="prompt">فَاكْتُبُوهُ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kalian</strong> &mdash; maka tuliskanlah (<bdi>هُ</bdi> = -nya)</td></tr><tr><td class="num">7.</td><td class="prompt">وَاسْتَغْفِرْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan mohonlah ampun!</td></tr><tr><td class="num">8.</td><td class="prompt">لَا تُطِعْهُ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; jangan menaatinya (<bdi>هُ</bdi> = dia)</td></tr><tr><td class="num">9.</td><td class="prompt">يَدْخُلُونَ</td><td class="answer"><strong>Sekarang</strong> (bukan perintah: berakhiran <bdi>ـُونَ</bdi>) &middot; pelaku: <strong>mereka</strong> &mdash; mereka masuk</td></tr><tr><td class="num">10.</td><td class="prompt">لَا تَقْرَبُوا</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kalian</strong> &mdash; jangan mendekati</td></tr><tr><td class="num">11.</td><td class="prompt">وَاقْتَرِبْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan mendekatlah!</td></tr><tr><td class="num">12.</td><td class="prompt">فَانصَبْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka bersungguh-sungguhlah!</td></tr><tr><td class="num">13.</td><td class="prompt">اِرْجِعِي</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (pr)</strong> &mdash; kembalilah!</td></tr><tr><td class="num">14.</td><td class="prompt">ثَبِّتْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; teguhkanlah!</td></tr><tr><td class="num">15.</td><td class="prompt">فَادْخُلِي</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (pr)</strong> &mdash; maka masuklah!</td></tr><tr><td class="num">16.</td><td class="prompt">فَلَا تَقُلْ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka jangan katakan</td></tr>
+</tbody>
+</table></div>
+<div class="section-title"><i class="fas fa-circle-question"></i> 6.3: Ulasan: Bagaimana kita mengenali:</div>
+<ul class="definition-list"><li><span class="label">1. Bentuk lampau?</span> <span style="flex:1; min-width:200px;">Lihat <strong>akhirannya</strong>: dia lk <bdi>ـَ</bdi> &middot; dia pr <bdi>ـَتْ</bdi> &middot; mereka <bdi>ـُوا</bdi> &middot; kamu lk <bdi>ـْتَ</bdi> &middot; kamu pr <bdi>ـْتِ</bdi> &middot; kalian <bdi>ـْتُمْ</bdi> &middot; saya <bdi>ـْتُ</bdi> &middot; kami <bdi>ـْنَا</bdi>. Contoh: <bdi>جَاءَتْ</bdi>.</span></li>
+<li><span class="label">2. Bentuk sekarang?</span> <span style="flex:1; min-width:200px;"><strong>Diawali</strong> <bdi>ي</bdi> / <bdi>ت</bdi> / <bdi>أ</bdi> / <bdi>ن</bdi> dan diakhiri dhammah (<bdi>ـُ</bdi>), <bdi>ـُونَ</bdi>, atau <bdi>ـِينَ</bdi>. Contoh: <bdi>يَعْلَمُ</bdi>, <bdi>تَعْلَمُونَ</bdi>.</span></li>
+<li><span class="label">3. Perintah?</span> <span style="flex:1; min-width:200px;">Ditujukan kepada &ldquo;kamu&rdquo;, <strong>tanpa huruf awalan</strong>, <strong>diakhiri sukun</strong> (atau <bdi>ـُوا</bdi> / <bdi>ـِي</bdi>), dan kadang diawali alif bantu. Contoh: <bdi>اِقْرَأْ</bdi>, <bdi>سَبِّحْ</bdi>.</span></li>
+<li><span class="label">4. Larangan?</span> <span style="flex:1; min-width:200px;"><strong>Diawali <bdi>لَا</bdi></strong> diikuti fi&rsquo;l bentuk sekarang yang <strong>diakhiri sukun</strong> (atau <bdi>ـُوا</bdi> / <bdi>ـِي</bdi>). Contoh: <bdi>لَا تُطِعْ</bdi>. (<bdi>لَا</bdi> + fi&rsquo;l berakhiran dhammah hanya berarti &ldquo;tidak&rdquo;.)</span></li></ul>
+<div class="section-title"><i class="fas fa-list-check"></i> 6.3: Tandai tiap fi&rsquo;l sebagai perintah, larangan, sekarang, atau lampau, lalu tuliskan pelaku di dalamnya.</div>
+<div class="overflow-x"><table class="grid-table exercise-table">
+<tbody>
+<tr><td class="num">1.</td><td class="prompt">بَشِّرْهُمْ (Cmd, أَنْتَ)</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; berilah kabar gembira kepada mereka (<bdi>هُمْ</bdi>)!</td></tr><tr><td class="num">2.</td><td class="prompt">تُحَدِّثُ (Pre, أَنْتَ)</td><td class="answer"><strong>Sekarang</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; engkau menceritakan</td></tr><tr><td class="num">3.</td><td class="prompt">لَا تُطِعْ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; jangan menaati</td></tr><tr><td class="num">4.</td><td class="prompt">أَنزَلْنَاهُ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>kami</strong> &mdash; kami menurunkannya (<bdi>هُ</bdi>)</td></tr><tr><td class="num">5.</td><td class="prompt">لَا يُغَادِرُ</td><td class="answer"><strong>Sekarang</strong> (dinegasikan dengan <bdi>لَا</bdi>; berakhiran dhammah) &middot; pelaku: <strong>dia (lk)</strong> &mdash; dia tidak meninggalkan</td></tr><tr><td class="num">6.</td><td class="prompt">حَتَّىٰ تَأْتِيَهُمْ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>حَتَّى</bdi>; berakhiran fat-hah) &middot; pelaku: <strong>dia (pr)</strong> &mdash; hingga datang kepada mereka (<bdi>هُمْ</bdi>)</td></tr><tr><td class="num">7.</td><td class="prompt">اُسْجُدُوا</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kalian</strong> &mdash; bersujudlah!</td></tr><tr><td class="num">8.</td><td class="prompt">جَاءَتْهُمْ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>dia (pr)</strong> &mdash; dia datang kepada mereka (<bdi>هُمْ</bdi>)</td></tr><tr><td class="num">9.</td><td class="prompt">لَا نُضِيعُ</td><td class="answer"><strong>Sekarang</strong> (dinegasikan dengan <bdi>لَا</bdi>; berakhiran dhammah) &middot; pelaku: <strong>kami</strong> &mdash; kami tidak menyia-nyiakan</td></tr><tr><td class="num">10.</td><td class="prompt">لِيَعْبُدُوا اللَّهَ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>لِ</bdi>; berakhiran fat-hah / tanpa <bdi>ن</bdi>) &middot; pelaku: <strong>mereka</strong> &mdash; agar mereka menyembah Allah</td></tr><tr><td class="num">11.</td><td class="prompt">يُوَسْوِسُ</td><td class="answer"><strong>Sekarang</strong> &middot; pelaku: <strong>dia (lk)</strong> &mdash; dia membisikkan</td></tr><tr><td class="num">12.</td><td class="prompt">الَّذِينَ كَفَرُوا</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>mereka</strong> &mdash; orang-orang yang kafir</td></tr><tr><td class="num">13.</td><td class="prompt">لَمْ يَلِدْ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>لَمْ</bdi>, bermakna lampau) &middot; pelaku: <strong>dia (lk)</strong> &mdash; Dia tidak beranak</td></tr><tr><td class="num">14.</td><td class="prompt">اِقْرَأْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; bacalah!</td></tr><tr><td class="num">15.</td><td class="prompt">جَاءَ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>dia (lk)</strong> &mdash; dia datang</td></tr><tr><td class="num">16.</td><td class="prompt">مَا لَمْ يَعْلَمْ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>لَمْ</bdi>, bermakna lampau) &middot; pelaku: <strong>dia (lk)</strong> &mdash; apa yang belum dia ketahui</td></tr><tr><td class="num">17.</td><td class="prompt">رَأَيْتَ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; engkau telah melihat</td></tr><tr><td class="num">18.</td><td class="prompt">أَلَمْ يَعْلَمْ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>لَمْ</bdi>, bermakna lampau) &middot; pelaku: <strong>dia (lk)</strong> &mdash; tidakkah dia mengetahui?</td></tr><tr><td class="num">19.</td><td class="prompt">يَدْخُلُونَ</td><td class="answer"><strong>Sekarang</strong> &middot; pelaku: <strong>mereka</strong> &mdash; mereka masuk</td></tr><tr><td class="num">20.</td><td class="prompt">لَا تُطِعْهُ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; jangan menaatinya (<bdi>هُ</bdi>)</td></tr><tr><td class="num">21.</td><td class="prompt">فَسَبِّحْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka bertasbihlah!</td></tr><tr><td class="num">22.</td><td class="prompt">وَاسْجُدْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan bersujudlah!</td></tr><tr><td class="num">23.</td><td class="prompt">وَاسْتَغْفِرْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan mohonlah ampun!</td></tr><tr><td class="num">24.</td><td class="prompt">وَاقْتَرِبْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan mendekatlah!</td></tr><tr><td class="num">25.</td><td class="prompt">لَا أَعْبُدُ</td><td class="answer"><strong>Sekarang</strong> (dinegasikan dengan <bdi>لَا</bdi>; berakhiran dhammah) &middot; pelaku: <strong>saya</strong> &mdash; aku tidak menyembah</td></tr><tr><td class="num">26.</td><td class="prompt">أَلَمْ نَشْرَحْ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>لَمْ</bdi>, bermakna lampau) &middot; pelaku: <strong>kami</strong> &mdash; bukankah Kami telah melapangkan?</td></tr><tr><td class="num">27.</td><td class="prompt">تَعْبُدُونَ</td><td class="answer"><strong>Sekarang</strong> &middot; pelaku: <strong>kalian</strong> &mdash; kalian menyembah</td></tr><tr><td class="num">28.</td><td class="prompt">فَإِذَا فَرَغْتَ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka apabila engkau telah selesai</td></tr><tr><td class="num">29.</td><td class="prompt">فَلْيَعْبُدُوا</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>فَلْ</bdi>, harf sukun) &middot; pelaku: <strong>mereka</strong> &mdash; maka hendaklah mereka menyembah</td></tr><tr><td class="num">30.</td><td class="prompt">فَانصَبْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka bersungguh-sungguhlah!</td></tr><tr><td class="num">31.</td><td class="prompt">أَطْعَمَهُمْ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>dia (lk)</strong> &mdash; dia memberi mereka makan (<bdi>هُمْ</bdi>)</td></tr><tr><td class="num">32.</td><td class="prompt">فَارْغَبْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka berharaplah!</td></tr><tr><td class="num">33.</td><td class="prompt">وَلَا يَحُضُّ</td><td class="answer"><strong>Sekarang</strong> (dinegasikan dengan <bdi>لَا</bdi>; berakhiran dhammah) &middot; pelaku: <strong>dia (lk)</strong> &mdash; dan dia tidak mendorong</td></tr><tr><td class="num">34.</td><td class="prompt">فَلَا تَنْهَرْ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka jangan menghardik</td></tr><tr><td class="num">35.</td><td class="prompt">يُرَاءُونَ</td><td class="answer"><strong>Sekarang</strong> &middot; pelaku: <strong>mereka</strong> &mdash; mereka berbuat riya</td></tr><tr><td class="num">36.</td><td class="prompt">فَاكْتُبُوهُ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kalian</strong> &mdash; maka tuliskanlah (<bdi>هُ</bdi>)!</td></tr><tr><td class="num">37.</td><td class="prompt">وَانْحَرْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; dan berkurbanlah!</td></tr><tr><td class="num">38.</td><td class="prompt">ثَبِّتْ</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; teguhkanlah!</td></tr><tr><td class="num">39.</td><td class="prompt">فَلَا تَقُلْ</td><td class="answer"><strong>Larangan</strong> &middot; pelaku: <strong>kamu (lk)</strong> &mdash; maka jangan katakan</td></tr><tr><td class="num">40.</td><td class="prompt">فَسَيُيَسِّرُهُ</td><td class="answer"><strong>Sekarang</strong> (setelah harf akan datang <bdi>سَ</bdi>) &middot; pelaku: <strong>dia (lk)</strong> &mdash; maka Dia akan memudahkannya (<bdi>هُ</bdi>)</td></tr><tr><td class="num">41.</td><td class="prompt">أَلَمْ يَجْعَلْ</td><td class="answer"><strong>Sekarang</strong> (setelah <bdi>لَمْ</bdi>, bermakna lampau) &middot; pelaku: <strong>dia (lk)</strong> &mdash; bukankah Dia telah menjadikan?</td></tr><tr><td class="num">42.</td><td class="prompt">فَأَنذَرْتُكُمْ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>saya</strong> &mdash; maka aku telah memperingatkan kalian (<bdi>كُمْ</bdi>)</td></tr><tr><td class="num">43.</td><td class="prompt">وَأَرْسَلَ عَلَيْهِمْ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>dia (lk)</strong> &mdash; dan Dia mengirimkan kepada mereka</td></tr><tr><td class="num">44.</td><td class="prompt">كَذَّبَتْ ثَمُودُ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>Tsamud (pelaku luar)</strong> &mdash; Tsamud mendustakan</td></tr><tr><td class="num">45.</td><td class="prompt">ثَقُلَتْ مَوَازِينُهُ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>timbangan-timbangannya (pelaku luar)</strong> &mdash; timbangan-timbangannya berat</td></tr><tr><td class="num">46.</td><td class="prompt">اِرْجِعِي</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (pr)</strong> &mdash; kembalilah!</td></tr><tr><td class="num">47.</td><td class="prompt">أَفَلَا يَعْلَمُ</td><td class="answer"><strong>Sekarang</strong> &middot; pelaku: <strong>dia (lk)</strong> &mdash; tidakkah dia mengetahui?</td></tr><tr><td class="num">48.</td><td class="prompt">فَادْخُلِي</td><td class="answer"><strong>Perintah</strong> &middot; pelaku: <strong>kamu (pr)</strong> &mdash; maka masuklah!</td></tr><tr><td class="num">49.</td><td class="prompt">إِذَا بُعْثِرَ</td><td class="answer"><strong>Lampau (pasif)</strong> &middot; pelaku: <strong>tidak disebut</strong> &mdash; apabila (kuburan) dibongkar</td></tr><tr><td class="num">50.</td><td class="prompt">قَدَّمَتْ</td><td class="answer"><strong>Lampau</strong> &middot; pelaku: <strong>dia (pr)</strong> &mdash; dia telah mengirimkan ke depan</td></tr>
+</tbody>
+</table></div>
+<div class="unit-pagination">
+<a href="level1-unit5.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Unit 5</a>
+<a href="level1-unit7.html" class="pagination-next">Unit 7: Penutup <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level1-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 1</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
