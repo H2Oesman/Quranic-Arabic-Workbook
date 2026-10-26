@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unit 1 &middot; Level 3 | Quranic Arabic Workbook</title>
+<meta name="description" content="The Doer-Ism - Quranic Arabic Level 3, Unit 1">
+<style>
+:root {
+    --bg-color: #f5f9fc;
+    --text-color: #1e2a3e;
+    --container-bg: white;
+    --arabic-color: #1a5276;
+    --section-title-color: #1e5f8e;
+    --verse-bg: #f8f9fa;
+    --verse-border: #e0e0e0;
+    --bonus-bg: #e8f4fc;
+    --tafsir-bg: #fffde7;
+    --tafsir-border: #ffe082;
+    --structure-bg: #f0f7ff;
+    --benefits-bg: #f1f8e9;
+    --link-color: #1e5f8e;
+    --link-hover: #0d3d5a;
+    --theme-card-bg: #ffffffdd;
+    --translation-color: #2c3e50;
+    --arrow-bg: #2c3e50;
+    --arrow-text: white;
+    --blank-color: #b0bac5;
+    --table-head-bg: #2c7da0;
+    --table-head-text: white;
+    --highlight-bg: #fff59d;
+    --highlight-bg-dark: #7a6a1e;
+}
+.dark-mode {
+    --bg-color: #121826;
+    --text-color: #eef2ff;
+    --container-bg: #1e293b;
+    --arabic-color: #7bc9ff;
+    --section-title-color: #7bc9ff;
+    --verse-bg: #2d3748;
+    --verse-border: #4a5568;
+    --bonus-bg: #1e3a5f;
+    --tafsir-bg: #2d3748;
+    --tafsir-border: #5dade2;
+    --structure-bg: #1e3a5f;
+    --benefits-bg: #1f3a2f;
+    --link-color: #93c5fd;
+    --link-hover: #c3e2ff;
+    --theme-card-bg: #1e293bdd;
+    --translation-color: #cbd5e1;
+    --arrow-bg: #3e5a77;
+    --arrow-text: #eef2ff;
+    --blank-color: #5a6578;
+    --table-head-bg: #2c5470;
+    --table-head-text: #eef2ff;
+    --highlight-bg: var(--highlight-bg-dark);
+}
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+a { color: var(--link-color); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.arabic {
+    font-size: 30px;
+    text-align: right;
+    direction: rtl;
+    margin: 14px 0;
+    color: var(--arabic-color);
+    font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+    line-height: 2.2;
+}
+.arabic.large { font-size: 36px; }
+.unit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #2c7da0, #1e5f8e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.unit-subtitle { text-align: center; font-size: 17px; opacity: 0.75; margin-bottom: 25px; }
+.level-badge {
+    display: inline-block;
+    background: var(--structure-bg);
+    color: var(--section-title-color);
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.section { margin: 34px 0; }
+.section-title {
+    font-size: 22px;
+    color: var(--section-title-color);
+    margin-bottom: 16px;
+    border-left: 5px solid #2c7da0;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subsection-title { font-size: 18px; font-weight: 700; color: var(--section-title-color); margin: 22px 0 10px; }
+.intro-box, .rule-box, .tip-box {
+    background: var(--bonus-bg);
+    padding: 20px 22px;
+    border-radius: 20px;
+    margin: 18px 0;
+}
+.note-box {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin: 18px 0;
+}
+.definition-list { list-style: none; padding: 0; margin: 12px 0; }
+.definition-list li { margin: 10px 0; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.definition-list .label { font-weight: 700; min-width: 90px; }
+.blank-line {
+    display: inline-block;
+    border-bottom: 2px dotted var(--blank-color);
+    min-width: 220px;
+    height: 1.4em;
+}
+.blank-short { min-width: 90px; }
+.blank-cell {
+    border-bottom: 2px dotted var(--blank-color);
+    min-height: 1.6em;
+}
+ol.steps, ol.rules { margin: 10px 0; padding-left: 28px; }
+ol.steps li, ol.rules li { margin: 10px 0; }
+table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: var(--structure-bg);
+    border-radius: 16px;
+    overflow: hidden;
+}
+table.grid-table th, table.grid-table td {
+    padding: 12px 10px;
+    border: 1px solid var(--verse-border);
+    text-align: center;
+    vertical-align: middle;
+}
+table.grid-table th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+}
+table.conj-table td.arabic-cell { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding: 14px 8px 4px; }
+table.conj-table td.gloss-cell { font-size: 14px; padding-bottom: 12px; }
+table.conj-table td.person-cell { font-size: 12px; font-weight: 700; opacity: 0.7; writing-mode: horizontal-tb; }
+table.wordbank td.ar { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; color: var(--arabic-color); width: 22%; }
+table.wordbank td.en { width: 28%; font-weight: 600; }
+table.harf-table td { font-family: 'Scheherazade New', serif; font-size: 24px; direction: rtl; color: var(--arabic-color); padding-top: 14px; }
+table.harf-table td.gloss { font-family: inherit; font-size: 14px; direction: ltr; color: var(--text-color); font-weight: 600; padding-bottom: 12px; padding-top: 2px;}
+table.exercise-table td.num { width: 34px; font-weight: 700; color: var(--section-title-color); text-align: center; }
+table.exercise-table td.prompt { font-family: 'Scheherazade New', serif; font-size: 22px; direction: rtl; text-align: right; color: var(--arabic-color); }
+table.exercise-table td.prompt.ltr { direction: ltr; text-align: left; font-family: inherit; font-size: 15px; color: var(--text-color); }
+table.exercise-table td.answer { }
+table.translate-table td.def { font-weight: 600; font-size: 14px; }
+.quran-block {
+    background: var(--verse-bg);
+    border: 1px solid var(--verse-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 18px 0;
+}
+.quran-block .arabic { margin: 6px 0; }
+.quran-ref { font-size: 13px; opacity: 0.7; text-align: right; direction: rtl; margin-top: 6px;}
+mark.hl { background: var(--highlight-bg); color: inherit; border-radius: 4px; padding: 0 2px; }
+.arrow-transform { display: flex; align-items: center; gap: 18px; margin: 14px 0; flex-wrap: wrap; }
+.arrow-transform .arabic { margin: 0; }
+.arrow-transform .arrow-ico { font-size: 22px; color: var(--section-title-color); }
+.arrow-transform .result { font-size: 14px; opacity: 0.85; }
+.example-list { margin: 12px 0; padding: 0; list-style: none; }
+.example-list li { margin: 8px 0; padding: 10px 14px; background: var(--verse-bg); border-radius: 12px; border: 1px solid var(--verse-border); }
+.top-home-link {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 7px 15px;
+    border-radius: 40px;
+    border: 1px solid var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+.top-home-link:hover { background-color: var(--link-color); color: white; text-decoration: none; }
+.top-nav { margin-bottom: 18px; }
+.scroll-arrow, .scroll-arrow-double {
+    position: fixed;
+    background: var(--arrow-bg);
+    color: var(--arrow-text);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s;
+    border: 1px solid var(--verse-border);
+    font-size: 20px;
+}
+.scroll-arrow { left: 20px; }
+.scroll-arrow-double { right: 20px; }
+.scroll-arrow:hover, .scroll-arrow-double:hover { transform: scale(1.08); background: var(--link-color); color: white; }
+.scroll-arrow.up { top: 200px; }
+.scroll-arrow.down { bottom: 90px; }
+.scroll-arrow-double.up-double { top: 200px; }
+.scroll-arrow-double.down-double { bottom: 90px; }
+.language-toggle, .dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    user-select: none;
+}
+.language-toggle { top: 20px; background: #2c7da0; }
+.dark-mode-toggle { top: 80px; background: #8e44ad; }
+@media (max-width: 640px) {
+    .language-toggle, .dark-mode-toggle { padding: 5px 12px; font-size: 12px; right: 12px; }
+    .scroll-arrow, .scroll-arrow-double { width: 38px; height: 38px; }
+    .scroll-arrow { left: 12px; }
+    .scroll-arrow-double { right: 12px; }
+    .scroll-arrow.up, .scroll-arrow-double.up-double { top: 170px; }
+    .scroll-arrow.down, .scroll-arrow-double.down-double { bottom: 70px; }
+    .arabic { font-size: 24px; }
+    .unit-title { font-size: 24px; }
+    table.grid-table th, table.grid-table td { padding: 8px 4px; font-size: 13px; }
+    table.conj-table td.arabic-cell, table.wordbank td.ar, table.harf-table td { font-size: 18px; }
+    .container { padding: 18px; border-radius: 16px; }
+}
+.unit-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--verse-border);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-prev, .pagination-next {
+    background: var(--verse-bg);
+    padding: 10px 22px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    border: 1px solid var(--verse-border);
+    font-size: 14px;
+}
+.pagination-prev:hover, .pagination-next:hover { background: var(--link-color); color: white; text-decoration: none; }
+.pagination-center { text-align: center; margin-top: 14px; width: 100%; }
+footer { text-align: center; margin-top: 40px; font-size: 12px; opacity: 0.6; }
+.hidden { display: none !important; }
+.two-col { display: flex; gap: 18px; flex-wrap: wrap; }
+.two-col > * { flex: 1; min-width: 260px; }
+.overflow-x { overflow-x: auto; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="languageToggle" class="language-toggle"><i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia</div>
+<div id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+
+<div id="scrollUp" class="scroll-arrow up" title="Scroll up"><i class="fas fa-chevron-up"></i></div>
+<div id="scrollDown" class="scroll-arrow down" title="Scroll down"><i class="fas fa-chevron-down"></i></div>
+<div id="doubleUpScroll" class="scroll-arrow-double up-double" title="Go to top"><i class="fas fa-angles-up"></i></div>
+<div id="doubleDownScroll" class="scroll-arrow-double down-double" title="Go to bottom"><i class="fas fa-angles-down"></i></div>
+
+<div class="container" id="mainContainer">
+<div id="english-content">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 3 Menu</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 3 &middot; UNIT 1</span></div>
+<h1 class="unit-title">The Doer-Ism</h1>
+
+<div class="section-title"><i class="fas fa-rotate"></i> 1.1: Review the following topics from Level 1 and 2.</div>
+<div class="note-box"><ol class="steps"><li><strong>Both Pronoun charts</strong><br><strong>Separate:</strong> <bdi>هُوَ</bdi> he, <bdi>هِيَ</bdi> she, <bdi>هُمْ</bdi> they, <bdi>أَنْتَ</bdi> you, <bdi>أَنْتِ</bdi> you (f), <bdi>أَنْتُمْ</bdi> y&rsquo;all, <bdi>أَنَا</bdi> I, <bdi>نَحْنُ</bdi> we. <strong>Attached:</strong> <bdi>ـهُ</bdi> him/it, <bdi>ـهَا</bdi> her/it, <bdi>ـهُمْ</bdi> them, <bdi>ـكَ</bdi> you, <bdi>ـكِ</bdi> you (f), <bdi>ـكُمْ</bdi> y&rsquo;all, <bdi>ـنِي</bdi> me, <bdi>ـنَا</bdi> us.</li><li><strong>Past, Present, Commanding Fi&rsquo;l charts</strong><br><strong>Past:</strong> He <bdi>ـَ</bdi> &middot; She <bdi>ـَتْ</bdi> &middot; They <bdi>ـُوا</bdi> &middot; You <bdi>ـْتَ</bdi> &middot; You (f) <bdi>ـْتِ</bdi> &middot; Y&rsquo;all <bdi>ـْتُمْ</bdi> &middot; I <bdi>ـْتُ</bdi> &middot; We <bdi>ـْنَا</bdi>. Look at the <strong>ending</strong> of the fi&rsquo;l to know the form. <strong>Present:</strong> He <bdi>يـ ـُ</bdi> &middot; She <bdi>تـ ـُ</bdi> &middot; They <bdi>يـ ـُونَ</bdi> &middot; You <bdi>تـ ـُ</bdi> &middot; You (f) <bdi>تـ ـِينَ</bdi> &middot; Y&rsquo;all <bdi>تـ ـُونَ</bdi> &middot; I <bdi>أ ـُ</bdi> &middot; We <bdi>نـ ـُ</bdi>. The <strong>first letter</strong> and the <strong>ending</strong> tell you the doer. <strong>Commanding:</strong> Commands are for <strong>you</strong> only. With a helper alif: <bdi>أَنْتَ اِعْلَمْ</bdi> <em>(know!)</em> &middot; <bdi>أَنْتِ اِعْلَمِي</bdi> <em>(you f know!)</em> &middot; <bdi>أَنْتُمْ اِعْلَمُوا</bdi> <em>(you all know!)</em>. Without a helper alif: <bdi>سَبِّحْ</bdi> &middot; <bdi>سَبِّحِي</bdi> &middot; <bdi>سَبِّحُوا</bdi>. The endings are <strong>sukun</strong> (you), <strong><bdi>ـِي</bdi></strong> (you f) and <strong><bdi>ـُوا</bdi></strong> (you all).</li><li><strong>A Harfs part 1, Sukun Harfs, E Harfs, Connector Harfs, Connector Isms</strong><br><strong>E harfs:</strong> <bdi>إِلَى</bdi>, <bdi>حَتَّى</bdi>, <bdi>عَلَى</bdi>, <bdi>عَنْ</bdi>, <bdi>فِي</bdi>, <bdi>مِنْ</bdi>, <bdi>وَ</bdi> (oath), <bdi>لِ</bdi>, <bdi>كَ</bdi>, <bdi>بِ</bdi>. They come <strong>before isms</strong> and give the ism an &ldquo;E&rdquo; ending (kasra). <strong>Connector harfs:</strong> <bdi>إِلَّا</bdi>, <bdi>لَا</bdi>, <bdi>ثُمَّ</bdi>, <bdi>فَ</bdi>, <bdi>وَ</bdi>. They connect sentences and can come before <strong>anything</strong> (ism, fi&rsquo;l or harf) without changing it. <strong>Connector isms:</strong> <bdi>الَّذِي</bdi>, <bdi>ذَلِكَ</bdi>, <bdi>مَنْ</bdi>, <bdi>مَا</bdi> (the one who, that, who, what). They are isms that connect one part of a sentence to another. <strong>A / Sukun / Future / General harfs:</strong> <strong>&ldquo;A&rdquo; harfs</strong> (the fi&rsquo;l ends in fat-ha; the <bdi>ن</bdi> drops for they / you f): <bdi>حَتَّى</bdi> until, <bdi>كَيْ</bdi> so that, <bdi>لِ</bdi> so that, <bdi>لَنْ</bdi> will not, <bdi>أَنْ</bdi> to / that. <strong>Sukun harfs</strong> (the fi&rsquo;l ends in sukun): <bdi>فَلْ</bdi> so _ should, <bdi>وَلْ</bdi> and _ should, <bdi>لَمْ</bdi> did not, <bdi>إِنْ</bdi> if. <strong>Future harfs:</strong> <bdi>سَ</bdi> / <bdi>سَوْفَ</bdi> will (<bdi>يَعْلَمُ</bdi> &rarr; <bdi>سَيَعْلَمُ</bdi>). <strong>General harfs:</strong> <bdi>لَوْ</bdi> if only, <bdi>إِذَا</bdi> when, <bdi>قَدْ</bdi> certainly, <bdi>أَ</bdi> did? (a question).</li><li><strong>How Tanween and AL affect translation</strong><br><strong>Tanween</strong> (<bdi>ـٌ ـً ـٍ</bdi>) means <strong>&ldquo;a / an&rdquo;</strong> (not specific): <bdi>كِتَابٌ</bdi> = <em>a book</em>. <strong>AL</strong> (<bdi>الْ</bdi>) means <strong>&ldquo;the&rdquo;</strong> (specific): <bdi>الْكِتَابُ</bdi> = <em>the book</em>. A word never has both.</li><li><strong>Ism Sentence. What ending do the parts usually get?</strong><br>An ism sentence has two parts (each can be a chain) and <strong>both usually end in UU</strong> (damma / UU sounds), with an invisible &ldquo;is&rdquo; between them. Example: <bdi>اللَّـهُ رَبُّنَا</bdi> = <em>Allah (is) our Lord.</em></li><li><strong>How do you find the invisible &ldquo;is&rdquo;?</strong><br>Split the sentence into its chains; the invisible &ldquo;is&rdquo; sits at the <strong>first break</strong>, between the first chain and the second. Example: <bdi dir='rtl'><bdi>هُوَ</bdi> | <bdi>قُرْآنٌ مَّجِيدٌ</bdi></bdi> = <em>He (is) a glorious Qur&rsquo;an.</em> If an E-harf chain comes first it is still the first chain: <bdi dir='rtl'><bdi>فِيهِ</bdi> | <bdi>آيَاتٌ</bdi></bdi> = <em>In it (are) verses.</em></li><li><strong>&ldquo;Stubborn&rdquo; words</strong><br>Isms whose ending <strong>never changes</strong> to show UU, AA or EE, whatever their role. Four kinds: <strong>pronouns</strong> (<bdi>هُوَ</bdi>, <bdi>أَنْتَ</bdi>&hellip;), <strong>connector isms</strong> (<bdi>الَّذِي</bdi>, <bdi>مَنْ</bdi>, <bdi>مَا</bdi>&hellip;), <strong>words ending in yaa</strong>, and <strong>words ending in alif</strong> (e.g. <bdi>مُوْسَى</bdi>). Pointer words (<bdi>هَـٰذَا</bdi>, <bdi>ذَلِكَ</bdi>) are stubborn too.</li><li><strong>A Harfs Part Two</strong><br>These A harfs come before isms: <bdi>إِنَّ</bdi> <em>indeed</em>, <bdi>أَنَّ</bdi> <em>that</em>, <bdi>كَأَنَّ</bdi> <em>as if</em>, <bdi>لَكِنَّ</bdi> <em>but</em>, <bdi>لَيْتَ</bdi> <em>if only</em>, <bdi>لَعَلَّ</bdi> <em>perhaps</em>, <bdi>بِأَنَّ</bdi> <em>because</em>. The word right after ends in <strong>AA</strong>: <bdi>إِنَّ اللَّـهَ</bdi> <em>Indeed Allah&hellip;</em>; with a pronoun: <bdi>إِنَّهُ</bdi> <em>indeed he&hellip;</em>.</li><li><strong>Rules of possession</strong><br>Two parts: the <strong>thing</strong> (owned, first) and the <strong>owner</strong> (next). The thing gets <strong>no tanween</strong> and <strong>no AL</strong> and takes the ending of its role (UU / AA / EE); the owner always ends in <strong>EE</strong> (or is an attached pronoun, e.g. <bdi>كِتَابُهُ</bdi>). Meaning: &ldquo;of / &rsquo;s&rdquo;.</li><li><strong>Words of time and place</strong><br>Words like <bdi>قَبْلَ</bdi> <em>before</em>, <bdi>بَعْدَ</bdi> <em>after</em>, <bdi>فَوْقَ</bdi> <em>above</em>, <bdi>تَحْتَ</bdi> <em>below</em>, <bdi>عِندَ</bdi> <em>near</em>, <bdi>بَيْنَ</bdi> <em>between</em>, <bdi>مَعَ</bdi> <em>with</em>, <bdi>خَلْفَ</bdi> <em>behind</em> <strong>behave like possession</strong> even though they don&rsquo;t &ldquo;mean&rdquo; it: they end in AA and the next word ends in <strong>EE</strong> (<bdi>تَحْتَ الشَّجَرَةِ</bdi> <em>under the tree</em>).</li><li><strong>What are 5 reasons to be feminine?</strong><br>(1) Ends in &#1577; (<bdi>مَدِيْنَة</bdi> city). (2) Actually feminine (<bdi>أُخْت</bdi> sister). (3) Names of places (<bdi>مَكَّة</bdi> Makkah). (4) Non-human plurals (<bdi>أَنْهَار</bdi> rivers). (5) Because the Arabs Said So &mdash; <strong>BASS</strong> words: <bdi>سَمَاء</bdi> sky, <bdi>أَرْض</bdi> land, <bdi>شَمْس</bdi> sun, <bdi>رِيْح</bdi> wind, <bdi>نَفْس</bdi> person, <bdi>دَار</bdi> home, <bdi>نَار</bdi> fire, <bdi>جَهَنَّم</bdi> Hellfire, <bdi>سَبِيل</bdi> path.</li><li><strong>Number charts</strong><br><strong>Masculine:</strong> singular <bdi>مُسْلِمٌ</bdi> (UU) / <bdi>مُسْلِمًا</bdi> (AA) / <bdi>مُسْلِمٍ</bdi> (EE); plural <bdi>مُسْلِمُوْنَ</bdi> (UU) / <bdi>مُسْلِمِيْنَ</bdi> (AA and EE). <strong>Feminine:</strong> singular <bdi>مُسْلِمَةٌ</bdi> / <bdi>مُسْلِمَةً</bdi> / <bdi>مُسْلِمَةٍ</bdi>; plural <bdi>مُسْلِمَاتٌ</bdi> (UU) / <bdi>مُسْلِمَاتٍ</bdi> (AA and EE).</li><li><strong>Rules of the adjective and its match</strong><br>The adjective comes <strong>after</strong> the word it describes and must <strong>match</strong> it in 4 things: <strong>gender</strong>, <strong>number</strong>, <strong>specificness</strong> (AL or tanween) and <strong>ending</strong> (UU / AA / EE). Example: <bdi>رَسُوْلٌ كَرِيْمٌ</bdi> = <em>a noble messenger</em>.</li><li><strong>Pointer words chart</strong><br><strong>Near:</strong> <bdi>هَـٰذَا</bdi> <em>this</em> (m) &middot; <bdi>هَـٰذِهِ</bdi> <em>this</em> (f) &middot; <bdi>هَـٰؤُلَاءِ</bdi> <em>these</em> (pl). <strong>Far:</strong> <bdi>ذَٰلِكَ</bdi> <em>that</em> (m) &middot; <bdi>تِلْكَ</bdi> <em>that</em> (f) &middot; <bdi>أُولَـٰئِكَ</bdi> <em>those</em> (pl).</li><li><strong>Rules of pointers</strong><br>Pointers are stubborn words (their ending never changes). The pointer must match the gender and number of the word it points to. A pointer forms a <strong>chain only if the next word has AL</strong>.</li><li><strong>Pointer chain vs. Pointer sentence</strong><br><strong>Pointer chain</strong> (pointer + word with AL): <bdi>ذَٰلِكَ الْكِتَابُ</bdi> = <em>that book</em> (one idea, no &ldquo;is&rdquo;). <strong>Pointer sentence</strong> (pointer + word without AL): <bdi>ذَٰلِكَ كِتَابٌ</bdi> = <em>that is a book</em> (the invisible &ldquo;is&rdquo; follows the pointer).</li><li><strong>Ism vs Fi&rsquo;l differences</strong><br><strong>Ism indicators:</strong> starts with AL; ends with tanween; ends with &#1577;; comes after an E harf; comes after <bdi>يَا</bdi>; is part of an adjective or possession. <strong>Fi&rsquo;l indicators:</strong> ends with <bdi>تْ</bdi>; comes after <bdi>قَدْ</bdi>; comes after an A harf; after a sukun harf; after a future harf (<bdi>سَ</bdi> / <bdi>سَوْفَ</bdi>).</li></ol></div>
+<div class="section-title"><i class="fas fa-highlighter"></i> 1.2: Identify the highlighted words as ism, fi&rsquo;l, or harf. Bonus: What kind is it? Bonus #2: What&rsquo;s the definition (answer orally)?</div>
+<div class="quran-block">
+<div class="arabic large"><mark class="hl"><ruby>اقْرَأْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;cmd</rt></ruby> <ruby>بِاسْمِ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> <ruby>رَبِّكَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>الَّذِي<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>خَلَقَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> ﴿١﴾ <ruby>خَلَقَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>الْإِنسَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>مِنْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>عَلَقٍ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿٢﴾ <ruby>اقْرَأْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;cmd</rt></ruby> <ruby>وَرَبُّكَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> <ruby>الْأَكْرَمُ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿٣﴾ <ruby>الَّذِي<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>عَلَّمَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>بِالْقَلَمِ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> ﴿٤﴾ <ruby>عَلَّمَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>الْإِنسَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>مَا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>لَمْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>يَعْلَمْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> ﴿٥﴾ <ruby>كَلَّا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>إِنَّ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>الْإِنسَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>لَيَطْغَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;pres</rt></ruby> ﴿٦﴾ <ruby>أَن<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>رَّآهُ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>اسْتَغْنَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> ﴿٧﴾ <ruby>إِنَّ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>إِلَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>رَبِّكَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>الرُّجْعَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿٨﴾ <ruby>أَرَأَيْتَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> <ruby>الَّذِي<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>يَنْهَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> ﴿٩﴾ <ruby>عَبْدًا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>إِذَا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>صَلَّىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> ﴿١٠﴾ <ruby>أَرَأَيْتَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> <ruby>إِن<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>كَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>عَلَى<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>الْهُدَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿١١﴾ <ruby>أَوْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>أَمَرَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>بِالتَّقْوَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> ﴿١٢﴾ <ruby>أَرَأَيْتَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> <ruby>إِن<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>كَذَّبَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>وَتَوَلَّىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> ﴿١٣﴾ <ruby>أَلَمْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>يَعْلَم<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> <ruby>بِأَنَّ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>اللَّـهَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>يَرَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> ﴿١٤﴾</mark></div>
+<div class="quran-ref">Surah Al-&rsquo;Alaq 96:1-14</div>
+</div>
+<div class="note-box"><strong>Key:</strong> I = Ism &middot; F = Fi&rsquo;l (past / pres = present / cmd = command) &middot; H = Harf. A harf attached to a word is shown with it (e.g. H+I for <bdi>بِاسْمِ</bdi> = <bdi>بِ</bdi> + <bdi>اسْمِ</bdi>; H+F&middot;past for <bdi>وَتَوَلَّىٰ</bdi> = <bdi>وَ</bdi> + <bdi>تَوَلَّىٰ</bdi>). Connector isms (<bdi>الَّذِي</bdi>, <bdi>مَا</bdi>) count as isms. Harf kinds: E harfs <bdi>بِ مِنْ إِلَىٰ عَلَى</bdi>; A harfs <bdi>أَن إِنَّ بِأَنَّ</bdi>; sukun harfs <bdi>لَمْ إِن</bdi>; connector harfs <bdi>وَ أَوْ</bdi>; general harfs <bdi>كَلَّا إِذَا أَ</bdi>.</div>
+<div class="section-title"><i class="fas fa-flask"></i> The 3 Sciences of Arabic</div>
+<div class="note-box"><ul class="definition-list"><li><span class="label">1.</span> <span style="flex:1; min-width:200px;"><strong>Nahw</strong> (النَّحْو) &mdash; <em>grammar</em>: how words connect into sentences and why their endings (UU / AA / EE) change.</span></li><li><span class="label">2.</span> <span style="flex:1; min-width:200px;"><strong>Sarf</strong> (الصَّرْف) &mdash; <em>morphology</em>: how words are built and changed from a root (past, present, command, the Doer-Ism&hellip;). <strong>This unit is Sarf.</strong></span></li><li><span class="label">3.</span> <span style="flex:1; min-width:200px;"><strong>Balagha</strong> (الْبَلَاغَة) &mdash; <em>eloquence</em>: the beauty and precision with which Arabic, and the Qur&rsquo;an in particular, expresses meaning.</span></li></ul></div>
+<div class="section-title"><i class="fas fa-person"></i> The Doer-Ism</div>
+<div class="intro-box"><strong>What is it?</strong> An ism derived from a fi&rsquo;l that describes the one doing the action &mdash; the &ldquo;doer&rdquo;. It is equivalent to English words ending in &ldquo;-er&rdquo; or &ldquo;-ing&rdquo; (e.g. worshipper, creator, sender).</div>
+<div class="note-box"><strong>2 main categories:</strong><ul class="definition-list"><li><span class="label">1.</span> <span style="flex:1; min-width:200px;"><strong>AA-E</strong> &mdash; AA after the beginning and E before the end, e.g. عَابِدٌ <em>worshipper</em>, خَالِقٌ <em>creator</em> (from a 3-letter root).</span></li><li><span class="label">2.</span> <span style="flex:1; min-width:200px;"><strong>MU-EE</strong> &mdash; starts with مُ and has an EE sound before the end, e.g. مُرْسِلٌ <em>sender</em>, مُسْلِمٌ <em>one who submits</em> (from longer verb forms).</span></li></ul></div>
+<div class="subsection-title">MU-EE:</div>
+<div class="note-box"><ol class="steps"><li>Starts with مُ</li><li>Has an EE sound before the end</li></ol></div>
+<div class="subsection-title">Examples:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">مُسْلِمٌ</td><td class="arabic">مُنَافِقٌ</td><td class="arabic">مُبِيْنٌ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-circle"></i> 1.3: Circle the Doer-Isms</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic"><mark class="hl">مُفْسِدُونَ</mark></td><td class="arabic">مَخْتُوْم</td><td class="arabic"><mark class="hl">الْمُتَكَبِّرُ</mark></td></tr><tr><td class="arabic"><mark class="hl">مُرْسِلِيْنَ</mark></td><td class="arabic">مَمْدُوْد</td><td class="arabic">الْمَرْجُوْمُوْنَ</td></tr><tr><td class="arabic">مُرْسَلِيْنَ</td><td class="arabic"><mark class="hl">مُنذِرٌ</mark></td><td class="arabic"><mark class="hl">مُؤْمِنًا</mark></td></tr></tbody></table></div>
+<div class="note-box"><ul class="example-list"><li><span class="arabic" style="font-size:20px;">مُفْسِدُونَ</span> &rarr; <strong>MU-EE</strong> &mdash; corrupters</li><li><span class="arabic" style="font-size:20px;">الْمُتَكَبِّرُ</span> &rarr; <strong>MU-EE</strong> &mdash; the Arrogant</li><li><span class="arabic" style="font-size:20px;">مُرْسِلِيْنَ</span> &rarr; <strong>MU-EE</strong> &mdash; senders</li><li><span class="arabic" style="font-size:20px;">مُنذِرٌ</span> &rarr; <strong>MU-EE</strong> &mdash; a warner</li><li><span class="arabic" style="font-size:20px;">مُؤْمِنًا</span> &rarr; <strong>MU-EE</strong> &mdash; a believer</li></ul><strong>Not Doer-Isms:</strong> مَخْتُوْم, مَمْدُوْد, الْمَرْجُوْمُوْنَ (they start with مَ and have a UU before the end) and مُرْسَلِيْنَ (starts with مُ but has an <em>AA</em> before the end, not EE &mdash; it means <em>those who were sent</em>).</div>
+<div class="subsection-title">AA-E:</div>
+<div class="note-box"><ol class="steps"><li>AA after the beginning</li><li>E before the end</li></ol></div>
+<div class="subsection-title">Examples:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">ذَاكِرَةٌ</td><td class="arabic">عَابِدٌ</td><td class="arabic">خَالِقٌ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 1.4: Find ALL the Doer-Isms. Do you recognize any?</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic"><mark class="hl">مُهَاجِرُونَ</mark></td><td class="arabic"><mark class="hl">الصَّابِرِيْنَ</mark></td><td class="arabic">المُصْطَفَى</td></tr><tr><td class="arabic"><mark class="hl">مُسْتَغْفِرِيْنَ</mark></td><td class="arabic">مَخْلُوْقٌ</td><td class="arabic">الْمُقَرَّبُونَ</td></tr><tr><td class="arabic"><mark class="hl">السَّابِقُونَ</mark></td><td class="arabic"><mark class="hl">حَافِظَاتٍ</mark></td><td class="arabic">هَاجَرُوا</td></tr><tr><td class="arabic">طَيِّبَاتٌ</td><td class="arabic"><mark class="hl">رَاجِعُونَ</mark></td><td class="arabic"><mark class="hl">مُضِلِّيْنَ</mark></td></tr></tbody></table></div>
+<div class="note-box"><ul class="example-list"><li><span class="arabic" style="font-size:20px;">مُهَاجِرُونَ</span> &rarr; <strong>MU-EE</strong> &mdash; emigrants (Muhajirun)</li><li><span class="arabic" style="font-size:20px;">الصَّابِرِيْنَ</span> &rarr; <strong>AA-E</strong> &mdash; the patient ones</li><li><span class="arabic" style="font-size:20px;">مُسْتَغْفِرِيْنَ</span> &rarr; <strong>MU-EE</strong> &mdash; those seeking forgiveness</li><li><span class="arabic" style="font-size:20px;">السَّابِقُونَ</span> &rarr; <strong>AA-E</strong> &mdash; the foremost</li><li><span class="arabic" style="font-size:20px;">حَافِظَاتٍ</span> &rarr; <strong>AA-E</strong> &mdash; women who guard</li><li><span class="arabic" style="font-size:20px;">رَاجِعُونَ</span> &rarr; <strong>AA-E</strong> &mdash; returning (&ldquo;to Him we are returning&rdquo;)</li><li><span class="arabic" style="font-size:20px;">مُضِلِّيْنَ</span> &rarr; <strong>MU-EE</strong> &mdash; misleaders</li></ul><strong>Not Doer-Isms:</strong> المُصْطَفَى, الْمُقَرَّبُونَ (AA before the end &mdash; <em>done-to</em>), مَخْلُوْقٌ (starts with مَ), هَاجَرُوا (a fi&rsquo;l) and طَيِّبَاتٌ (an adjective).</div>
+<div class="section-title"><i class="fas fa-language"></i> 1.5: Let&rsquo;s translate:</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">يَقُولُ الظَّالِمُونَ</td><td class="def">oppressors</td><td class="answer">The oppressors say</td></tr><tr><td class="num">2.</td><td class="prompt">اللَّـهُ خَالِقُ كُلِّ شَيْءٍ</td><td class="def">creator</td><td class="answer">Allah is the Creator of all things</td></tr><tr><td class="num">3.</td><td class="prompt">وَاللَّـهُ يُحِبُّ الصَّابِرِيْنَ</td><td class="def">loves; patient ones</td><td class="answer">And Allah loves the patient ones</td></tr><tr><td class="num">4.</td><td class="prompt">أَمْ هُمُ الْخَالِقُونَ</td><td class="def">or (questioning word)</td><td class="answer">Or are they the creators?</td></tr><tr><td class="num">5.</td><td class="prompt">وَلَا تَنكِحُوا الْمُشْرِكَاتِ</td><td class="def">marry</td><td class="answer">And do not marry the polytheist women</td></tr><tr><td class="num">6.</td><td class="prompt">وَبَشِّرِ الْمُؤْمِنِينَ</td><td class="def">give good news</td><td class="answer">And give good news to the believers</td></tr></tbody>
+</table></div>
+<div class="subsection-title" style="text-align:center;">Doer-Ism Patterns</div>
+<div class="overflow-x"><table class="grid-table"><tbody>
+<tr><td style="text-align:center; font-weight:700;">AA-E</td><td class="arabic" style="text-align:center;">عَابِدٌ<div style="font-size:14px; font-weight:400; margin-top:4px;">&rsquo;aabid<br>worshipper</div></td>
+<td style="text-align:center; font-weight:700;">MU-EE</td><td class="arabic" style="text-align:center;">مُرْسِلٌ<div style="font-size:14px; font-weight:400; margin-top:4px;">mursil<br>sender</div></td></tr>
+</tbody></table></div>
+<div class="section-title"><i class="fas fa-book"></i> Word Bank</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">دَعَا</td><td class="en">he called</td><td class="ar">عَبَدَ</td><td class="en">he worshipped</td></tr><tr><td class="ar">اِتَّقَى</td><td class="en">he feared (Allah)</td><td class="ar">ظَلَمَ</td><td class="en">he oppressed/wronged</td></tr><tr><td class="ar">هَدَى</td><td class="en">he guided</td><td class="ar">سَأَلَ</td><td class="en">he asked</td></tr><tr><td class="ar">أَرَادَ</td><td class="en">he wanted/intended</td><td class="ar">وَجَدَ</td><td class="en">he found</td></tr><tr><td class="ar">أَمْ</td><td class="en">or</td><td class="ar">أَخْرَجَ</td><td class="en">he brought forth/expelled</td></tr><tr><td class="ar">أَكَلَ</td><td class="en">he ate</td><td class="ar">اِتَّخَذَ</td><td class="en">he took</td></tr></tbody>
+</table></div>
+<div class="note-box"><strong>Homework:</strong> &#9744; Complete Lessons 36-40 in the mobile app</div>
+<div class="subsection-title">Term Glossary</div>
+<div class="overflow-x"><table class="grid-table"><thead><tr><th>Our Term</th><th>Arabic Term</th></tr></thead>
+<tbody><tr><td>Doer-Ism</td><td class="arabic" style="text-align:center;">اِسْمُ فَاعِل</td></tr></tbody></table></div>
+<div class="unit-pagination">
+<a href="level2-index.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Level 2 Menu</a>
+<a href="level3-unit2.html" class="pagination-next">Unit 2: Detail-Ism <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Level 3 Menu</a>
+</div>
+</div>
+</div>
+<div id="indonesian-content" class="hidden">
+<div class="top-nav">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 3</a>
+</div>
+<div style="text-align:center;"><span class="level-badge">LEVEL 3 &middot; UNIT 1</span></div>
+<h1 class="unit-title">Ism Pelaku (Doer-Ism)</h1>
+
+<div class="section-title"><i class="fas fa-rotate"></i> 1.1: Ulas kembali topik-topik berikut dari Level 1 dan 2.</div>
+<div class="note-box"><ol class="steps"><li><strong>Kedua tabel kata ganti</strong><br><strong>Terpisah:</strong> <bdi>هُوَ</bdi> dia (lk), <bdi>هِيَ</bdi> dia (pr), <bdi>هُمْ</bdi> mereka, <bdi>أَنْتَ</bdi> kamu (lk), <bdi>أَنْتِ</bdi> kamu (pr), <bdi>أَنْتُمْ</bdi> kalian, <bdi>أَنَا</bdi> saya, <bdi>نَحْنُ</bdi> kami. <strong>Melekat:</strong> <bdi>ـهُ</bdi> dia/-nya (lk), <bdi>ـهَا</bdi> -nya (pr), <bdi>ـهُمْ</bdi> mereka, <bdi>ـكَ</bdi> engkau, <bdi>ـكِ</bdi> engkau (pr), <bdi>ـكُمْ</bdi> kalian, <bdi>ـنِي</bdi> saya, <bdi>ـنَا</bdi> kami.</li><li><strong>Tabel fi&rsquo;l lampau, sekarang, dan perintah</strong><br><strong>Lampau:</strong> Dia lk <bdi>ـَ</bdi> &middot; Dia pr <bdi>ـَتْ</bdi> &middot; Mereka <bdi>ـُوا</bdi> &middot; Kamu lk <bdi>ـْتَ</bdi> &middot; Kamu pr <bdi>ـْتِ</bdi> &middot; Kalian <bdi>ـْتُمْ</bdi> &middot; Saya <bdi>ـْتُ</bdi> &middot; Kami <bdi>ـْنَا</bdi>. Lihat <strong>akhiran</strong> fi&rsquo;l untuk mengenali bentuknya. <strong>Sekarang:</strong> Dia lk <bdi>يـ ـُ</bdi> &middot; Dia pr <bdi>تـ ـُ</bdi> &middot; Mereka <bdi>يـ ـُونَ</bdi> &middot; Kamu lk <bdi>تـ ـُ</bdi> &middot; Kamu pr <bdi>تـ ـِينَ</bdi> &middot; Kalian <bdi>تـ ـُونَ</bdi> &middot; Saya <bdi>أ ـُ</bdi> &middot; Kami <bdi>نـ ـُ</bdi>. <strong>Huruf pertama</strong> dan <strong>akhiran</strong> menunjukkan pelaku. <strong>Perintah:</strong> Perintah hanya untuk <strong>kamu</strong>. Dengan alif bantu: <bdi>أَنْتَ اِعْلَمْ</bdi> <em>(ketahuilah!)</em> &middot; <bdi>أَنْتِ اِعْلَمِي</bdi> <em>(ketahuilah, kamu pr!)</em> &middot; <bdi>أَنْتُمْ اِعْلَمُوا</bdi> <em>(ketahuilah, kalian!)</em>. Tanpa alif bantu: <bdi>سَبِّحْ</bdi> &middot; <bdi>سَبِّحِي</bdi> &middot; <bdi>سَبِّحُوا</bdi>. Akhirannya <strong>sukun</strong> (kamu lk), <strong><bdi>ـِي</bdi></strong> (kamu pr) dan <strong><bdi>ـُوا</bdi></strong> (kalian).</li><li><strong>Harf A bagian 1, Harf Sukun, Harf E, Harf Penghubung, Ism Penghubung</strong><br><strong>Harf E:</strong> <bdi>إِلَى</bdi>, <bdi>حَتَّى</bdi>, <bdi>عَلَى</bdi>, <bdi>عَنْ</bdi>, <bdi>فِي</bdi>, <bdi>مِنْ</bdi>, <bdi>وَ</bdi> (sumpah), <bdi>لِ</bdi>, <bdi>كَ</bdi>, <bdi>بِ</bdi>. Datang <strong>sebelum ism</strong> dan memberi akhiran &ldquo;E&rdquo; (kasrah) pada ism. <strong>Harf penghubung:</strong> <bdi>إِلَّا</bdi>, <bdi>لَا</bdi>, <bdi>ثُمَّ</bdi>, <bdi>فَ</bdi>, <bdi>وَ</bdi>. Menghubungkan kalimat dan bisa datang sebelum <strong>apa saja</strong> (ism, fi&rsquo;l atau harf) tanpa mengubahnya. <strong>Ism penghubung:</strong> <bdi>الَّذِي</bdi>, <bdi>ذَلِكَ</bdi>, <bdi>مَنْ</bdi>, <bdi>مَا</bdi> (yang, itu, siapa, apa). Ism yang menghubungkan satu bagian kalimat dengan bagian lain. <strong>Harf A / Sukun / Akan datang / Umum:</strong> <strong>Harf &ldquo;A&rdquo;</strong> (fi&rsquo;l berakhiran fat-hah; <bdi>ن</bdi> gugur untuk mereka / kamu pr): <bdi>حَتَّى</bdi> hingga, <bdi>كَيْ</bdi> agar, <bdi>لِ</bdi> agar, <bdi>لَنْ</bdi> tidak akan, <bdi>أَنْ</bdi> untuk / bahwa. <strong>Harf sukun</strong> (fi&rsquo;l berakhiran sukun): <bdi>فَلْ</bdi> maka hendaklah _, <bdi>وَلْ</bdi> dan hendaklah _, <bdi>لَمْ</bdi> tidak (lampau), <bdi>إِنْ</bdi> jika. <strong>Harf bentuk akan datang:</strong> <bdi>سَ</bdi> / <bdi>سَوْفَ</bdi> akan (<bdi>يَعْلَمُ</bdi> &rarr; <bdi>سَيَعْلَمُ</bdi>). <strong>Harf umum:</strong> <bdi>لَوْ</bdi> seandainya, <bdi>إِذَا</bdi> ketika, <bdi>قَدْ</bdi> sungguh, <bdi>أَ</bdi> apakah? (pertanyaan).</li><li><strong>Bagaimana Tanween dan AL memengaruhi terjemahan</strong><br><strong>Tanwin</strong> (<bdi>ـٌ ـً ـٍ</bdi>) berarti <strong>&ldquo;sebuah / suatu&rdquo;</strong> (tidak tertentu): <bdi>كِتَابٌ</bdi> = <em>sebuah kitab</em>. <strong>AL</strong> (<bdi>الْ</bdi>) berarti <strong>&ldquo;si / yang tertentu&rdquo;</strong>: <bdi>الْكِتَابُ</bdi> = <em>kitab itu</em>. Sebuah kata tidak pernah memiliki keduanya.</li><li><strong>Kalimat Ism. Akhiran apa yang biasanya didapat bagian-bagiannya?</strong><br>Kalimat ism memiliki dua bagian (masing-masing bisa berupa rangkaian) dan <strong>keduanya biasanya berakhiran UU</strong> (dhammah / bunyi UU), dengan &ldquo;adalah&rdquo; yang tidak terlihat di antaranya. Contoh: <bdi>اللَّـهُ رَبُّنَا</bdi> = <em>Allah (adalah) Tuhan kami.</em></li><li><strong>Bagaimana caramu menemukan &ldquo;adalah&rdquo; yang tersembunyi?</strong><br>Pecah kalimat menjadi rangkaian-rangkaiannya; &ldquo;adalah&rdquo; yang tidak terlihat berada pada <strong>pemisah pertama</strong>, antara rangkaian pertama dan kedua. Contoh: <bdi dir='rtl'><bdi>هُوَ</bdi> | <bdi>قُرْآنٌ مَّجِيدٌ</bdi></bdi> = <em>Dia (adalah) Al-Qur&rsquo;an yang mulia.</em> Bila rangkaian harf E datang lebih dulu, itu tetap rangkaian pertama: <bdi dir='rtl'><bdi>فِيهِ</bdi> | <bdi>آيَاتٌ</bdi></bdi> = <em>Di dalamnya (ada) ayat-ayat.</em></li><li><strong>Kata-kata &ldquo;keras kepala&rdquo;</strong><br>Ism yang akhirannya <strong>tidak pernah berubah</strong> menjadi UU, AA atau EE, apa pun perannya. Empat jenis: <strong>kata ganti</strong> (<bdi>هُوَ</bdi>, <bdi>أَنْتَ</bdi>&hellip;), <strong>ism penghubung</strong> (<bdi>الَّذِي</bdi>, <bdi>مَنْ</bdi>, <bdi>مَا</bdi>&hellip;), <strong>kata berakhiran yaa</strong>, dan <strong>kata berakhiran alif</strong> (mis. <bdi>مُوْسَى</bdi>). Kata tunjuk (<bdi>هَـٰذَا</bdi>, <bdi>ذَلِكَ</bdi>) juga termasuk &ldquo;keras kepala&rdquo;.</li><li><strong>Harf A Bagian Dua</strong><br>Harf A ini datang sebelum ism: <bdi>إِنَّ</bdi> <em>sesungguhnya</em>, <bdi>أَنَّ</bdi> <em>bahwa</em>, <bdi>كَأَنَّ</bdi> <em>seolah-olah</em>, <bdi>لَكِنَّ</bdi> <em>tetapi</em>, <bdi>لَيْتَ</bdi> <em>seandainya</em>, <bdi>لَعَلَّ</bdi> <em>barangkali</em>, <bdi>بِأَنَّ</bdi> <em>karena</em>. Kata tepat sesudahnya berakhiran <strong>AA</strong>: <bdi>إِنَّ اللَّـهَ</bdi> <em>Sesungguhnya Allah&hellip;</em>; dengan kata ganti: <bdi>إِنَّهُ</bdi> <em>sesungguhnya dia&hellip;</em>.</li><li><strong>Aturan-aturan kepemilikan</strong><br>Dua bagian: <strong>barang</strong> (yang dimiliki, pertama) dan <strong>pemilik</strong> (berikutnya). Barang <strong>tanpa tanwin</strong> dan <strong>tanpa AL</strong> serta mengikuti akhiran perannya (UU / AA / EE); pemilik selalu berakhiran <strong>EE</strong> (atau kata ganti melekat, mis. <bdi>كِتَابُهُ</bdi>). Artinya: &ldquo;milik / -nya&rdquo;.</li><li><strong>Kata-kata waktu dan tempat</strong><br>Kata-kata seperti <bdi>قَبْلَ</bdi> <em>sebelum</em>, <bdi>بَعْدَ</bdi> <em>sesudah</em>, <bdi>فَوْقَ</bdi> <em>di atas</em>, <bdi>تَحْتَ</bdi> <em>di bawah</em>, <bdi>عِندَ</bdi> <em>di dekat</em>, <bdi>بَيْنَ</bdi> <em>di antara</em>, <bdi>مَعَ</bdi> <em>bersama</em>, <bdi>خَلْفَ</bdi> <em>di belakang</em> <strong>berperilaku seperti kepemilikan</strong> meski tidak &ldquo;bermakna&rdquo; demikian: berakhiran AA dan kata berikutnya berakhiran <strong>EE</strong> (<bdi>تَحْتَ الشَّجَرَةِ</bdi> <em>di bawah pohon</em>).</li><li><strong>Apa saja 5 alasan untuk menjadi feminin?</strong><br>(1) Berakhiran &#1577; (<bdi>مَدِيْنَة</bdi> kota). (2) Memang feminin (<bdi>أُخْت</bdi> saudari). (3) Nama tempat (<bdi>مَكَّة</bdi> Makkah). (4) Jamak bukan manusia (<bdi>أَنْهَار</bdi> sungai-sungai). (5) Karena orang Arab menetapkannya &mdash; kata <strong>BASS</strong>: <bdi>سَمَاء</bdi> langit, <bdi>أَرْض</bdi> tanah, <bdi>شَمْس</bdi> matahari, <bdi>رِيْح</bdi> angin, <bdi>نَفْس</bdi> jiwa, <bdi>دَار</bdi> rumah, <bdi>نَار</bdi> api, <bdi>جَهَنَّم</bdi> neraka Jahanam, <bdi>سَبِيل</bdi> jalan.</li><li><strong>Tabel-tabel jumlah</strong><br><strong>Maskulin:</strong> tunggal <bdi>مُسْلِمٌ</bdi> (UU) / <bdi>مُسْلِمًا</bdi> (AA) / <bdi>مُسْلِمٍ</bdi> (EE); jamak <bdi>مُسْلِمُوْنَ</bdi> (UU) / <bdi>مُسْلِمِيْنَ</bdi> (AA dan EE). <strong>Feminin:</strong> tunggal <bdi>مُسْلِمَةٌ</bdi> / <bdi>مُسْلِمَةً</bdi> / <bdi>مُسْلِمَةٍ</bdi>; jamak <bdi>مُسْلِمَاتٌ</bdi> (UU) / <bdi>مُسْلِمَاتٍ</bdi> (AA dan EE).</li><li><strong>Aturan kata sifat dan kecocokannya</strong><br>Kata sifat datang <strong>setelah</strong> kata yang dijelaskannya dan harus <strong>cocok</strong> dalam 4 hal: <strong>jenis kelamin</strong>, <strong>jumlah</strong>, <strong>kekhususan</strong> (AL atau tanwin) dan <strong>akhiran</strong> (UU / AA / EE). Contoh: <bdi>رَسُوْلٌ كَرِيْمٌ</bdi> = <em>seorang rasul yang mulia</em>.</li><li><strong>Tabel kata tunjuk</strong><br><strong>Dekat:</strong> <bdi>هَـٰذَا</bdi> <em>ini</em> (lk) &middot; <bdi>هَـٰذِهِ</bdi> <em>ini</em> (pr) &middot; <bdi>هَـٰؤُلَاءِ</bdi> <em>ini</em> (jamak). <strong>Jauh:</strong> <bdi>ذَٰلِكَ</bdi> <em>itu</em> (lk) &middot; <bdi>تِلْكَ</bdi> <em>itu</em> (pr) &middot; <bdi>أُولَـٰئِكَ</bdi> <em>itu</em> (jamak).</li><li><strong>Aturan kata tunjuk</strong><br>Kata tunjuk adalah kata &ldquo;keras kepala&rdquo; (akhirannya tidak berubah). Kata tunjuk harus sesuai dengan jenis kelamin dan jumlah kata yang ditunjuk. Kata tunjuk membentuk <strong>rangkaian hanya jika kata berikutnya memiliki AL</strong>.</li><li><strong>Rangkaian tunjuk vs. kalimat tunjuk</strong><br><strong>Rangkaian tunjuk</strong> (kata tunjuk + kata ber-AL): <bdi>ذَٰلِكَ الْكِتَابُ</bdi> = <em>kitab itu</em> (satu gagasan, tanpa &ldquo;adalah&rdquo;). <strong>Kalimat tunjuk</strong> (kata tunjuk + kata tanpa AL): <bdi>ذَٰلِكَ كِتَابٌ</bdi> = <em>itu adalah sebuah kitab</em> (&ldquo;adalah&rdquo; tersembunyi setelah kata tunjuk).</li><li><strong>Perbedaan Ism vs Fi&rsquo;l</strong><br><strong>Ciri ism:</strong> diawali AL; berakhiran tanwin; berakhiran &#1577;; datang setelah harf E; datang setelah <bdi>يَا</bdi>; bagian dari kata sifat atau kepemilikan. <strong>Ciri fi&rsquo;l:</strong> berakhiran <bdi>تْ</bdi>; datang setelah <bdi>قَدْ</bdi>; setelah harf A; setelah harf sukun; setelah harf bentuk akan datang (<bdi>سَ</bdi> / <bdi>سَوْفَ</bdi>).</li></ol></div>
+<div class="section-title"><i class="fas fa-highlighter"></i> 1.2: Tentukan kata-kata yang disorot sebagai ism, fi&rsquo;l, atau harf. Bonus: Apa jenisnya? Bonus #2: Apa artinya (jawab secara lisan)?</div>
+<div class="quran-block">
+<div class="arabic large"><mark class="hl"><ruby>اقْرَأْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;cmd</rt></ruby> <ruby>بِاسْمِ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> <ruby>رَبِّكَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>الَّذِي<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>خَلَقَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> ﴿١﴾ <ruby>خَلَقَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>الْإِنسَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>مِنْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>عَلَقٍ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿٢﴾ <ruby>اقْرَأْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;cmd</rt></ruby> <ruby>وَرَبُّكَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> <ruby>الْأَكْرَمُ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿٣﴾ <ruby>الَّذِي<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>عَلَّمَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>بِالْقَلَمِ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> ﴿٤﴾ <ruby>عَلَّمَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>الْإِنسَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>مَا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>لَمْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>يَعْلَمْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> ﴿٥﴾ <ruby>كَلَّا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>إِنَّ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>الْإِنسَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>لَيَطْغَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;pres</rt></ruby> ﴿٦﴾ <ruby>أَن<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>رَّآهُ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>اسْتَغْنَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> ﴿٧﴾ <ruby>إِنَّ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>إِلَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>رَبِّكَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>الرُّجْعَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿٨﴾ <ruby>أَرَأَيْتَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> <ruby>الَّذِي<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>يَنْهَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> ﴿٩﴾ <ruby>عَبْدًا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>إِذَا<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>صَلَّىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> ﴿١٠﴾ <ruby>أَرَأَيْتَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> <ruby>إِن<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>كَانَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>عَلَى<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>الْهُدَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> ﴿١١﴾ <ruby>أَوْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>أَمَرَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>بِالتَّقْوَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+I</rt></ruby> ﴿١٢﴾ <ruby>أَرَأَيْتَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> <ruby>إِن<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>كَذَّبَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;past</rt></ruby> <ruby>وَتَوَلَّىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H+F&middot;past</rt></ruby> ﴿١٣﴾ <ruby>أَلَمْ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>يَعْلَم<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> <ruby>بِأَنَّ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">H</rt></ruby> <ruby>اللَّـهَ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">I</rt></ruby> <ruby>يَرَىٰ<rt style="font-size:12px; font-family:system-ui,sans-serif; font-weight:700; color:#d9534f; letter-spacing:0;">F&middot;pres</rt></ruby> ﴿١٤﴾</mark></div>
+<div class="quran-ref">Surah Al-&rsquo;Alaq 96:1-14</div>
+</div>
+<div class="note-box"><strong>Keterangan:</strong> I = Ism &middot; F = Fi&rsquo;l (past = lampau / pres = sekarang / cmd = perintah) &middot; H = Harf. Harf yang menempel pada kata ditulis bersamanya (mis. H+I untuk <bdi>بِاسْمِ</bdi> = <bdi>بِ</bdi> + <bdi>اسْمِ</bdi>; H+F&middot;past untuk <bdi>وَتَوَلَّىٰ</bdi> = <bdi>وَ</bdi> + <bdi>تَوَلَّىٰ</bdi>). Ism penghubung (<bdi>الَّذِي</bdi>, <bdi>مَا</bdi>) dihitung sebagai ism. Jenis harf: harf E <bdi>بِ مِنْ إِلَىٰ عَلَى</bdi>; harf A <bdi>أَن إِنَّ بِأَنَّ</bdi>; harf sukun <bdi>لَمْ إِن</bdi>; harf penghubung <bdi>وَ أَوْ</bdi>; harf umum <bdi>كَلَّا إِذَا أَ</bdi>.</div>
+<div class="section-title"><i class="fas fa-flask"></i> 3 Ilmu Bahasa Arab</div>
+<div class="note-box"><ul class="definition-list"><li><span class="label">1.</span> <span style="flex:1; min-width:200px;"><strong>Nahw</strong> (النَّحْو) &mdash; <em>tata bahasa</em>: bagaimana kata-kata terhubung menjadi kalimat dan mengapa akhirannya (UU / AA / EE) berubah.</span></li><li><span class="label">2.</span> <span style="flex:1; min-width:200px;"><strong>Sarf</strong> (الصَّرْف) &mdash; <em>morfologi</em>: bagaimana kata dibentuk dan diubah dari akar katanya (lampau, sekarang, perintah, Ism Pelaku&hellip;). <strong>Unit ini adalah Sarf.</strong></span></li><li><span class="label">3.</span> <span style="flex:1; min-width:200px;"><strong>Balagha</strong> (الْبَلَاغَة) &mdash; <em>ilmu keindahan bahasa</em>: keindahan dan ketepatan Bahasa Arab, khususnya Al-Qur&rsquo;an, dalam menyampaikan makna.</span></li></ul></div>
+<div class="section-title"><i class="fas fa-person"></i> Ism Pelaku (Doer-Ism)</div>
+<div class="intro-box"><strong>Apa itu?</strong> Ism yang berasal dari fi&rsquo;l yang menggambarkan pelaku dari suatu perbuatan &mdash; &ldquo;sang pelaku&rdquo;. Setara dengan kata dalam bahasa Indonesia yang berarti &ldquo;orang yang me-...&rdquo; atau &ldquo;pe-...&rdquo; (misalnya: penyembah, pencipta, pengirim).</div>
+<div class="note-box"><strong>2 kategori utama:</strong><ul class="definition-list"><li><span class="label">1.</span> <span style="flex:1; min-width:200px;"><strong>AA-E</strong> &mdash; bunyi AA setelah awal dan bunyi E sebelum akhir, mis. عَابِدٌ <em>penyembah</em>, خَالِقٌ <em>pencipta</em> (dari akar 3 huruf).</span></li><li><span class="label">2.</span> <span style="flex:1; min-width:200px;"><strong>MU-EE</strong> &mdash; diawali مُ dan memiliki bunyi EE sebelum akhir, mis. مُرْسِلٌ <em>pengirim</em>, مُسْلِمٌ <em>orang yang berserah diri</em> (dari bentuk kata kerja yang lebih panjang).</span></li></ul></div>
+<div class="subsection-title">MU-EE:</div>
+<div class="note-box"><ol class="steps"><li>Diawali dengan مُ</li><li>Memiliki bunyi EE sebelum akhir kata</li></ol></div>
+<div class="subsection-title">Contoh:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">مُسْلِمٌ</td><td class="arabic">مُنَافِقٌ</td><td class="arabic">مُبِيْنٌ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-circle"></i> 1.3: Lingkari Ism Pelaku</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic"><mark class="hl">مُفْسِدُونَ</mark></td><td class="arabic">مَخْتُوْم</td><td class="arabic"><mark class="hl">الْمُتَكَبِّرُ</mark></td></tr><tr><td class="arabic"><mark class="hl">مُرْسِلِيْنَ</mark></td><td class="arabic">مَمْدُوْد</td><td class="arabic">الْمَرْجُوْمُوْنَ</td></tr><tr><td class="arabic">مُرْسَلِيْنَ</td><td class="arabic"><mark class="hl">مُنذِرٌ</mark></td><td class="arabic"><mark class="hl">مُؤْمِنًا</mark></td></tr></tbody></table></div>
+<div class="note-box"><ul class="example-list"><li><span class="arabic" style="font-size:20px;">مُفْسِدُونَ</span> &rarr; <strong>MU-EE</strong> &mdash; para perusak</li><li><span class="arabic" style="font-size:20px;">الْمُتَكَبِّرُ</span> &rarr; <strong>MU-EE</strong> &mdash; Yang Maha Perkasa / sombong</li><li><span class="arabic" style="font-size:20px;">مُرْسِلِيْنَ</span> &rarr; <strong>MU-EE</strong> &mdash; para pengirim</li><li><span class="arabic" style="font-size:20px;">مُنذِرٌ</span> &rarr; <strong>MU-EE</strong> &mdash; seorang pemberi peringatan</li><li><span class="arabic" style="font-size:20px;">مُؤْمِنًا</span> &rarr; <strong>MU-EE</strong> &mdash; seorang yang beriman</li></ul><strong>Bukan Ism Pelaku:</strong> مَخْتُوْم, مَمْدُوْد, الْمَرْجُوْمُوْنَ (diawali مَ dan ada bunyi UU sebelum akhir) dan مُرْسَلِيْنَ (diawali مُ tetapi ada bunyi <em>AA</em> sebelum akhir, bukan EE &mdash; artinya <em>orang-orang yang diutus</em>).</div>
+<div class="subsection-title">AA-E:</div>
+<div class="note-box"><ol class="steps"><li>Bunyi AA setelah awal kata</li><li>Bunyi E sebelum akhir kata</li></ol></div>
+<div class="subsection-title">Contoh:</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic">ذَاكِرَةٌ</td><td class="arabic">عَابِدٌ</td><td class="arabic">خَالِقٌ</td></tr></tbody></table></div>
+<div class="section-title"><i class="fas fa-magnifying-glass"></i> 1.4: Temukan SEMUA Ism Pelaku. Apakah ada yang kamu kenali?</div>
+<div class="overflow-x"><table class="grid-table"><tbody><tr><td class="arabic"><mark class="hl">مُهَاجِرُونَ</mark></td><td class="arabic"><mark class="hl">الصَّابِرِيْنَ</mark></td><td class="arabic">المُصْطَفَى</td></tr><tr><td class="arabic"><mark class="hl">مُسْتَغْفِرِيْنَ</mark></td><td class="arabic">مَخْلُوْقٌ</td><td class="arabic">الْمُقَرَّبُونَ</td></tr><tr><td class="arabic"><mark class="hl">السَّابِقُونَ</mark></td><td class="arabic"><mark class="hl">حَافِظَاتٍ</mark></td><td class="arabic">هَاجَرُوا</td></tr><tr><td class="arabic">طَيِّبَاتٌ</td><td class="arabic"><mark class="hl">رَاجِعُونَ</mark></td><td class="arabic"><mark class="hl">مُضِلِّيْنَ</mark></td></tr></tbody></table></div>
+<div class="note-box"><ul class="example-list"><li><span class="arabic" style="font-size:20px;">مُهَاجِرُونَ</span> &rarr; <strong>MU-EE</strong> &mdash; orang-orang yang berhijrah (Muhajirin)</li><li><span class="arabic" style="font-size:20px;">الصَّابِرِيْنَ</span> &rarr; <strong>AA-E</strong> &mdash; orang-orang yang sabar</li><li><span class="arabic" style="font-size:20px;">مُسْتَغْفِرِيْنَ</span> &rarr; <strong>MU-EE</strong> &mdash; orang-orang yang memohon ampun</li><li><span class="arabic" style="font-size:20px;">السَّابِقُونَ</span> &rarr; <strong>AA-E</strong> &mdash; orang-orang yang terdepan</li><li><span class="arabic" style="font-size:20px;">حَافِظَاتٍ</span> &rarr; <strong>AA-E</strong> &mdash; wanita-wanita yang menjaga</li><li><span class="arabic" style="font-size:20px;">رَاجِعُونَ</span> &rarr; <strong>AA-E</strong> &mdash; kembali (&ldquo;kepada-Nya kita kembali&rdquo;)</li><li><span class="arabic" style="font-size:20px;">مُضِلِّيْنَ</span> &rarr; <strong>MU-EE</strong> &mdash; para penyesat</li></ul><strong>Bukan Ism Pelaku:</strong> المُصْطَفَى, الْمُقَرَّبُونَ (bunyi AA sebelum akhir &mdash; <em>objek / yang dikenai</em>), مَخْلُوْقٌ (diawali مَ), هَاجَرُوا (fi&rsquo;l) dan طَيِّبَاتٌ (kata sifat).</div>
+<div class="section-title"><i class="fas fa-language"></i> 1.5: Ayo terjemahkan:</div>
+<div class="overflow-x"><table class="grid-table translate-table">
+<thead><tr><th>#</th><th>Example</th><th>Definition</th><th>Translation</th></tr></thead>
+<tbody><tr><td class="num">1.</td><td class="prompt">يَقُولُ الظَّالِمُونَ</td><td class="def">orang-orang zalim</td><td class="answer">Orang-orang zalim berkata</td></tr><tr><td class="num">2.</td><td class="prompt">اللَّـهُ خَالِقُ كُلِّ شَيْءٍ</td><td class="def">pencipta</td><td class="answer">Allah adalah pencipta segala sesuatu</td></tr><tr><td class="num">3.</td><td class="prompt">وَاللَّـهُ يُحِبُّ الصَّابِرِيْنَ</td><td class="def">mencintai; orang-orang yang sabar</td><td class="answer">Dan Allah mencintai orang-orang yang sabar</td></tr><tr><td class="num">4.</td><td class="prompt">أَمْ هُمُ الْخَالِقُونَ</td><td class="def">atau (kata tanya)</td><td class="answer">Ataukah mereka yang menciptakan?</td></tr><tr><td class="num">5.</td><td class="prompt">وَلَا تَنكِحُوا الْمُشْرِكَاتِ</td><td class="def">menikahi</td><td class="answer">Dan janganlah kalian menikahi wanita-wanita musyrik</td></tr><tr><td class="num">6.</td><td class="prompt">وَبَشِّرِ الْمُؤْمِنِينَ</td><td class="def">memberi kabar gembira</td><td class="answer">Dan berilah kabar gembira kepada orang-orang beriman</td></tr></tbody>
+</table></div>
+<div class="subsection-title" style="text-align:center;">Pola Ism Pelaku</div>
+<div class="overflow-x"><table class="grid-table"><tbody>
+<tr><td style="text-align:center; font-weight:700;">AA-E</td><td class="arabic" style="text-align:center;">عَابِدٌ<div style="font-size:14px; font-weight:400; margin-top:4px;">&rsquo;aabid<br>penyembah</div></td>
+<td style="text-align:center; font-weight:700;">MU-EE</td><td class="arabic" style="text-align:center;">مُرْسِلٌ<div style="font-size:14px; font-weight:400; margin-top:4px;">mursil<br>pengirim</div></td></tr>
+</tbody></table></div>
+<div class="section-title"><i class="fas fa-book"></i> Kumpulan Kata</div>
+<div class="overflow-x"><table class="grid-table wordbank">
+<thead><tr><th>Word</th><th>Meaning</th><th>Word</th><th>Meaning</th></tr></thead>
+<tbody><tr><td class="ar">دَعَا</td><td class="en">dia memanggil</td><td class="ar">عَبَدَ</td><td class="en">dia menyembah</td></tr><tr><td class="ar">اِتَّقَى</td><td class="en">dia bertakwa (kepada Allah)</td><td class="ar">ظَلَمَ</td><td class="en">dia menzalimi</td></tr><tr><td class="ar">هَدَى</td><td class="en">dia memberi petunjuk</td><td class="ar">سَأَلَ</td><td class="en">dia bertanya/meminta</td></tr><tr><td class="ar">أَرَادَ</td><td class="en">dia menghendaki/bermaksud</td><td class="ar">وَجَدَ</td><td class="en">dia menemukan</td></tr><tr><td class="ar">أَمْ</td><td class="en">atau</td><td class="ar">أَخْرَجَ</td><td class="en">dia mengeluarkan</td></tr><tr><td class="ar">أَكَلَ</td><td class="en">dia makan</td><td class="ar">اِتَّخَذَ</td><td class="en">dia mengambil/menjadikan</td></tr></tbody>
+</table></div>
+<div class="note-box"><strong>Tugas:</strong> &#9744; Selesaikan Pelajaran 36-40 di aplikasi seluler</div>
+<div class="subsection-title">Daftar Istilah</div>
+<div class="overflow-x"><table class="grid-table"><thead><tr><th>Istilah Kami</th><th>Istilah Arab</th></tr></thead>
+<tbody><tr><td>Ism Pelaku</td><td class="arabic" style="text-align:center;">اِسْمُ فَاعِل</td></tr></tbody></table></div>
+<div class="unit-pagination">
+<a href="level2-index.html" class="pagination-prev"><i class="fas fa-arrow-left"></i> Menu Level 2</a>
+<a href="level3-unit2.html" class="pagination-next">Unit 2: Ism Detail <i class="fas fa-arrow-right"></i></a>
+<div class="pagination-center">
+<a href="index.html" class="top-home-link"><i class="fas fa-house"></i> Main Menu</a>
+<a href="level3-index.html" class="top-home-link"><i class="fas fa-layer-group"></i> Menu Level 3</a>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+(function(){
+    var langToggle = document.getElementById('languageToggle');
+    var darkToggle = document.getElementById('darkModeToggle');
+    var enContent = document.getElementById('english-content');
+    var idContent = document.getElementById('indonesian-content');
+    var body = document.body;
+
+    function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+    function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+    function setLang(lang){
+        if(lang === 'id'){
+            enContent.classList.add('hidden');
+            idContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇬🇧 English';
+        } else {
+            idContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            langToggle.innerHTML = '<i class="fas fa-flag"></i> 🇮🇩 Bahasa Indonesia';
+        }
+        safeSet('uqa-lang', lang);
+    }
+    langToggle.addEventListener('click', function(){
+        var cur = idContent.classList.contains('hidden') ? 'en' : 'id';
+        setLang(cur === 'en' ? 'id' : 'en');
+    });
+    var forceIndonesian = /indonesian/i.test(window.location.search);
+    var savedLang = safeGet('uqa-lang');
+    setLang(forceIndonesian ? 'id' : (savedLang === 'id' ? 'id' : 'en'));
+
+    function setDark(on){
+        if(on){ body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode'; }
+        else { body.classList.remove('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode'; }
+        safeSet('uqa-dark', on ? '1' : '0');
+    }
+    darkToggle.addEventListener('click', function(){
+        setDark(!body.classList.contains('dark-mode'));
+    });
+    var forceDark = /dark/i.test(window.location.search);
+    var savedDark = safeGet('uqa-dark');
+    if(forceDark) setDark(true);
+    else if(savedDark === '1') setDark(true);
+    else if(savedDark === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setDark(true);
+
+    document.getElementById('scrollUp').addEventListener('click', function(){ window.scrollBy({top:-400, behavior:'smooth'}); });
+    document.getElementById('scrollDown').addEventListener('click', function(){ window.scrollBy({top:400, behavior:'smooth'}); });
+    document.getElementById('doubleUpScroll').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('doubleDownScroll').addEventListener('click', function(){ window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
